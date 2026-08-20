@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home & Decor — Elora Journal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f142b;
+            --container-bg: #151b38;
+            --card-bg: #1a2245;
+            --text-main: #d3d7ee;
+            --text-heading: #ffffff;
+            --accent: #9b7cff;
+            --accent-light: #c9bdff;
+            --border-color: rgba(155, 124, 255, 0.18);
+            --muted: #898fae;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: "Inter", Arial, sans-serif;
+            line-height: 1.7;
+        }
+
+        .page-wrapper {
+            max-width: 1240px;
+            width: 100%;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .page-header h1 {
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: 46px;
+            color: var(--text-heading);
+            font-weight: 600;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        .page-header p {
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-style: italic;
+            color: var(--muted);
+            font-size: 19px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Grid for 18 Decor Article Cards */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .article-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .article-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--accent);
+            box-shadow: 0 15px 35px rgba(155, 124, 255, 0.15);
+        }
+
+        .card-tag {
+            font-family: "Inter", Arial, sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-light);
+            margin-bottom: 12px;
+        }
+
+        .card-title {
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: 24px;
+            color: var(--text-heading);
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 15px;
+        }
+
+        .card-excerpt {
+            font-size: 14px;
+            color: var(--text-main);
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .card-footer-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding-top: 15px;
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .read-more {
+            color: var(--accent-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .read-more:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        /* Responsive Breakpoints */
+        @media(max-width: 1024px) {
+            .articles-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media(max-width: 650px) {
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+            .page-header h1 {
+                font-size: 36px;
+            }
+            .page-wrapper {
+                padding: 0 15px;
+                margin: 25px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-wrapper">
+        <div class="page-header">
+            <h1>Home & Decor</h1>
+            <p>Thoughtful interiors, sanctuaries of calm, and the art of shaping spaces that inspire well-being.</p>
+        </div>
+
+        <div class="articles-grid">
+            
+            <!-- Card 1 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Minimalism</div>
+                    <h3 class="card-title">Designing a Sanctuary of Calm</h3>
+                    <p class="card-excerpt">How stripping away unnecessary clutter turns a chaotic room into a restorative haven for your mind.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>4 min read</span>
+                    <a href="minimalism.html" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Lighting</div>
+                    <h3 class="card-title">The Magic of Layered Lighting</h3>
+                    <p class="card-excerpt">Moving beyond harsh overhead fixtures to ambient lamps, candles, and warm corners that shape cozy moods.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>5 min read</span>
+                    <a href="layered-lighting.html" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Textiles</div>
+                    <h3 class="card-title">Embracing Organic Textures</h3>
+                    <p class="card-excerpt">Layering linen throws, raw wool rugs, and chunky knits to add warmth and tactile depth to modern living spaces.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>4 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Biophilic Design</div>
+                    <h3 class="card-title">Bringing the Outdoors Inside</h3>
+                    <p class="card-excerpt">Integrating potted greenery, botanical prints, and earthy clay pots to breathe life and fresh energy into your rooms.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>6 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Color Palette</div>
+                    <h3 class="card-title">Earthy Tones & Warm Neutrals</h3>
+                    <p class="card-excerpt">Exploring terracotta, sage green, and soft beige hues that ground your home in a timeless, welcoming calm.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>5 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Kitchen Decor</div>
+                    <h3 class="card-title">The Soulful Kitchen Counter</h3>
+                    <p class="card-excerpt">Balancing everyday utility with rustic wooden boards, ceramic crocks, and fresh herbs for an inviting cooking space.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>4 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Vintage Charm</div>
+                    <h3 class="card-title">The Art of Mixing Eras</h3>
+                    <p class="card-excerpt">How pairing sleek modern furniture with weathered vintage accent pieces adds unique character and personal history.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>5 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Bedroom Sanctuary</div>
+                    <h3 class="card-title">Crafting a Restful Sleep Retreat</h3>
+                    <p class="card-excerpt">Essential styling tips for turning your bedroom into an offline, ultra-cozy sanctuary dedicated to rest.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>4 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 9 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Wall Art</div>
+                    <h3 class="card-title">Curating a Meaningful Gallery Wall</h3>
+                    <p class="card-excerpt">Moving away from generic prints to display personal sketches, vintage photographs, and textural objects.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>6 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 10 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Small Spaces</div>
+                    <h3 class="card-title">Maximizing Compact Apartments</h3>
+                    <p class="card-excerpt">Smart design choices—from multi-functional furniture to clever mirror placements—that expand small footprints.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>5 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 11 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Aromatics</div>
+                    <h3 class="card-title">Scent as an Interior Element</h3>
+                    <p class="card-excerpt">Using sandalwood incense, beeswax candles, and cedar diffusers to layer an invisible yet profound dimension of comfort.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>3 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 12 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Home Office</div>
+                    <h3 class="card-title">Productivity Meets Aesthetics</h3>
+                    <p class="card-excerpt">Designing a workspace that inspires focus with clean lines, ergonomic wood furniture, and minimal desktop clutter.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>4 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 13 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Bookshelf Styling</div>
+                    <h3 class="card-title">The Poetry of Open Shelving</h3>
+                    <p class="card-excerpt">How to arrange books, ceramics, and personal mementos with breathing room rather than packing shelves tightly.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>5 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 14 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Bathroom Spa</div>
+                    <h3 class="card-title">Turning the Bath into a Spa</h3>
+                    <p class="card-excerpt">Simple upgrades like fluffy waffle towels, teak bath trays, and amber glass soap dispensers for daily luxury.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>4 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 15 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Outdoor Living</div>
+                    <h3 class="card-title">Balcony & Patio Escapes</h3>
+                    <p class="card-excerpt">Transforming even the smallest outdoor nook into an inviting breakfast corner with fairy lights and weather-safe cushions.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>5 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 16 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Wabi-Sabi</div>
+                    <h3 class="card-title">Finding Beauty in Flaws</h3>
+                    <p class="card-excerpt">Celebrating weathered wood, chipped ceramics, and unpretentious natural finishes that tell a genuine story.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>6 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 17 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Entryways</div>
+                    <h3 class="card-title">The Welcoming Threshold</h3>
+                    <p class="card-excerpt">Creating a functional and serene drop-zone for keys, coats, and shoes right as you walk through your front door.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>3 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 18 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Intentional Living</div>
+                    <h3 class="card-title">A Home That Evolves With You</h3>
+                    <p class="card-excerpt">Viewing interior styling as a slow, continuous reflection of your personal growth, memories, and changing seasons.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>5 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Scripts for dynamic Header and Footer -->
+    <script src="header.js" defer></script>
+    <script src="footer.js" defer></script>
+</body>
+</html>

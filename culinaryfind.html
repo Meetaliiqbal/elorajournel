@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+
+<title>Culinary Finds — Elora Journal</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap');
+
+:root{
+    --bg:#0f142b;
+    --surface:#151b38;
+    --card:#1a2245;
+    --soft:#202951;
+    --text:#d3d7ee;
+    --heading:#ffffff;
+    --muted:#898fae;
+    --accent:#9b7cff;
+    --accent-light:#c9bdff;
+    --accent-dark:#8062e8;
+    --border:rgba(155,124,255,.18);
+    --max:720px;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+    -webkit-text-size-adjust:100%;
+}
+
+body{
+    margin:0;
+    width:100%;
+    min-width:0;
+    overflow-x:hidden;
+    background:var(--bg);
+    color:var(--text);
+    font-family:"DM Sans",Arial,sans-serif;
+    line-height:1.7;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+
+/* =====================================================
+   PAGE
+===================================================== */
+
+.offer-page{
+    width:100%;
+    max-width:var(--max);
+    margin:0 auto;
+    padding:58px 22px 75px;
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.offer-intro{
+    text-align:center;
+    margin-bottom:34px;
+}
+
+.offer-eyebrow{
+    display:inline-block;
+    margin-bottom:16px;
+    padding:6px 14px;
+
+    background:rgba(155,124,255,.09);
+    border:1px solid rgba(155,124,255,.20);
+
+    border-radius:30px;
+
+    color:var(--accent-light);
+
+    font-family:"DM Sans",Arial,sans-serif;
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.offer-intro h1{
+    margin:0 0 14px;
+
+    color:var(--heading);
+
+    font-family:"Playfair Display",Georgia,serif;
+    font-size:clamp(31px,5vw,43px);
+    font-weight:500;
+    line-height:1.22;
+    letter-spacing:-.4px;
+}
+
+.offer-intro p{
+    max-width:590px;
+    margin:0 auto;
+
+    color:var(--muted);
+
+    font-family:"DM Sans",Arial,sans-serif;
+    font-size:13.5px;
+    line-height:1.8;
+}
+
+
+/* =====================================================
+   OFFER CARD
+===================================================== */
+
+.offer-card{
+    background:var(--surface);
+
+    border:1px solid var(--border);
+    border-radius:18px;
+
+    padding:34px;
+
+    box-shadow:
+        0 16px 45px rgba(0,0,0,.20);
+}
+
+
+/* =====================================================
+   CARD HEADER
+===================================================== */
+
+.card-header{
+    text-align:center;
+    margin-bottom:28px;
+}
+
+.card-icon{
+    width:58px;
+    height:58px;
+
+    margin:0 auto 17px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:rgba(155,124,255,.10);
+    border:1px solid rgba(155,124,255,.20);
+
+    border-radius:15px;
+}
+
+.card-icon svg{
+    width:27px;
+    height:27px;
+    color:var(--accent-light);
+}
+
+.card-header h2{
+    margin:0 0 9px;
+
+    color:var(--heading);
+
+    font-family:"Playfair Display",Georgia,serif;
+    font-size:25px;
+    font-weight:500;
+    line-height:1.35;
+}
+
+.card-header p{
+    margin:0;
+
+    color:var(--muted);
+
+    font-family:"DM Sans",Arial,sans-serif;
+    font-size:13px;
+    line-height:1.7;
+}
+
+
+/* =====================================================
+   LOCATION SECTION
+===================================================== */
+
+.location-section{
+    margin-bottom:23px;
+    padding:19px;
+
+    background:rgba(155,124,255,.055);
+
+    border:1px solid rgba(155,124,255,.14);
+    border-radius:13px;
+}
+
+.location-title{
+    margin:0 0 13px;
+
+    color:var(--heading);
+
+    font-family:"Playfair Display",Georgia,serif;
+    font-size:18px;
+    font-weight:500;
+
+    text-align:center;
+}
+
+.location-subtitle{
+    margin:0 0 16px;
+
+    color:var(--muted);
+
+    font-family:"DM Sans",Arial,sans-serif;
+    font-size:11px;
+
+    text-align:center;
+}
+
+.country-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:9px;
+}
+
+.country{
+    padding:10px 6px;
+
+    background:var(--soft);
+
+    border:1px solid rgba(155,124,255,.12);
+    border-radius:8px;
+
+    color:var(--accent-light);
+
+    font-family:"DM Sans",Arial,sans-serif;
+    font-size:11px;
+    font-weight:600;
+
+    text-align:center;
+    letter-spacing:.4px;
+}
+
+
+/* =====================================================
+   INFORMATION BOX
+===================================================== */
+
+.info-box{
+    margin-bottom:24px;
+    padding:18px;
+
+    background:var(--soft);
+
+    border:1px solid rgba(155,124,255,.13);
+    border-radius:13px;
+}
+
+.info-item{
+    display:flex;
+    align-items:flex-start;
+    gap:11px;
+
+    margin-bottom:12px;
+
+    color:#bfc4da;
+
+    font-family:"DM Sans",Arial,sans-serif;
+    font-size:12.5px;
+    line-height:1.6;
+}
+
+.info-item:last-child{
+    margin-bottom:0;
+}
+
+.info-dot{
+    flex:0 0 auto;
+
+    width:7px;
+    height:7px;
+
+    margin-top:7px;
+
+    border-radius:50%;
+
+    background:var(--accent);
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.offer-action{
+    margin-top:5px;
+}
+
+.offer-button{
+    width:100%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+
+    padding:16px 20px;
+
+    background:var(--accent);
+    color:#ffffff;
+
+    border-radius:9px;
+
+    font-family:"DM Sans",Arial,sans-serif;
+    font-size:13.5px;
+    font-weight:600;
+
+    box-shadow:0 5px 16px rgba(155,124,255,.20);
+
+    transition:
+        background .2s ease,
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.offer-button:hover{
+    background:var(--accent-dark);
+
+    transform:translateY(-1px);
+
+    box-shadow:
+        0 8px 22px rgba(155,124,255,.27);
+}
+
+.offer-button svg{
+    transition:transform .2s ease;
+}
+
+.offer-button:hover svg{
+    transform:translateX(3px);
+}
+
+
+/* =====================================================
+   EXTERNAL NOTE
+===================================================== */
+
+.external-note{
+    margin:13px 0 0;
+
+    color:#737a98;
+
+    font-family:"DM Sans",Arial,sans-serif;
+    font-size:9.5px;
+    line-height:1.6;
+
+    text-align:center;
+}
+
+
+/* =====================================================
+   DISCLOSURE
+===================================================== */
+
+.disclosure{
+    max-width:610px;
+
+    margin:23px auto 0;
+
+    color:#737a98;
+
+    font-family:"DM Sans",Arial,sans-serif;
+    font-size:10px;
+    line-height:1.65;
+
+    text-align:center;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:650px){
+
+    .offer-page{
+        padding:38px 15px 50px;
+    }
+
+    .offer-intro{
+        margin-bottom:27px;
+    }
+
+    .offer-intro h1{
+        font-size:30px;
+    }
+
+    .offer-intro p{
+        font-size:13px;
+    }
+
+    .offer-card{
+        padding:25px 20px;
+    }
+
+    .card-header h2{
+        font-size:23px;
+    }
+
+    .country-grid{
+        gap:7px;
+    }
+
+    .country{
+        padding:9px 4px;
+        font-size:10px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media(max-width:420px){
+
+    .offer-page{
+        padding:30px 14px 45px;
+    }
+
+    .offer-card{
+        padding:22px 17px;
+    }
+
+    .offer-intro h1{
+        font-size:27px;
+    }
+
+    .location-section{
+        padding:16px;
+    }
+
+    .country-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:8px;
+    }
+
+    .country{
+        padding:10px 5px;
+        font-size:10.5px;
+    }
+
+    .info-box{
+        padding:16px;
+    }
+
+    .offer-button{
+        padding:14px 12px;
+        font-size:12.5px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     ELORA SHARED HEADER
+===================================================== -->
+
+<script src="header.js" defer></script>
+
+
+
+<main class="offer-page">
+
+
+    <!-- =================================================
+         INTRO
+    ================================================= -->
+
+    <section class="offer-intro">
+
+        <span class="offer-eyebrow">
+            Culinary &amp; Recipes
+        </span>
+
+        <h1>
+            Culinary Finds
+        </h1>
+
+        <p>
+            Explore selected food and kitchen resources for readers
+            who enjoy discovering new ideas for everyday cooking,
+            baking, and kitchen routines.
+        </p>
+
+    </section>
+
+
+
+    <!-- =================================================
+         STANDALONE OFFER CARD
+    ================================================= -->
+
+    <section class="offer-card">
+
+
+        <!-- CARD HEADER -->
+
+        <div class="card-header">
+
+            <div class="card-icon">
+
+                <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                >
+
+                    <path d="M4 3v18"></path>
+
+                    <path d="M8 3v7"></path>
+
+                    <path d="M12 3v7"></path>
+
+                    <path d="M4 10h8"></path>
+
+                    <path d="M16 3v18"></path>
+
+                    <path d="M16 3c2.2 1.8 3.2 4.3 3.2 7.2S18.2 15.7 16 17"></path>
+
+                </svg>
+
+            </div>
+
+
+            <h2>
+                Explore Selected Culinary Options
+            </h2>
+
+            <p>
+                Take a look at the available selection and discover
+                resources that may fit your food and kitchen interests.
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             LOCATION
+        ================================================= -->
+
+        <section class="location-section">
+
+            <h3 class="location-title">
+                Availability
+            </h3>
+
+            <p class="location-subtitle">
+                This resource is currently available in selected locations.
+            </p>
+
+            <div class="country-grid">
+
+                <div class="country">
+                    United States
+                </div>
+
+                <div class="country">
+                    United Kingdom
+                </div>
+
+                <div class="country">
+                    Australia
+                </div>
+
+                <div class="country">
+                    Canada
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             INFORMATION
+        ================================================= -->
+
+        <div class="info-box">
+
+            <div class="info-item">
+
+                <span class="info-dot"></span>
+
+                <span>
+                    Explore food, kitchen, and everyday culinary options
+                    through the featured external page.
+                </span>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <span class="info-dot"></span>
+
+                <span>
+                    Browse the available selection and review the details
+                    provided by the partner.
+                </span>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <span class="info-dot"></span>
+
+                <span>
+                    Availability, eligibility, pricing, and other details
+                    may vary by location.
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             CPA CTA
+
+             Replace YOUR_CULINARY_CPA_LINK_HERE
+             with your actual CPA URL.
+        ================================================= -->
+
+        <div class="offer-action">
+
+            <a
+                href="https://linkthem.net/aff_c?offer_id=455&aff_id=2281"
+                class="offer-button"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <span>
+                    Explore Available Options
+                </span>
+
+                <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                >
+
+                    <line
+                        x1="5"
+                        y1="12"
+                        x2="19"
+                        y2="12"
+                    ></line>
+
+                    <polyline
+                        points="12 5 19 12 12 19"
+                    ></polyline>
+
+                </svg>
+
+            </a>
+
+
+            <p class="external-note">
+                You will be visiting an independent external partner page.
+                Details on that page are provided by the third-party provider.
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         DISCLOSURE
+    ================================================= -->
+
+    <p class="disclosure">
+        Elora Journal is an independent editorial publication.
+        Featured resources may be provided by third-party partners.
+        Availability, eligibility, pricing, and promotional details
+        may vary.
+    </p>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     ELORA SHARED FOOTER
+===================================================== -->
+
+<script src="footer.js" defer></script>
+
+
+</body>
+
+</html>

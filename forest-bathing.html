@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+
+<title>Forest Bathing — The Healing Power of Ancient Woods | Elora Journal</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap');
+
+:root{
+    --bg:#0f142b;
+    --surface:#151b38;
+    --soft:#202951;
+    --text:#d3d7ee;
+    --heading:#ffffff;
+    --muted:#898fae;
+    --accent:#9b7cff;
+    --accent-light:#c9bdff;
+    --accent-dark:#8062e8;
+    --border:rgba(155,124,255,.18);
+    --max:760px;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+    -webkit-text-size-adjust:100%;
+}
+
+body{
+    margin:0;
+    min-width:0;
+    overflow-x:hidden;
+    background:var(--bg);
+    color:var(--text);
+    font-family:"DM Sans",Arial,sans-serif;
+    line-height:1.8;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+
+/* =====================================================
+   ARTICLE PAGE
+===================================================== */
+
+.article-page{
+    width:100%;
+    max-width:var(--max);
+    margin:0 auto;
+    padding:60px 22px 80px;
+}
+
+
+/* =====================================================
+   ARTICLE HEADER
+===================================================== */
+
+.article-header{
+    text-align:center;
+    margin-bottom:38px;
+}
+
+.article-category{
+    display:inline-block;
+    margin-bottom:17px;
+    padding:6px 14px;
+
+    background:rgba(155,124,255,.10);
+    border:1px solid rgba(155,124,255,.22);
+    border-radius:30px;
+
+    color:var(--accent-light);
+
+    font-family:"DM Sans",Arial,sans-serif;
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.article-header h1{
+    margin:0 0 15px;
+
+    color:var(--heading);
+
+    font-family:"Playfair Display",Georgia,serif;
+    font-size:clamp(32px,5vw,46px);
+    font-weight:500;
+    line-height:1.2;
+    letter-spacing:-.5px;
+}
+
+.article-subtitle{
+    max-width:620px;
+    margin:0 auto;
+
+    color:var(--muted);
+
+    font-family:"DM Sans",Arial,sans-serif;
+    font-size:14px;
+    line-height:1.8;
+}
+
+
+/* =====================================================
+   ARTICLE CARD
+===================================================== */
+
+.article-card{
+    background:var(--surface);
+
+    border:1px solid var(--border);
+    border-radius:18px;
+
+    padding:40px;
+
+    box-shadow:0 15px 45px rgba(0,0,0,.18);
+}
+
+
+/* =====================================================
+   FEATURED QUOTE
+===================================================== */
+
+.featured-quote{
+    margin:0 0 32px;
+    padding:23px 25px;
+
+    background:rgba(155,124,255,.07);
+
+    border-left:3px solid var(--accent);
+    border-radius:0 12px 12px 0;
+
+    color:var(--accent-light);
+
+    font-family:"Playfair Display",Georgia,serif;
+    font-size:21px;
+    font-style:italic;
+    line-height:1.6;
+}
+
+
+/* =====================================================
+   ARTICLE CONTENT
+===================================================== */
+
+.article-card h2{
+    margin:32px 0 12px;
+
+    color:var(--heading);
+
+    font-family:"Playfair Display",Georgia,serif;
+    font-size:25px;
+    font-weight:500;
+    line-height:1.4;
+}
+
+.article-card h2:first-of-type{
+    margin-top:0;
+}
+
+.article-card p{
+    margin:0 0 19px;
+
+    color:var(--text);
+
+    font-family:"DM Sans",Arial,sans-serif;
+    font-size:14px;
+    line-height:1.85;
+}
+
+.article-card strong{
+    color:var(--accent-light);
+    font-weight:600;
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.find-section{
+    margin:30px 0 34px;
+    padding:25px 22px;
+
+    background:rgba(155,124,255,.055);
+
+    border:1px solid rgba(155,124,255,.16);
+    border-radius:14px;
+}
+
+.find-section h3{
+    margin:0 0 8px;
+
+    color:var(--heading);
+
+    font-family:"Playfair Display",Georgia,serif;
+    font-size:22px;
+    font-weight:500;
+
+    text-align:center;
+}
+
+.find-section p{
+    max-width:540px;
+    margin:0 auto 18px;
+
+    color:var(--muted);
+
+    font-family:"DM Sans",Arial,sans-serif;
+    font-size:12.5px;
+
+    text-align:center;
+    line-height:1.7;
+}
+
+.find-button{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+
+    width:100%;
+    padding:15px 20px;
+
+    background:var(--accent);
+    color:#fff;
+
+    border-radius:8px;
+
+    font-family:"DM Sans",Arial,sans-serif;
+    font-size:13px;
+    font-weight:600;
+
+    box-shadow:0 5px 16px rgba(155,124,255,.18);
+
+    transition:
+        background .2s ease,
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.find-button:hover{
+    background:var(--accent-dark);
+    transform:translateY(-1px);
+    box-shadow:0 8px 20px rgba(155,124,255,.25);
+}
+
+.find-button svg{
+    transition:transform .2s ease;
+}
+
+.find-button:hover svg{
+    transform:translateX(3px);
+}
+
+.cta-note{
+    margin:10px 0 0 !important;
+
+    color:#737a98 !important;
+
+    font-size:9.5px !important;
+    text-align:center !important;
+}
+
+
+/* =====================================================
+   NATURE LIST
+===================================================== */
+
+.nature-list{
+    margin:24px 0 28px;
+    padding:0;
+    list-style:none;
+}
+
+.nature-list li{
+    position:relative;
+
+    margin-bottom:13px;
+    padding-left:25px;
+
+    color:#bfc4da;
+
+    font-family:"DM Sans",Arial,sans-serif;
+    font-size:13.5px;
+    line-height:1.7;
+}
+
+.nature-list li::before{
+    content:"";
+
+    position:absolute;
+    left:4px;
+    top:.75em;
+
+    width:7px;
+    height:7px;
+
+    border-radius:50%;
+
+    background:var(--accent);
+}
+
+
+/* =====================================================
+   REFLECTION BOX
+===================================================== */
+
+.reflection-box{
+    margin:30px 0;
+    padding:22px;
+
+    background:var(--soft);
+
+    border:1px solid rgba(155,124,255,.14);
+    border-radius:13px;
+}
+
+.reflection-box h3{
+    margin:0 0 8px;
+
+    color:var(--heading);
+
+    font-family:"Playfair Display",Georgia,serif;
+    font-size:20px;
+    font-weight:500;
+}
+
+.reflection-box p{
+    margin:0;
+
+    color:var(--muted);
+
+    font-family:"DM Sans",Arial,sans-serif;
+    font-size:13px;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:650px){
+
+    .article-page{
+        padding:38px 15px 55px;
+    }
+
+    .article-header{
+        margin-bottom:30px;
+    }
+
+    .article-header h1{
+        font-size:31px;
+    }
+
+    .article-subtitle{
+        font-size:13px;
+    }
+
+    .article-card{
+        padding:25px 20px;
+    }
+
+    .featured-quote{
+        padding:20px;
+        font-size:19px;
+    }
+
+    .article-card h2{
+        font-size:22px;
+    }
+
+    .article-card p{
+        font-size:13.5px;
+    }
+
+    .find-section{
+        padding:22px 17px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media(max-width:420px){
+
+    .article-page{
+        padding:30px 14px 45px;
+    }
+
+    .article-header h1{
+        font-size:28px;
+    }
+
+    .article-card{
+        padding:22px 17px;
+    }
+
+    .featured-quote{
+        font-size:18px;
+        padding:18px;
+    }
+
+    .find-button{
+        padding:14px 12px;
+        font-size:12.5px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     ELORA SHARED HEADER
+===================================================== -->
+
+<script src="header.js" defer></script>
+
+
+
+<main class="article-page">
+
+
+    <!-- =================================================
+         ARTICLE HEADER
+    ================================================= -->
+
+    <header class="article-header">
+
+        <span class="article-category">
+            Nature &amp; Outdoors
+        </span>
+
+        <h1>
+            The Healing Power of Ancient Woods
+        </h1>
+
+        <p class="article-subtitle">
+            Immersing your senses in dense pine forests and quiet
+            woodland spaces to reconnect with nature and restore
+            a sense of inner balance.
+        </p>
+
+    </header>
+
+
+
+    <!-- =================================================
+         ARTICLE
+    ================================================= -->
+
+    <article class="article-card">
+
+
+        <blockquote class="featured-quote">
+            “Sometimes the quietest places have the most to say.”
+        </blockquote>
+
+
+
+        <h2>
+            Entering the Forest
+        </h2>
+
+        <p>
+            There is a particular stillness that arrives when you step
+            beneath a canopy of trees. The sounds of traffic disappear,
+            the air feels different, and the pace of the outside world
+            seems to soften.
+        </p>
+
+        <p>
+            Forest bathing, inspired by the Japanese practice of
+            <em>shinrin-yoku</em>, is less about hiking toward a
+            destination and more about experiencing the forest through
+            your senses.
+        </p>
+
+
+
+        <h2>
+            Let Your Senses Lead
+        </h2>
+
+        <p>
+            A forest offers an extraordinary collection of small
+            details. The texture of tree bark, the movement of leaves,
+            the scent of damp earth, and the changing quality of light
+            can all become part of the experience.
+        </p>
+
+        <p>
+            Instead of walking quickly from one point to another,
+            slowing down creates an opportunity to notice these details.
+            A short walk can become a much richer experience when there
+            is no pressure to reach a particular destination.
+        </p>
+
+
+
+        <h2>
+            The Rhythm of Ancient Woods
+        </h2>
+
+        <p>
+            Older forests often have a particularly distinctive
+            atmosphere. Tall trunks, layered vegetation, moss-covered
+            surfaces, and filtered sunlight create an environment that
+            feels removed from the pace of modern life.
+        </p>
+
+        <p>
+            Spending quiet time among trees can encourage a natural
+            shift in attention. Instead of constantly checking screens
+            or thinking about the next task, your focus gradually moves
+            toward what is happening around you.
+        </p>
+
+<!-- =================================================
+             CTA
+        ================================================= -->
+
+        <section class="find-section">
+
+            <h3>
+                Discover More Outdoor Inspiration
+            </h3>
+
+            <p>
+                If you're looking for new ideas for outdoor escapes,
+                nature-focused experiences, and travel inspiration,
+                explore our selected resources.
+            </p>
+
+            <a
+                href="naturefind.html"
+                class="find-button"
+            >
+
+                <span>
+                    Explore Nature &amp; Travel Resources
+                </span>
+
+                <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                >
+
+                    <line
+                        x1="5"
+                        y1="12"
+                        x2="19"
+                        y2="12"
+                    ></line>
+
+                    <polyline
+                        points="12 5 19 12 12 19"
+                    ></polyline>
+
+                </svg>
+
+            </a>
+
+            <p class="cta-note">
+                Explore an independent external resource.
+                Availability and other details may vary by provider.
+            </p>
+
+        </section>
+
+        <h2>
+            A Slower Way to Explore
+        </h2>
+
+        <p>
+            Forest bathing does not require an intense hike or a long
+            expedition. The practice can be as simple as choosing a
+            quiet woodland path and allowing yourself to move slowly.
+        </p>
+
+        <ul class="nature-list">
+
+            <li>
+                Leave your usual pace behind and walk without rushing.
+            </li>
+
+            <li>
+                Notice the sounds of birds, wind, leaves, and distant water.
+            </li>
+
+            <li>
+                Pause occasionally to observe textures, colors, and light.
+            </li>
+
+            <li>
+                Take a few quiet moments without checking your phone.
+            </li>
+
+            <li>
+                Allow the experience to unfold without needing a specific destination.
+            </li>
+
+        </ul>
+
+
+
+        
+
+
+
+        <h2>
+            Finding Stillness in the Trees
+        </h2>
+
+        <p>
+            One of the most valuable parts of spending time in nature
+            is the opportunity to step away from constant stimulation.
+            Without notifications, crowded streets, and endless streams
+            of information, the mind has room to settle into a quieter
+            rhythm.
+        </p>
+
+        <p>
+            This doesn't mean every forest visit needs to become a
+            formal practice. Sometimes simply sitting beneath a tree,
+            watching the branches move, or listening to the surrounding
+            sounds is enough.
+        </p>
+
+
+
+        <div class="reflection-box">
+
+            <h3>
+                The Forest Does Not Ask You to Hurry
+            </h3>
+
+            <p>
+                Trees grow slowly, seasons change gradually, and forests
+                constantly transform without demanding our attention.
+                Spending time among them can be a gentle reminder that
+                not everything needs to happen immediately.
+            </p>
+
+        </div>
+
+
+
+        <h2>
+            Bringing the Experience Home
+        </h2>
+
+        <p>
+            The feeling of a forest does not have to disappear the moment
+            you return home. A slower evening, a walk through a nearby
+            park, a few minutes outdoors, or even keeping natural
+            textures and plants around your living space can help carry
+            some of that atmosphere into everyday life.
+        </p>
+
+        <p>
+            The real value of forest bathing may not be about escaping
+            permanently. It is about remembering how to pause.
+        </p>
+
+
+
+        <h2>
+            A Quiet Return to Nature
+        </h2>
+
+        <p>
+            Ancient woods offer something wonderfully uncomplicated:
+            space to breathe, observe, and move at a more natural pace.
+        </p>
+
+        <p>
+            Whether you spend an entire afternoon beneath the trees or
+            simply take a slow walk through a nearby woodland, the
+            experience can become a small ritual of reconnection.
+        </p>
+
+        <p>
+            Sometimes, <strong>finding a little stillness is enough to
+            change the way we return to the world.</strong>
+        </p>
+
+
+    </article>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     ELORA SHARED FOOTER
+===================================================== -->
+
+<script src="footer.js" defer></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+
+<title>Seasons — Noticing the Shift of Autumn Leaves | Elora Journal</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap');
+
+:root{
+    --bg:#0f142b;
+    --surface:#151b38;
+    --soft:#202951;
+    --text:#d3d7ee;
+    --heading:#ffffff;
+    --muted:#898fae;
+    --accent:#9b7cff;
+    --accent-light:#c9bdff;
+    --accent-dark:#8062e8;
+    --border:rgba(155,124,255,.18);
+    --max:760px;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+    -webkit-text-size-adjust:100%;
+}
+
+body{
+    margin:0;
+    min-width:0;
+    overflow-x:hidden;
+    background:var(--bg);
+    color:var(--text);
+    font-family:"DM Sans",Arial,sans-serif;
+    line-height:1.8;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+
+/* =====================================================
+   ARTICLE PAGE
+===================================================== */
+
+.article-page{
+    width:100%;
+    max-width:var(--max);
+    margin:0 auto;
+    padding:60px 22px 80px;
+}
+
+
+/* =====================================================
+   ARTICLE HEADER
+===================================================== */
+
+.article-header{
+    text-align:center;
+    margin-bottom:38px;
+}
+
+.article-category{
+    display:inline-block;
+    margin-bottom:17px;
+    padding:6px 14px;
+
+    background:rgba(155,124,255,.10);
+    border:1px solid rgba(155,124,255,.22);
+    border-radius:30px;
+
+    color:var(--accent-light);
+
+    font-family:"DM Sans",Arial,sans-serif;
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.article-header h1{
+    margin:0 0 15px;
+
+    color:var(--heading);
+
+    font-family:"Playfair Display",Georgia,serif;
+    font-size:clamp(32px,5vw,46px);
+    font-weight:500;
+    line-height:1.2;
+    letter-spacing:-.5px;
+}
+
+.article-subtitle{
+    max-width:620px;
+    margin:0 auto;
+
+    color:var(--muted);
+
+    font-family:"DM Sans",Arial,sans-serif;
+    font-size:14px;
+    line-height:1.8;
+}
+
+
+/* =====================================================
+   ARTICLE CARD
+===================================================== */
+
+.article-card{
+    background:var(--surface);
+
+    border:1px solid var(--border);
+    border-radius:18px;
+
+    padding:40px;
+
+    box-shadow:0 15px 45px rgba(0,0,0,.18);
+}
+
+
+/* =====================================================
+   FEATURED QUOTE
+===================================================== */
+
+.featured-quote{
+    margin:0 0 32px;
+    padding:23px 25px;
+
+    background:rgba(155,124,255,.07);
+
+    border-left:3px solid var(--accent);
+    border-radius:0 12px 12px 0;
+
+    color:var(--accent-light);
+
+    font-family:"Playfair Display",Georgia,serif;
+    font-size:21px;
+    font-style:italic;
+    line-height:1.6;
+}
+
+
+/* =====================================================
+   ARTICLE CONTENT
+===================================================== */
+
+.article-card h2{
+    margin:32px 0 12px;
+
+    color:var(--heading);
+
+    font-family:"Playfair Display",Georgia,serif;
+    font-size:25px;
+    font-weight:500;
+    line-height:1.4;
+}
+
+.article-card h2:first-of-type{
+    margin-top:0;
+}
+
+.article-card p{
+    margin:0 0 19px;
+
+    color:var(--text);
+
+    font-family:"DM Sans",Arial,sans-serif;
+    font-size:14px;
+    line-height:1.85;
+}
+
+.article-card strong{
+    color:var(--accent-light);
+    font-weight:600;
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.find-section{
+    margin:30px 0 34px;
+    padding:25px 22px;
+
+    background:rgba(155,124,255,.055);
+
+    border:1px solid rgba(155,124,255,.16);
+    border-radius:14px;
+}
+
+.find-section h3{
+    margin:0 0 8px;
+
+    color:var(--heading);
+
+    font-family:"Playfair Display",Georgia,serif;
+    font-size:22px;
+    font-weight:500;
+
+    text-align:center;
+}
+
+.find-section p{
+    max-width:540px;
+    margin:0 auto 18px;
+
+    color:var(--muted);
+
+    font-family:"DM Sans",Arial,sans-serif;
+    font-size:12.5px;
+
+    text-align:center;
+    line-height:1.7;
+}
+
+.find-button{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+
+    width:100%;
+    padding:15px 20px;
+
+    background:var(--accent);
+    color:#fff;
+
+    border-radius:8px;
+
+    font-family:"DM Sans",Arial,sans-serif;
+    font-size:13px;
+    font-weight:600;
+
+    box-shadow:0 5px 16px rgba(155,124,255,.18);
+
+    transition:
+        background .2s ease,
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.find-button:hover{
+    background:var(--accent-dark);
+    transform:translateY(-1px);
+    box-shadow:0 8px 20px rgba(155,124,255,.25);
+}
+
+.find-button svg{
+    transition:transform .2s ease;
+}
+
+.find-button:hover svg{
+    transform:translateX(3px);
+}
+
+.cta-note{
+    margin:10px 0 0 !important;
+
+    color:#737a98 !important;
+
+    font-size:9.5px !important;
+    text-align:center !important;
+}
+
+
+/* =====================================================
+   REFLECTION BOX
+===================================================== */
+
+.reflection-box{
+    margin:30px 0;
+    padding:22px;
+
+    background:var(--soft);
+
+    border:1px solid rgba(155,124,255,.14);
+    border-radius:13px;
+}
+
+.reflection-box h3{
+    margin:0 0 8px;
+
+    color:var(--heading);
+
+    font-family:"Playfair Display",Georgia,serif;
+    font-size:20px;
+    font-weight:500;
+}
+
+.reflection-box p{
+    margin:0;
+
+    color:var(--muted);
+
+    font-family:"DM Sans",Arial,sans-serif;
+    font-size:13px;
+}
+
+
+/* =====================================================
+   SEASON LIST
+===================================================== */
+
+.season-list{
+    margin:24px 0 28px;
+    padding:0;
+    list-style:none;
+}
+
+.season-list li{
+    position:relative;
+
+    margin-bottom:13px;
+    padding-left:25px;
+
+    color:#bfc4da;
+
+    font-family:"DM Sans",Arial,sans-serif;
+    font-size:13.5px;
+    line-height:1.7;
+}
+
+.season-list li::before{
+    content:"";
+
+    position:absolute;
+    left:4px;
+    top:.75em;
+
+    width:7px;
+    height:7px;
+
+    border-radius:50%;
+
+    background:var(--accent);
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:650px){
+
+    .article-page{
+        padding:38px 15px 55px;
+    }
+
+    .article-header{
+        margin-bottom:30px;
+    }
+
+    .article-header h1{
+        font-size:31px;
+    }
+
+    .article-subtitle{
+        font-size:13px;
+    }
+
+    .article-card{
+        padding:25px 20px;
+    }
+
+    .featured-quote{
+        padding:20px;
+        font-size:19px;
+    }
+
+    .article-card h2{
+        font-size:22px;
+    }
+
+    .article-card p{
+        font-size:13.5px;
+    }
+
+    .find-section{
+        padding:22px 17px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media(max-width:420px){
+
+    .article-page{
+        padding:30px 14px 45px;
+    }
+
+    .article-header h1{
+        font-size:28px;
+    }
+
+    .article-card{
+        padding:22px 17px;
+    }
+
+    .featured-quote{
+        font-size:18px;
+        padding:18px;
+    }
+
+    .find-button{
+        padding:14px 12px;
+        font-size:12.5px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     ELORA SHARED HEADER
+===================================================== -->
+
+<script src="header.js" defer></script>
+
+
+
+<main class="article-page">
+
+
+    <!-- =================================================
+         ARTICLE HEADER
+    ================================================= -->
+
+    <header class="article-header">
+
+        <span class="article-category">
+            Nature &amp; Outdoors
+        </span>
+
+        <h1>
+            Noticing the Shift of Autumn Leaves
+        </h1>
+
+        <p class="article-subtitle">
+            Reflecting on cycles of letting go and quiet renewal
+            as green canopies transform into amber and gold.
+        </p>
+
+    </header>
+
+
+
+    <!-- =================================================
+         ARTICLE
+    ================================================= -->
+
+    <article class="article-card">
+
+
+        <blockquote class="featured-quote">
+            “Every season carries a quiet lesson about change.”
+        </blockquote>
+
+
+
+        <h2>
+            When Green Begins to Change
+        </h2>
+
+        <p>
+            Autumn rarely arrives all at once. It begins with subtle
+            changes: a cooler morning, softer afternoon light, and the
+            first hints of gold appearing among familiar green leaves.
+        </p>
+
+        <p>
+            Day by day, the landscape changes almost imperceptibly.
+            What looked permanent during the height of summer begins
+            to reveal itself as part of a much larger cycle.
+        </p>
+
+
+
+        <h2>
+            The Beauty of Letting Go
+        </h2>
+
+        <p>
+            Trees offer a beautiful perspective on release. As the
+            season progresses, leaves gradually loosen their connection
+            to the branches. There is no urgency in the process.
+        </p>
+
+        <p>
+            The forest simply responds to changing light, temperature,
+            and time. What once served the tree during one season is
+            eventually allowed to fall away.
+        </p>
+
+        <p>
+            Watching this process can become a quiet reminder that
+            letting go is not always a loss. Sometimes it is simply
+            part of making room for what comes next.
+        </p>
+
+
+
+        <h2>
+            A Landscape in Transition
+        </h2>
+
+        <p>
+            Autumn transforms familiar places into something almost
+            new. Paths become covered with leaves, sunlight passes
+            through thinner canopies, and colors shift from deep green
+            toward amber, copper, and muted gold.
+        </p>
+
+        <p>
+            Even an ordinary walk can feel different when the landscape
+            is changing around you. The season encourages us to notice
+            details that might otherwise disappear into the background.
+        </p>
+
+ <!-- =================================================
+             CTA
+        ================================================= -->
+
+        <section class="find-section">
+
+            <h3>
+                Discover More Outdoor Inspiration
+            </h3>
+
+            <p>
+                Explore selected nature, outdoor, and travel resources
+                for ideas that can help you discover new places and
+                experiences.
+            </p>
+
+            <a
+                href="naturefind.html"
+                class="find-button"
+            >
+
+                <span>
+                    Explore Nature &amp; Travel Resources
+                </span>
+
+                <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                >
+
+                    <line
+                        x1="5"
+                        y1="12"
+                        x2="19"
+                        y2="12"
+                    ></line>
+
+                    <polyline
+                        points="12 5 19 12 12 19"
+                    ></polyline>
+
+                </svg>
+
+            </a>
+
+            <p class="cta-note">
+                Explore an independent external resource.
+                Availability and other details may vary by provider.
+            </p>
+
+        </section>
+
+
+        <h2>
+            Learning From Seasonal Cycles
+        </h2>
+
+        <p>
+            Nature rarely moves in a straight line. Growth is followed
+            by change, abundance by rest, and stillness by renewal.
+            Each stage has its own purpose.
+        </p>
+
+        <ul class="season-list">
+
+            <li>
+                Notice small changes instead of waiting for dramatic transformation.
+            </li>
+
+            <li>
+                Allow yourself to appreciate things while they are changing.
+            </li>
+
+            <li>
+                Remember that periods of quiet can be part of growth.
+            </li>
+
+            <li>
+                Make space for old routines or expectations to naturally fall away.
+            </li>
+
+            <li>
+                Look for signs of renewal even during quieter seasons.
+            </li>
+
+        </ul>
+
+
+
+       
+
+
+        <h2>
+            Making Room for Renewal
+        </h2>
+
+        <p>
+            The falling leaf is often described as an ending, but the
+            forest does not treat it as the end of the story. Fallen
+            leaves become part of the ground, returning nutrients to the
+            environment and supporting the cycle that follows.
+        </p>
+
+        <p>
+            In the same way, moments of change in our own lives can
+            eventually become the foundation for something different.
+            An ending can create space for a new direction, a new habit,
+            or simply a different way of seeing familiar things.
+        </p>
+
+
+
+        <div class="reflection-box">
+
+            <h3>
+                Change Does Not Have to Be Loud
+            </h3>
+
+            <p>
+                Some of the most meaningful transitions happen quietly.
+                A leaf changes color, releases its hold, and becomes part
+                of the earth again. There is beauty in allowing change
+                to happen without forcing it.
+            </p>
+
+        </div>
+
+
+
+        <h2>
+            Taking an Autumn Walk
+        </h2>
+
+        <p>
+            You do not need a distant forest to notice the season.
+            A neighborhood park, tree-lined street, or nearby garden
+            can offer its own small signs of transition.
+        </p>
+
+        <p>
+            Walk without rushing. Look upward at the canopy. Notice
+            which leaves are changing first. Listen to the sound of
+            leaves beneath your feet and pay attention to how the light
+            feels different from a few weeks earlier.
+        </p>
+
+        <p>
+            These simple observations can turn an ordinary walk into
+            a moment of reflection.
+        </p>
+
+
+
+        <h2>
+            The Quiet Wisdom of Autumn
+        </h2>
+
+        <p>
+            Autumn reminds us that change does not necessarily mean
+            something has gone wrong. Seasons change because change
+            is part of their nature.
+        </p>
+
+        <p>
+            The green canopy becomes amber and gold, the leaves fall,
+            the landscape becomes quieter, and eventually another
+            season begins.
+        </p>
+
+        <p>
+            <strong>Perhaps the quietest lesson of autumn is that
+            letting go and beginning again can belong to the very
+            same cycle.</strong>
+        </p>
+
+
+    </article>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     ELORA SHARED FOOTER
+===================================================== -->
+
+<script src="footer.js" defer></script>
+
+
+</body>
+
+</html>

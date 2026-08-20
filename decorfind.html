@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+>
+
+<meta
+    name="referrer"
+    content="no-referrer"
+>
+
+<title>Home Decor &amp; Living Picks — Elora Journal</title>
+
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap');
+
+
+:root{
+
+    --bg:#0f142b;
+    --surface:#151b38;
+    --soft:#202951;
+
+    --text:#d3d7ee;
+    --heading:#ffffff;
+    --muted:#898fae;
+
+    --accent:#9b7cff;
+    --accent-light:#c9bdff;
+    --accent-dark:#8062e8;
+
+    --border:rgba(155,124,255,.18);
+
+    --max:760px;
+
+}
+
+
+*,
+*::before,
+*::after{
+    box-sizing:border-box;
+}
+
+
+html{
+    scroll-behavior:smooth;
+    -webkit-text-size-adjust:100%;
+}
+
+
+body{
+
+    margin:0;
+    min-width:0;
+    overflow-x:hidden;
+
+    background:var(--bg);
+    color:var(--text);
+
+    font-family:'DM Sans',Arial,sans-serif;
+
+    line-height:1.8;
+
+}
+
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+
+
+/* =====================================================
+   PAGE
+===================================================== */
+
+.page{
+
+    width:100%;
+    max-width:var(--max);
+
+    margin:0 auto;
+
+    padding:58px 22px 75px;
+
+}
+
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.intro{
+
+    text-align:center;
+
+    margin-bottom:34px;
+
+}
+
+
+.eyebrow{
+
+    display:inline-block;
+
+    margin-bottom:16px;
+
+    padding:6px 14px;
+
+    background:rgba(155,124,255,.10);
+
+    border:1px solid rgba(155,124,255,.22);
+
+    border-radius:30px;
+
+    color:var(--accent-light);
+
+    font-size:10px;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+
+.intro h1{
+
+    margin:0 0 15px;
+
+    color:var(--heading);
+
+    font-family:'Playfair Display',Georgia,serif;
+
+    font-size:clamp(30px,5vw,42px);
+
+    font-weight:500;
+
+    line-height:1.25;
+
+    letter-spacing:-.4px;
+
+}
+
+
+.intro p{
+
+    max-width:600px;
+
+    margin:0 auto;
+
+    color:var(--muted);
+
+    font-size:13.5px;
+
+    line-height:1.8;
+
+}
+
+
+
+/* =====================================================
+   OFFER CARD
+===================================================== */
+
+.offer-card{
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    padding:35px;
+
+    box-shadow:
+        0 15px 45px rgba(0,0,0,.18);
+
+}
+
+
+
+/* =====================================================
+   CARD HEADER
+===================================================== */
+
+.card-header{
+
+    text-align:center;
+
+    margin-bottom:28px;
+
+}
+
+
+.card-header h2{
+
+    margin:0 0 10px;
+
+    color:var(--heading);
+
+    font-family:'Playfair Display',Georgia,serif;
+
+    font-size:25px;
+
+    font-weight:500;
+
+    line-height:1.4;
+
+}
+
+
+.card-header p{
+
+    margin:0;
+
+    color:var(--muted);
+
+    font-size:13px;
+
+    line-height:1.8;
+
+}
+
+
+
+/* =====================================================
+   INFORMATION BOX
+===================================================== */
+
+.info-box{
+
+    margin-bottom:24px;
+
+    padding:20px;
+
+    background:var(--soft);
+
+    border:1px solid rgba(155,124,255,.14);
+
+    border-radius:13px;
+
+}
+
+
+.info-title{
+
+    margin:0 0 14px;
+
+    color:var(--heading);
+
+    font-family:'Playfair Display',Georgia,serif;
+
+    font-size:20px;
+
+    font-weight:500;
+
+}
+
+
+.info-item{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:11px;
+
+    margin-bottom:12px;
+
+    color:#bfc4da;
+
+    font-size:12.5px;
+
+    line-height:1.65;
+
+}
+
+
+.info-item:last-child{
+    margin-bottom:0;
+}
+
+
+.info-bullet{
+
+    flex:0 0 auto;
+
+    width:7px;
+
+    height:7px;
+
+    margin-top:8px;
+
+    border-radius:50%;
+
+    background:var(--accent);
+
+}
+
+
+
+/* =====================================================
+   COUNTRY ELIGIBILITY
+===================================================== */
+
+.country-box{
+
+    margin-bottom:24px;
+
+    padding:21px;
+
+    background:rgba(155,124,255,.055);
+
+    border:1px solid rgba(155,124,255,.16);
+
+    border-radius:13px;
+
+    text-align:center;
+
+}
+
+
+.country-label{
+
+    display:block;
+
+    margin-bottom:12px;
+
+    color:var(--muted);
+
+    font-size:10px;
+
+    font-weight:600;
+
+    letter-spacing:1.7px;
+
+    text-transform:uppercase;
+
+}
+
+
+.countries{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:9px;
+
+}
+
+
+.country{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-width:78px;
+
+    padding:8px 13px;
+
+    background:#171e3d;
+
+    border:1px solid rgba(155,124,255,.20);
+
+    border-radius:22px;
+
+    color:var(--accent-light);
+
+    font-size:11.5px;
+
+    font-weight:600;
+
+}
+
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.cta{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    width:100%;
+
+    padding:16px 20px;
+
+    background:var(--accent);
+
+    border-radius:8px;
+
+    color:#ffffff;
+
+    font-size:13.5px;
+
+    font-weight:600;
+
+    box-shadow:
+        0 5px 16px rgba(155,124,255,.18);
+
+    transition:
+        background .2s ease,
+        transform .2s ease,
+        box-shadow .2s ease;
+
+}
+
+
+.cta:hover{
+
+    background:var(--accent-dark);
+
+    transform:translateY(-1px);
+
+    box-shadow:
+        0 8px 20px rgba(155,124,255,.25);
+
+}
+
+
+.cta svg{
+
+    transition:transform .2s ease;
+
+}
+
+
+.cta:hover svg{
+
+    transform:translateX(3px);
+
+}
+
+
+
+/* =====================================================
+   EXTERNAL NOTE
+===================================================== */
+
+.external-note{
+
+    margin:12px 0 0;
+
+    color:#737a98;
+
+    font-size:9.5px;
+
+    line-height:1.6;
+
+    text-align:center;
+
+}
+
+
+
+/* =====================================================
+   DISCLOSURE
+===================================================== */
+
+.disclosure{
+
+    max-width:620px;
+
+    margin:22px auto 0;
+
+    color:#737a98;
+
+    font-size:10px;
+
+    line-height:1.7;
+
+    text-align:center;
+
+}
+
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:650px){
+
+    .page{
+
+        padding:38px 15px 55px;
+
+    }
+
+
+    .intro{
+
+        margin-bottom:28px;
+
+    }
+
+
+    .intro h1{
+
+        font-size:30px;
+
+    }
+
+
+    .intro p{
+
+        font-size:13px;
+
+    }
+
+
+    .offer-card{
+
+        padding:25px 20px;
+
+    }
+
+
+    .card-header h2{
+
+        font-size:22px;
+
+    }
+
+
+    .card-header p{
+
+        font-size:12.5px;
+
+    }
+
+
+    .info-box,
+    .country-box{
+
+        padding:17px;
+
+    }
+
+}
+
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media(max-width:420px){
+
+    .page{
+
+        padding:30px 14px 45px;
+
+    }
+
+
+    .intro h1{
+
+        font-size:28px;
+
+    }
+
+
+    .offer-card{
+
+        padding:22px 17px;
+
+    }
+
+
+    .cta{
+
+        padding:14px 12px;
+
+        font-size:12.5px;
+
+    }
+
+
+    .country{
+
+        min-width:70px;
+
+        padding:7px 10px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SHARED ELORA HEADER
+===================================================== -->
+
+<script src="header.js" defer></script>
+
+
+
+<main class="page">
+
+
+    <!-- =================================================
+         INTRO
+    ================================================= -->
+
+    <section class="intro">
+
+
+        <span class="eyebrow">
+            Home &amp; Decor
+        </span>
+
+
+        <h1>
+            Home Decor &amp; Living Picks
+        </h1>
+
+
+        <p>
+            Explore selected home, interior, organization, and
+            everyday living products through our featured partner.
+        </p>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         STANDALONE OFFER CARD
+    ================================================= -->
+
+    <section class="offer-card">
+
+
+        <div class="card-header">
+
+            <h2>
+                Discover Ideas for Your Space
+            </h2>
+
+
+            <p>
+                Whether you're refreshing one room or looking for
+                simple additions to your everyday space, explore
+                a selection of home and living products available
+                through the partner page.
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             WHAT TO EXPECT
+        ================================================= -->
+
+        <div class="info-box">
+
+
+            <h3 class="info-title">
+                What You Can Explore
+            </h3>
+
+
+            <div class="info-item">
+
+                <span class="info-bullet"></span>
+
+                <span>
+                    Home accessories and decorative pieces for
+                    different interiors and personal styles.
+                </span>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <span class="info-bullet"></span>
+
+                <span>
+                    Everyday products for living spaces,
+                    bedrooms, kitchens, and home organization.
+                </span>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <span class="info-bullet"></span>
+
+                <span>
+                    Product selections and current availability
+                    are shown on the external partner page.
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             COUNTRY AVAILABILITY
+        ================================================= -->
+
+        <div class="country-box">
+
+
+            <span class="country-label">
+                Currently Available In
+            </span>
+
+
+            <div class="countries">
+
+                <span class="country">
+                    🇺🇸 United States
+                </span>
+
+                <span class="country">
+                    🇬🇧 United Kingdom
+                </span>
+
+                <span class="country">
+                    🇦🇺 Australia
+                </span>
+
+                <span class="country">
+                    🇨🇦 Canada
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             CTA
+        ================================================= -->
+
+        <a
+            href="https://linkthem.net/aff_c?offer_id=340&aff_id=2281"
+            class="cta"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <span>
+                Explore Home Decor Picks
+            </span>
+
+
+            <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+            >
+
+                <line
+                    x1="5"
+                    y1="12"
+                    x2="19"
+                    y2="12"
+                ></line>
+
+
+                <polyline
+                    points="12 5 19 12 12 19"
+                ></polyline>
+
+            </svg>
+
+        </a>
+
+
+        <p class="external-note">
+
+            You will continue to an independent third-party
+            shopping page. Product availability, pricing,
+            and terms may change.
+
+        </p>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         DISCLOSURE
+    ================================================= -->
+
+    <p class="disclosure">
+
+        Elora Journal may receive compensation from qualifying
+        purchases made through eligible partner links. Product
+        information, pricing, availability, and terms are provided
+        by the third-party retailer.
+
+    </p>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     SHARED ELORA FOOTER
+===================================================== -->
+
+<script src="footer.js" defer></script>
+
+
+</body>
+
+</html>

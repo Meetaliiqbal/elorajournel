@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<meta name="referrer" content="no-referrer">
+
+<title>Travel &amp; Getaway Guide — Elora Journal</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap');
+
+:root{
+    --bg:#0f142b;
+    --surface:#151b38;
+    --card:#1a2245;
+    --soft:#202951;
+    --text:#d3d7ee;
+    --heading:#ffffff;
+    --muted:#898fae;
+    --accent:#9b7cff;
+    --accent-light:#c9bdff;
+    --accent-dark:#8062e8;
+    --border:rgba(155,124,255,.18);
+    --max:820px;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+    -webkit-text-size-adjust:100%;
+}
+
+body{
+    margin:0;
+    min-width:0;
+    overflow-x:hidden;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'DM Sans',Arial,sans-serif;
+    line-height:1.7;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+
+/* =====================================================
+   PAGE
+===================================================== */
+
+.page{
+    width:100%;
+    max-width:var(--max);
+    margin:0 auto;
+    padding:58px 22px 75px;
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.intro{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.eyebrow{
+    display:inline-block;
+    margin-bottom:16px;
+    padding:6px 14px;
+    background:rgba(155,124,255,.10);
+    border:1px solid rgba(155,124,255,.22);
+    border-radius:30px;
+    color:var(--accent-light);
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.intro h1{
+    margin:0 0 14px;
+    color:var(--heading);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:clamp(32px,5vw,46px);
+    font-weight:500;
+    line-height:1.2;
+    letter-spacing:-.4px;
+}
+
+.intro p{
+    max-width:620px;
+    margin:0 auto;
+    color:var(--muted);
+    font-size:13.5px;
+    line-height:1.8;
+}
+
+
+/* =====================================================
+   MAIN CARD
+===================================================== */
+
+.offer-card{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:36px;
+    box-shadow:0 15px 45px rgba(0,0,0,.18);
+}
+
+.offer-intro{
+    text-align:center;
+    margin-bottom:28px;
+}
+
+.offer-intro h2{
+    margin:0 0 9px;
+    color:var(--heading);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:25px;
+    font-weight:500;
+}
+
+.offer-intro p{
+    max-width:580px;
+    margin:0 auto;
+    color:var(--muted);
+    font-size:13px;
+    line-height:1.75;
+}
+
+
+/* =====================================================
+   DESTINATION INFO
+===================================================== */
+
+.info-box{
+    margin-bottom:24px;
+    padding:20px;
+    background:var(--soft);
+    border:1px solid rgba(155,124,255,.14);
+    border-radius:13px;
+}
+
+.info-box h3{
+    margin:0 0 14px;
+    color:var(--heading);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:20px;
+    font-weight:500;
+}
+
+.info-item{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    margin-bottom:11px;
+    color:#bfc4da;
+    font-size:12.5px;
+    line-height:1.6;
+}
+
+.info-item:last-child{
+    margin-bottom:0;
+}
+
+.info-bullet{
+    flex-shrink:0;
+    color:var(--accent-light);
+    font-size:14px;
+    line-height:1.4;
+}
+
+
+/* =====================================================
+   COUNTRY AVAILABILITY
+===================================================== */
+
+.availability{
+    margin-bottom:25px;
+    padding:20px;
+    background:rgba(155,124,255,.055);
+    border:1px solid var(--border);
+    border-radius:13px;
+}
+
+.availability-title{
+    margin:0 0 14px;
+    color:var(--heading);
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:.5px;
+}
+
+.country-list{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+}
+
+.country{
+    padding:10px 8px;
+    background:rgba(255,255,255,.035);
+    border:1px solid rgba(155,124,255,.12);
+    border-radius:8px;
+    color:var(--accent-light);
+    font-size:11px;
+    font-weight:600;
+    text-align:center;
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.cta-area{
+    margin-top:5px;
+}
+
+.cta{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    width:100%;
+    padding:16px 20px;
+    background:var(--accent);
+    color:#ffffff;
+    border-radius:8px;
+    font-size:13.5px;
+    font-weight:600;
+    box-shadow:0 5px 16px rgba(155,124,255,.18);
+    transition:
+        background .2s ease,
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.cta:hover{
+    background:var(--accent-dark);
+    transform:translateY(-1px);
+    box-shadow:0 8px 22px rgba(155,124,255,.25);
+}
+
+.cta svg{
+    transition:transform .2s ease;
+}
+
+.cta:hover svg{
+    transform:translateX(3px);
+}
+
+.external-note{
+    margin:12px 0 0;
+    color:#737a98;
+    font-size:9.5px;
+    line-height:1.6;
+    text-align:center;
+}
+
+
+/* =====================================================
+   DISCLOSURE
+===================================================== */
+
+.disclosure{
+    max-width:650px;
+    margin:23px auto 0;
+    color:#737a98;
+    font-size:10px;
+    line-height:1.7;
+    text-align:center;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:650px){
+
+    .page{
+        padding:38px 15px 55px;
+    }
+
+    .intro{
+        margin-bottom:28px;
+    }
+
+    .intro h1{
+        font-size:31px;
+    }
+
+    .intro p{
+        font-size:13px;
+    }
+
+    .offer-card{
+        padding:25px 20px;
+    }
+
+    .offer-intro h2{
+        font-size:22px;
+    }
+
+    .country-list{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media(max-width:420px){
+
+    .page{
+        padding:30px 14px 45px;
+    }
+
+    .intro h1{
+        font-size:28px;
+    }
+
+    .offer-card{
+        padding:22px 17px;
+    }
+
+    .country{
+        font-size:10.5px;
+    }
+
+    .cta{
+        padding:14px 12px;
+        font-size:12.5px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- =====================================================
+     SHARED ELORA HEADER
+===================================================== -->
+
+<script src="header.js" defer></script>
+
+<main class="page">
+
+
+<!-- =================================================
+     INTRO
+================================================= -->
+
+<section class="intro">
+
+    <span class="eyebrow">
+        Travel &amp; Exploration
+    </span>
+
+    <h1>
+        Discover Your Next Getaway
+    </h1>
+
+    <p>
+        Explore selected travel opportunities, destination ideas,
+        and getaway resources for planning your next journey.
+    </p>
+
+</section>
+
+
+
+<!-- =================================================
+     OFFER CARD
+================================================= -->
+
+<section class="offer-card">
+
+
+    <div class="offer-intro">
+
+        <h2>
+            Explore Travel Opportunities
+        </h2>
+
+        <p>
+            If you're planning a trip, take a look at the available
+            options through our independent travel partner. Details
+            and availability may vary depending on your location.
+        </p>
+
+    </div>
+
+
+
+    <!-- =================================================
+         INFORMATION
+    ================================================= -->
+
+    <div class="info-box">
+
+        <h3>
+            What You Can Explore
+        </h3>
+
+        <div class="info-item">
+
+            <span class="info-bullet">•</span>
+
+            <span>
+                Travel destinations and getaway opportunities.
+            </span>
+
+        </div>
+
+        <div class="info-item">
+
+            <span class="info-bullet">•</span>
+
+            <span>
+                Options that may be useful when planning a future trip.
+            </span>
+
+        </div>
+
+        <div class="info-item">
+
+            <span class="info-bullet">•</span>
+
+            <span>
+                Additional details are provided on the independent
+                partner page.
+            </span>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         COUNTRY AVAILABILITY
+    ================================================= -->
+
+    <div class="availability">
+
+        <p class="availability-title">
+            Currently available in:
+        </p>
+
+        <div class="country-list">
+
+            <div class="country">
+                United States
+            </div>
+
+            <div class="country">
+                United Kingdom
+            </div>
+
+            <div class="country">
+                Australia
+            </div>
+
+            <div class="country">
+                Canada
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         CPA CTA
+    ================================================= -->
+
+    <div class="cta-area">
+
+        <a
+            href="https://linkthem.net/aff_c?offer_id=4135&aff_id=2281"
+            class="cta"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <span>
+                Explore Travel Options
+            </span>
+
+            <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+            >
+
+                <line
+                    x1="5"
+                    y1="12"
+                    x2="19"
+                    y2="12"
+                ></line>
+
+                <polyline
+                    points="12 5 19 12 12 19"
+                ></polyline>
+
+            </svg>
+
+        </a>
+
+        <p class="external-note">
+            You will continue to an independent external partner
+            page. Availability, eligibility, pricing, and other
+            details are determined by the third-party provider.
+        </p>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =================================================
+     DISCLOSURE
+================================================= -->
+
+<p class="disclosure">
+    Elora Journal provides independent editorial content and
+    may receive compensation from selected partner links.
+    Partner availability and eligibility can vary by location.
+</p>
+
+
+</main>
+
+<!-- =====================================================
+     SHARED ELORA FOOTER
+===================================================== -->
+
+<script src="footer.js" defer></script>
+
+</body>
+
+</html>

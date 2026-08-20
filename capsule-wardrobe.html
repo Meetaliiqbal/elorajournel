@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+>
+
+<meta
+    name="referrer"
+    content="no-referrer"
+>
+
+<title>The Art of Essential Dressing — Elora Journal</title>
+
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap');
+
+
+:root{
+
+    --bg:#0f142b;
+    --surface:#151b38;
+    --soft:#202951;
+
+    --text:#d3d7ee;
+    --heading:#ffffff;
+    --muted:#898fae;
+
+    --accent:#9b7cff;
+    --accent-light:#c9bdff;
+    --accent-dark:#8062e8;
+
+    --border:rgba(155,124,255,.18);
+
+    --max:760px;
+
+}
+
+
+*,
+*::before,
+*::after{
+    box-sizing:border-box;
+}
+
+
+html{
+    scroll-behavior:smooth;
+    -webkit-text-size-adjust:100%;
+}
+
+
+body{
+
+    margin:0;
+    min-width:0;
+    overflow-x:hidden;
+
+    background:var(--bg);
+    color:var(--text);
+
+    font-family:'DM Sans',Arial,sans-serif;
+
+    line-height:1.8;
+
+}
+
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+
+
+/* =====================================================
+   ARTICLE PAGE
+===================================================== */
+
+.article-page{
+
+    width:100%;
+    max-width:var(--max);
+
+    margin:0 auto;
+
+    padding:60px 22px 80px;
+
+}
+
+
+
+/* =====================================================
+   ARTICLE HEADER
+===================================================== */
+
+.article-header{
+
+    text-align:center;
+
+    margin-bottom:38px;
+
+}
+
+
+.article-category{
+
+    display:inline-block;
+
+    margin-bottom:17px;
+
+    padding:6px 14px;
+
+    background:rgba(155,124,255,.10);
+
+    border:1px solid rgba(155,124,255,.22);
+
+    border-radius:30px;
+
+    color:var(--accent-light);
+
+    font-size:10px;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+
+.article-header h1{
+
+    margin:0 0 17px;
+
+    color:var(--heading);
+
+    font-family:'Playfair Display',Georgia,serif;
+
+    font-size:clamp(32px,5vw,46px);
+
+    font-weight:500;
+
+    line-height:1.2;
+
+    letter-spacing:-.5px;
+
+}
+
+
+.article-subtitle{
+
+    max-width:620px;
+
+    margin:0 auto;
+
+    color:var(--muted);
+
+    font-size:14px;
+
+    line-height:1.8;
+
+}
+
+
+
+/* =====================================================
+   ARTICLE CARD
+===================================================== */
+
+.article-card{
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    padding:40px;
+
+    box-shadow:
+        0 15px 45px rgba(0,0,0,.18);
+
+}
+
+
+
+/* =====================================================
+   FEATURED QUOTE
+===================================================== */
+
+.featured-quote{
+
+    margin:0 0 32px;
+
+    padding:23px 25px;
+
+    background:rgba(155,124,255,.07);
+
+    border-left:3px solid var(--accent);
+
+    border-radius:0 12px 12px 0;
+
+    color:var(--accent-light);
+
+    font-family:'Playfair Display',Georgia,serif;
+
+    font-size:21px;
+
+    font-style:italic;
+
+    line-height:1.6;
+
+}
+
+
+
+/* =====================================================
+   ARTICLE CONTENT
+===================================================== */
+
+.article-card h2{
+
+    margin:30px 0 12px;
+
+    color:var(--heading);
+
+    font-family:'Playfair Display',Georgia,serif;
+
+    font-size:25px;
+
+    font-weight:500;
+
+    line-height:1.4;
+
+}
+
+
+.article-card h2:first-of-type{
+    margin-top:0;
+}
+
+
+.article-card p{
+
+    margin:0 0 19px;
+
+    color:var(--text);
+
+    font-size:14px;
+
+    line-height:1.85;
+
+}
+
+
+.article-card strong{
+
+    color:var(--accent-light);
+
+    font-weight:600;
+
+}
+
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.find-section{
+
+    margin:28px 0 32px;
+
+    padding:25px 22px;
+
+    background:rgba(155,124,255,.055);
+
+    border:1px solid rgba(155,124,255,.16);
+
+    border-radius:14px;
+
+}
+
+
+.find-section h3{
+
+    margin:0 0 8px;
+
+    color:var(--heading);
+
+    font-family:'Playfair Display',Georgia,serif;
+
+    font-size:22px;
+
+    font-weight:500;
+
+    text-align:center;
+
+}
+
+
+.find-section p{
+
+    max-width:540px;
+
+    margin:0 auto 18px;
+
+    color:var(--muted);
+
+    font-size:12.5px;
+
+    text-align:center;
+
+    line-height:1.7;
+
+}
+
+
+.find-button{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    width:100%;
+
+    padding:15px 20px;
+
+    background:var(--accent);
+
+    border-radius:8px;
+
+    color:#ffffff;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    box-shadow:
+        0 5px 16px rgba(155,124,255,.18);
+
+    transition:
+        background .2s ease,
+        transform .2s ease,
+        box-shadow .2s ease;
+
+}
+
+
+.find-button:hover{
+
+    background:var(--accent-dark);
+
+    transform:translateY(-1px);
+
+    box-shadow:
+        0 8px 20px rgba(155,124,255,.25);
+
+}
+
+
+.find-button svg{
+
+    transition:transform .2s ease;
+
+}
+
+
+.find-button:hover svg{
+    transform:translateX(3px);
+}
+
+
+.cta-note{
+
+    margin:10px 0 0 !important;
+
+    color:#737a98 !important;
+
+    font-size:9.5px !important;
+
+    text-align:center !important;
+
+}
+
+
+
+/* =====================================================
+   LIST
+===================================================== */
+
+.wardrobe-list{
+
+    margin:24px 0 28px;
+
+    padding:0;
+
+    list-style:none;
+
+}
+
+
+.wardrobe-list li{
+
+    position:relative;
+
+    margin-bottom:13px;
+
+    padding-left:25px;
+
+    color:#bfc4da;
+
+    font-size:13.5px;
+
+    line-height:1.7;
+
+}
+
+
+.wardrobe-list li::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:4px;
+
+    top:.75em;
+
+    width:7px;
+
+    height:7px;
+
+    border-radius:50%;
+
+    background:var(--accent);
+
+}
+
+
+
+/* =====================================================
+   REFLECTION BOX
+===================================================== */
+
+.reflection-box{
+
+    margin:30px 0;
+
+    padding:22px;
+
+    background:var(--soft);
+
+    border:1px solid rgba(155,124,255,.14);
+
+    border-radius:13px;
+
+}
+
+
+.reflection-box h3{
+
+    margin:0 0 8px;
+
+    color:var(--heading);
+
+    font-family:'Playfair Display',Georgia,serif;
+
+    font-size:20px;
+
+    font-weight:500;
+
+}
+
+
+.reflection-box p{
+
+    margin:0;
+
+    color:var(--muted);
+
+    font-size:13px;
+
+}
+
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:650px){
+
+    .article-page{
+
+        padding:38px 15px 55px;
+
+    }
+
+
+    .article-header{
+
+        margin-bottom:30px;
+
+    }
+
+
+    .article-header h1{
+
+        font-size:31px;
+
+    }
+
+
+    .article-subtitle{
+
+        font-size:13px;
+
+    }
+
+
+    .article-card{
+
+        padding:25px 20px;
+
+    }
+
+
+    .featured-quote{
+
+        padding:20px;
+
+        font-size:19px;
+
+    }
+
+
+    .article-card h2{
+
+        font-size:22px;
+
+    }
+
+
+    .article-card p{
+
+        font-size:13.5px;
+
+    }
+
+
+    .find-section{
+
+        padding:22px 17px;
+
+    }
+
+}
+
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media(max-width:420px){
+
+    .article-page{
+
+        padding:30px 14px 45px;
+
+    }
+
+
+    .article-header h1{
+
+        font-size:28px;
+
+    }
+
+
+    .article-card{
+
+        padding:22px 17px;
+
+    }
+
+
+    .featured-quote{
+
+        font-size:18px;
+
+        padding:18px;
+
+    }
+
+
+    .find-button{
+
+        padding:14px 12px;
+
+        font-size:12.5px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SHARED ELORA HEADER
+===================================================== -->
+
+<script src="header.js" defer></script>
+
+
+
+<main class="article-page">
+
+
+    <!-- =================================================
+         ARTICLE HEADER
+    ================================================= -->
+
+    <header class="article-header">
+
+        <span class="article-category">
+            Fashion &amp; Style
+        </span>
+
+
+        <h1>
+            The Art of Essential Dressing
+        </h1>
+
+
+        <p class="article-subtitle">
+            How curating fewer, more versatile pieces can simplify
+            your daily routine while creating a wardrobe that feels
+            effortless and distinctly your own.
+        </p>
+
+    </header>
+
+
+
+    <!-- =================================================
+         ARTICLE
+    ================================================= -->
+
+    <article class="article-card">
+
+
+        <!-- FEATURED QUOTE -->
+
+        <blockquote class="featured-quote">
+
+            “Style becomes easier when every piece has a reason
+            to be there.”
+
+        </blockquote>
+
+
+
+        <!-- =================================================
+             SECTION 1
+        ================================================= -->
+
+        <h2>
+            The Freedom of Fewer Choices
+        </h2>
+
+
+        <p>
+
+            Opening a wardrobe filled with clothes does not always
+            make getting dressed easier. When there are too many
+            possibilities, choosing an outfit can become another
+            decision competing for attention during an already busy day.
+
+        </p>
+
+
+        <p>
+
+            A capsule wardrobe approaches dressing differently.
+            Instead of collecting every trend, it focuses on a
+            smaller selection of pieces that work naturally together.
+            <strong>The result is less visual noise and more clarity
+            when deciding what to wear.</strong>
+
+        </p>
+
+
+
+        
+
+
+
+        <!-- =================================================
+             SECTION 2
+        ================================================= -->
+
+        <h2>
+            Build Around Versatility
+        </h2>
+
+
+        <p>
+
+            The foundation of an effective capsule wardrobe is not
+            a specific number of items. It is versatility. A useful
+            piece should work with several other pieces rather than
+            depend on one particular outfit.
+
+        </p>
+
+
+        <ul class="wardrobe-list">
+
+            <li>
+                Choose a small selection of reliable everyday tops.
+            </li>
+
+            <li>
+                Keep a few bottoms that can be styled in different ways.
+            </li>
+
+            <li>
+                Include versatile layers that work across changing weather
+                and occasions.
+            </li>
+
+            <li>
+                Select shoes that complement multiple outfits rather than
+                serving only one look.
+            </li>
+
+        </ul>
+
+<!-- =================================================
+             CTA
+        ================================================= -->
+
+        <section class="find-section">
+
+
+            <h3>
+                Explore Fashion Finds
+            </h3>
+
+
+            <p>
+
+                Looking to refresh your everyday wardrobe?
+                Explore selected fashion and lifestyle picks
+                through our featured partner page.
+
+            </p>
+
+
+            <a
+                href="fashionfind.html"
+                class="find-button"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <span>
+                    Explore Fashion Picks
+                </span>
+
+
+                <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                >
+
+                    <line
+                        x1="5"
+                        y1="12"
+                        x2="19"
+                        y2="12"
+                    ></line>
+
+
+                    <polyline
+                        points="12 5 19 12 12 19"
+                    ></polyline>
+
+                </svg>
+
+            </a>
+
+
+            <p class="cta-note">
+
+                You will continue to an independent shopping page.
+                Product availability and pricing may change.
+
+            </p>
+
+
+        </section>
+
+        <!-- =================================================
+             SECTION 3
+        ================================================= -->
+
+        <h2>
+            Quality Over Constant Replacement
+        </h2>
+
+
+        <p>
+
+            A smaller wardrobe also encourages a more thoughtful approach
+            to buying. Instead of immediately replacing something because
+            a new trend appears, you can consider whether a new piece
+            genuinely adds something useful to what you already own.
+
+        </p>
+
+
+        <p>
+
+            This does not mean every item has to be expensive. It simply
+            means paying attention to <strong>fit, comfort, construction,
+            and how often you are realistically going to wear it.</strong>
+
+        </p>
+
+
+
+        <!-- =================================================
+             REFLECTION BOX
+        ================================================= -->
+
+        <div class="reflection-box">
+
+
+            <h3>
+                A Simple Wardrobe Check
+            </h3>
+
+
+            <p>
+
+                Pick five pieces from your current wardrobe. If each one
+                can create several different outfits with what you already
+                own, you are moving toward a more versatile wardrobe.
+
+            </p>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             SECTION 4
+        ================================================= -->
+
+        <h2>
+            Make Your Personal Style Visible
+        </h2>
+
+
+        <p>
+
+            A capsule wardrobe should not make everyone dress the same.
+            Its purpose is to create a dependable foundation that leaves
+            room for personality.
+
+        </p>
+
+
+        <p>
+
+            Perhaps your style is defined by relaxed silhouettes, subtle
+            neutrals, structured tailoring, expressive accessories, or
+            a mixture of different influences. The important part is
+            recognizing what you repeatedly enjoy wearing.
+
+        </p>
+
+
+
+        <!-- =================================================
+             SECTION 5
+        ================================================= -->
+
+        <h2>
+            Dressing With Less Friction
+        </h2>
+
+
+        <p>
+
+            The real benefit of essential dressing is not simply having
+            fewer clothes. It is having fewer unnecessary decisions.
+
+        </p>
+
+
+        <p>
+
+            When the pieces in your wardrobe work together, getting
+            dressed becomes less about searching through possibilities
+            and more about choosing between combinations you already know
+            feel good.
+
+        </p>
+
+
+        <p>
+
+            A thoughtfully edited wardrobe can make mornings simpler,
+            shopping more intentional, and personal style easier to
+            recognize. Sometimes, the easiest way to elevate your daily
+            look is to give the pieces you already love more room to shine.
+
+        </p>
+
+
+    </article>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     SHARED ELORA FOOTER
+===================================================== -->
+
+<script src="footer.js" defer></script>
+
+
+</body>
+
+</html>

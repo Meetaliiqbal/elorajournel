@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel & Exploration — Elora Journal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f142b;
+            --container-bg: #151b38;
+            --card-bg: #1a2245;
+            --text-main: #d3d7ee;
+            --text-heading: #ffffff;
+            --accent: #9b7cff;
+            --accent-light: #c9bdff;
+            --border-color: rgba(155, 124, 255, 0.18);
+            --muted: #898fae;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: "Inter", Arial, sans-serif;
+            line-height: 1.7;
+        }
+
+        .page-wrapper {
+            max-width: 1240px;
+            width: 100%;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .page-header h1 {
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: 46px;
+            color: var(--text-heading);
+            font-weight: 600;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        .page-header p {
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-style: italic;
+            color: var(--muted);
+            font-size: 19px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Grid for 18 Travel Article Cards */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .article-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .article-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--accent);
+            box-shadow: 0 15px 35px rgba(155, 124, 255, 0.15);
+        }
+
+        .card-tag {
+            font-family: "Inter", Arial, sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-light);
+            margin-bottom: 12px;
+        }
+
+        .card-title {
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: 24px;
+            color: var(--text-heading);
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 15px;
+        }
+
+        .card-excerpt {
+            font-size: 14px;
+            color: var(--text-main);
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .card-footer-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding-top: 15px;
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .read-more {
+            color: var(--accent-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .read-more:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        /* Responsive Breakpoints */
+        @media(max-width: 1024px) {
+            .articles-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media(max-width: 650px) {
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+            .page-header h1 {
+                font-size: 36px;
+            }
+            .page-wrapper {
+                padding: 0 15px;
+                margin: 25px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-wrapper">
+        <div class="page-header">
+            <h1>Travel & Exploration</h1>
+            <p>Wanderlust tales, hidden retreats, and the transformative art of discovering the world slowly.</p>
+        </div>
+
+        <div class="articles-grid">
+            
+            <!-- Card 1 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Slow Travel</div>
+                    <h3 class="card-title">The Art of Traveling Slowly</h3>
+                    <p class="card-excerpt">Trading rushed itineraries for extended stays in a single village, allowing culture and geography to seep in deeply.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>5 min read</span>
+                    <a href="slow-travel.html" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Hidden Escapes</div>
+                    <h3 class="card-title">Chasing Quiet Mountain Valleys</h3>
+                    <p class="card-excerpt">A reflective journey through mist-shrouded peaks, pine forests, and cabins far away from digital noise.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>4 min read</span>
+                    <a href="hidden-escapes.html" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Coastal Living</div>
+                    <h3 class="card-title">Secret Coves Along the Mediterranean</h3>
+                    <p class="card-excerpt">Discovering untouched pebble beaches, quiet fishing ports, and golden hours spent by the saltwater breeze.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>6 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">City Wander</div>
+                    <h3 class="card-title">Getting Lost in Historic Alleys</h3>
+                    <p class="card-excerpt">Why mapless exploration through ancient European quarters reveals the true soul and architecture of a city.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>4 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Mindful Journeys</div>
+                    <h3 class="card-title">The Solitude of Solo Trips</h3>
+                    <p class="card-excerpt">Embracing the profound independence and self-discovery that comes with navigating foreign lands completely alone.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>5 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Architecture</div>
+                    <h3 class="card-title">Timeless Design in Ancient Cities</h3>
+                    <p class="card-excerpt">Observing how local stonework, courtyards, and centuries-old structures shape the regional identity of travelers' hubs.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>6 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Culinary Trips</div>
+                    <h3 class="card-title">Tasting Traditions Through Local Markets</h3>
+                    <p class="card-excerpt">Exploring morning food stalls, spice merchants, and family recipes passed down through generations.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>4 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Packing Guide</div>
+                    <h3 class="card-title">The Minimalist Wanderer's Suitcase</h3>
+                    <p class="card-excerpt">How to pack a single carry-on bag for a multi-week expedition without sacrificing style or comfort.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>3 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 9 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Desert Horizons</div>
+                    <h3 class="card-title">Silence Under the Starry Sands</h3>
+                    <p class="card-excerpt">Reflections on a night spent in the open desert, surrounded by absolute quiet and vast celestial skies.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>5 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 10 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Island Retreats</div>
+                    <h3 class="card-title">Islands Time Forgot</h3>
+                    <p class="card-excerpt">Stepping away from commercial resorts to find secluded islands where bicycles replace cars and time slows down.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>4 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 11 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Train Journeys</div>
+                    <h3 class="card-title">The Romance of Scenic Railways</h3>
+                    <p class="card-excerpt">Why traveling across countries by train offers a hypnotic, unhurried perspective of changing landscapes.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>5 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 12 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Nordic Escape</div>
+                    <h3 class="card-title">Embracing the Nordic Concept of Friluftsliv</h3>
+                    <p class="card-excerpt">Connecting deeply with nature through open-air life, regardless of weather, across Scandinavian forests and fjords.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>6 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 13 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Journaling</div>
+                    <h3 class="card-title">Capturing Memories on Paper</h3>
+                    <p class="card-excerpt">Tips for keeping a travel journal filled with ticket stubs, watercolor sketches, and unfiltered evening thoughts.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>3 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 14 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Cultural Heritage</div>
+                    <h3 class="card-title">Preserving Ancient Artisan Communities</h3>
+                    <p class="card-excerpt">Meeting local weavers, potters, and craftsmen whose centuries-old techniques keep regional heritage alive.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>5 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 15 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Forest Bathing</div>
+                    <h3 class="card-title">Shinrin-Yoku in Japanese Woodlands</h3>
+                    <p class="card-excerpt">The restorative practice of immersing your senses in the healing atmosphere of ancient bamboo and cedar woods.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>4 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 16 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Rural Charm</div>
+                    <h3 class="card-title">Life in an Italian Countryside Villa</h3>
+                    <p class="card-excerpt">Experiencing the harvest season, rustic kitchen tables, and the gentle pace of agrarian life in Tuscany.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>5 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 17 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Photography</div>
+                    <h3 class="card-title">Capturing Authenticity Through a Lens</h3>
+                    <p class="card-excerpt">Moving away from staged tourist snapshots toward candid, meaningful frames that tell honest travel stories.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>4 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 18 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Reflection</div>
+                    <h3 class="card-title">What Travel Teaches Us About Home</h3>
+                    <p class="card-excerpt">How exploring the wider world eventually grants us a renewed appreciation and tenderness for our own front door.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>5 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Scripts for dynamic Header and Footer -->
+    <script src="header.js" defer></script>
+    <script src="footer.js" defer></script>
+</body>
+</html>

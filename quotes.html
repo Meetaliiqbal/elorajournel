@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes & Reflections — Elora Journal</title>
+    <!-- New Google Fonts: Cormorant Garamond & Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f142b;
+            --container-bg: #151b38;
+            --card-bg: #1a2245;
+            --text-main: #d3d7ee;
+            --text-heading: #ffffff;
+            --accent: #9b7cff;
+            --accent-light: #c9bdff;
+            --border-color: rgba(155, 124, 255, 0.18);
+            --muted: #898fae;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: "Inter", Arial, sans-serif;
+            line-height: 1.7;
+        }
+
+        .page-wrapper {
+            max-width: 1240px;
+            width: 100%;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .page-header h1 {
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: 46px;
+            color: var(--text-heading);
+            font-weight: 600;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        .page-header p {
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-style: italic;
+            color: var(--muted);
+            font-size: 19px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Grid for 18 Article/Quote Cards */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .article-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .article-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--accent);
+            box-shadow: 0 15px 35px rgba(155, 124, 255, 0.15);
+        }
+
+        .card-tag {
+            font-family: "Inter", Arial, sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-light);
+            margin-bottom: 12px;
+        }
+
+        .card-title {
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: 24px;
+            color: var(--text-heading);
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 15px;
+        }
+
+        .card-excerpt {
+            font-size: 14px;
+            color: var(--text-main);
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .card-footer-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding-top: 15px;
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .read-more {
+            color: var(--accent-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .read-more:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        /* Responsive Breakpoints */
+        @media(max-width: 1024px) {
+            .articles-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media(max-width: 650px) {
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+            .page-header h1 {
+                font-size: 36px;
+            }
+            .page-wrapper {
+                padding: 0 15px;
+                margin: 25px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-wrapper">
+        <div class="page-header">
+            <h1>Quotes & Reflections</h1>
+            <p>Timeless words and contemplative thoughts worth noticing along the journey of life.</p>
+        </div>
+
+        <div class="articles-grid">
+            
+            <!-- Card 1 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Wisdom</div>
+                    <h3 class="card-title">The Art of Quiet Observation</h3>
+                    <p class="card-excerpt">"Silence is not empty; it is full of answers." Discover how slowing down your mind helps you perceive beauty in ordinary moments.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>4 min read</span>
+                    <a href="the-art-of-quiet-observation.html" class="read-more">Read Reflection →</a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Solitude</div>
+                    <h3 class="card-title">Finding Strength in Stillness</h3>
+                    <p class="card-excerpt">In a world obsessed with constant noise, true clarity belongs to those who dare to sit in absolute quiet.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>3 min read</span>
+                    <a href="stillness.html" class="read-more">Read Reflection →</a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Perspective</div>
+                    <h3 class="card-title">Reframing Daily Routine</h3>
+                    <p class="card-excerpt">"Change the way you look at things, and the things you look at change." Practical thoughts on turning mundane tasks into rituals.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>5 min read</span>
+                    <a href="#" class="read-more">Read Reflection →</a>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Mindfulness</div>
+                    <h3 class="card-title">The Grace of Imperfection</h3>
+                    <p class="card-excerpt">Embracing flaws as natural brushstrokes on the canvas of human experience rather than mistakes to be erased.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>4 min read</span>
+                    <a href="#" class="read-more">Read Reflection →</a>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Philosophy</div>
+                    <h3 class="card-title">Echoes of Ancient Thinkers</h3>
+                    <p class="card-excerpt">How Stoic principles from centuries ago continue to anchor our chaotic modern digital existence.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>6 min read</span>
+                    <a href="#" class="read-more">Read Reflection →</a>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Creativity</div>
+                    <h3 class="card-title">Nurturing the Inner Spark</h3>
+                    <p class="card-excerpt">Inspiration doesn't strike by accident; it arrives when you clear space in your schedule to let curiosity wander.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>4 min read</span>
+                    <a href="#" class="read-more">Read Reflection →</a>
+                </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Patience</div>
+                    <h3 class="card-title">The Slow Growth of Mastery</h3>
+                    <p class="card-excerpt">Everything worth having requires time, seasonal setbacks, and the quiet resilience to keep going.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>5 min read</span>
+                    <a href="#" class="read-more">Read Reflection →</a>
+                </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Gratitude</div>
+                    <h3 class="card-title">Noticing the Unnoticed</h3>
+                    <p class="card-excerpt">A deep dive into morning light, brewing coffee, and finding extraordinary joy in the simplest daily rhythms.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>3 min read</span>
+                    <a href="#" class="read-more">Read Reflection →</a>
+                </div>
+            </div>
+
+            <!-- Card 9 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Resilience</div>
+                    <h3 class="card-title">Bending Without Breaking</h3>
+                    <p class="card-excerpt">Like bamboo in a storm, true emotional flexibility is about yielding gracefully to life's unpredictable winds.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>4 min read</span>
+                    <a href="#" class="read-more">Read Reflection →</a>
+                </div>
+            </div>
+
+            <!-- Card 10 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Simplicity</div>
+                    <h3 class="card-title">The Luxury of Less</h3>
+                    <p class="card-excerpt">Decluttering physical spaces to unburden the mind and make room for what truly matters in daily life.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>5 min read</span>
+                    <a href="#" class="read-more">Read Reflection →</a>
+                </div>
+            </div>
+
+            <!-- Card 11 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Curiosity</div>
+                    <h3 class="card-title">Asking Better Questions</h3>
+                    <p class="card-excerpt">Intelligence is measured by answers, but wisdom begins with asking the right questions about our purpose.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>4 min read</span>
+                    <a href="#" class="read-more">Read Reflection →</a>
+                </div>
+            </div>
+
+            <!-- Card 12 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Time</div>
+                    <h3 class="card-title">Befriending the Clock</h3>
+                    <p class="card-excerpt">Moving away from the anxiety of productivity culture and toward a harmonious, intentional pacing of hours.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>6 min read</span>
+                    <a href="#" class="read-more">Read Reflection →</a>
+                </div>
+            </div>
+
+            <!-- Card 13 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Empathy</div>
+                    <h3 class="card-title">Listening Beyond Words</h3>
+                    <p class="card-excerpt">Understanding the unspoken emotions of those around us through deep attention and genuine emotional presence.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>3 min read</span>
+                    <a href="#" class="read-more">Read Reflection →</a>
+                </div>
+            </div>
+
+            <!-- Card 14 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Ambition</div>
+                    <h3 class="card-title">Quiet Ambition vs. Noise</h3>
+                    <p class="card-excerpt">Building meaningful dreams in the background without needing constant validation or social applause.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>5 min read</span>
+                    <a href="#" class="read-more">Read Reflection →</a>
+                </div>
+            </div>
+
+            <!-- Card 15 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Nature</div>
+                    <h3 class="card-title">Lessons from the Forest Canopy</h3>
+                    <p class="card-excerpt">Observing how trees support one another underground reveals profound truths about human community.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>4 min read</span>
+                    <a href="#" class="read-more">Read Reflection →</a>
+                </div>
+            </div>
+
+            <!-- Card 16 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Focus</div>
+                    <h3 class="card-title">The Sanctuary of Deep Work</h3>
+                    <p class="card-excerpt">Protecting your attention span from digital distractions as an act of self-preservation and mental clarity.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>6 min read</span>
+                    <a href="#" class="read-more">Read Reflection →</a>
+                </div>
+            </div>
+
+            <!-- Card 17 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Joy</div>
+                    <h3 class="card-title">Micro-Moments of Delight</h3>
+                    <p class="card-excerpt">Collecting small sparks of happiness throughout an ordinary Tuesday to anchor your emotional well-being.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>3 min read</span>
+                    <a href="#" class="read-more">Read Reflection →</a>
+                </div>
+            </div>
+
+            <!-- Card 18 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Legacy</div>
+                    <h3 class="card-title">What We Leave Behind</h3>
+                    <p class="card-excerpt">Reflecting on the intangible imprint of kindness, grace, and inspiration we gift to the people we meet.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>5 min read</span>
+                    <a href="#" class="read-more">Read Reflection →</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Scripts for dynamic Header and Footer -->
+    <script src="header.js" defer></script>
+    <script src="footer.js" defer></script>
+</body>
+</html>

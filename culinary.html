@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culinary & Recipes — Elora Journal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f142b;
+            --container-bg: #151b38;
+            --card-bg: #1a2245;
+            --text-main: #d3d7ee;
+            --text-heading: #ffffff;
+            --accent: #9b7cff;
+            --accent-light: #c9bdff;
+            --border-color: rgba(155, 124, 255, 0.18);
+            --muted: #898fae;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: "Inter", Arial, sans-serif;
+            line-height: 1.7;
+        }
+
+        .page-wrapper {
+            max-width: 1240px;
+            width: 100%;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .page-header h1 {
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: 46px;
+            color: var(--text-heading);
+            font-weight: 600;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        .page-header p {
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-style: italic;
+            color: var(--muted);
+            font-size: 19px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Grid for 18 Culinary Article Cards */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .article-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .article-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--accent);
+            box-shadow: 0 15px 35px rgba(155, 124, 255, 0.15);
+        }
+
+        .card-tag {
+            font-family: "Inter", Arial, sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-light);
+            margin-bottom: 12px;
+        }
+
+        .card-title {
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: 24px;
+            color: var(--text-heading);
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 15px;
+        }
+
+        .card-excerpt {
+            font-size: 14px;
+            color: var(--text-main);
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .card-footer-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding-top: 15px;
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .read-more {
+            color: var(--accent-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .read-more:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        /* Responsive Breakpoints */
+        @media(max-width: 1024px) {
+            .articles-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media(max-width: 650px) {
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+            .page-header h1 {
+                font-size: 36px;
+            }
+            .page-wrapper {
+                padding: 0 15px;
+                margin: 25px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-wrapper">
+        <div class="page-header">
+            <h1>Culinary & Recipes</h1>
+            <p>Thoughtful cooking, seasonal flavors, and the comforting rituals of gathering around the table.</p>
+        </div>
+
+        <div class="articles-grid">
+            
+            <!-- Card 1 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Slow Cooking</div>
+                    <h3 class="card-title">The Art of Slow-Simmered Broths</h3>
+                    <p class="card-excerpt">Discovering how patience, aromatic vegetables, and gentle simmering create deeply restorative, soulful stocks.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>5 min read</span>
+                    <a href="slow-cooking.html" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Baking</div>
+                    <h3 class="card-title">Mastering Rustic Sourdough at Home</h3>
+                    <p class="card-excerpt">A beginner-friendly guide to nurturing your wild starter, folding dough, and achieving the perfect crispy crust.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>6 min read</span>
+                    <a href="baking.html" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Seasonal Produce</div>
+                    <h3 class="card-title">Cooking with the Rhythm of Seasons</h3>
+                    <p class="card-excerpt">Why aligning your kitchen pantry with local harvests elevates flavors and connects you closer to nature.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>4 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Coffee Rituals</div>
+                    <h3 class="card-title">The Morning Pour-Over Meditation</h3>
+                    <p class="card-excerpt">Transforming your daily cup of coffee into an intentional, mindful ritual of aroma, timing, and warmth.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>3 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Herbs & Spices</div>
+                    <h3 class="card-title">Building a Soulful Spice Cabinet</h3>
+                    <p class="card-excerpt">Essential whole spices, toast techniques, and how grinding your own seeds unlocks vibrant kitchen flavors.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>4 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Pasta Craft</div>
+                    <h3 class="card-title">Handmade Pasta Without Special Tools</h3>
+                    <p class="card-excerpt">Simple flour and water techniques to roll out silky ribbons of pappardelle right on your kitchen counter.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>5 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Tea Traditions</div>
+                    <h3 class="card-title">The Quiet Elegance of Loose Leaf Tea</h3>
+                    <p class="card-excerpt">Exploring single-origin leaves, brewing temperatures, and ceramic pots designed for mindful afternoon breaks.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>4 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Dinner Parties</div>
+                    <h3 class="card-title">Hosting an Effortless Evening Supper</h3>
+                    <p class="card-excerpt">Tips for planning a stress-free menu, ambient lighting, and long conversations around a shared family-style table.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>5 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 9 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Fermentation</div>
+                    <h3 class="card-title">The Magic of Quick Pickling & Ferments</h3>
+                    <p class="card-excerpt">Preserving crisp garden vegetables using simple brine methods that add tangy punch to everyday meals.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>5 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 10 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Cast Iron</div>
+                    <h3 class="card-title">Caring for Your Heirloom Cast Iron</h3>
+                    <p class="card-excerpt">Seasoning rituals, cleaning secrets, and why a well-loved iron skillet is the most reliable tool in your kitchen.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>4 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 11 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Plant-Based</div>
+                    <h3 class="card-title">Elevating Simple Root Vegetables</h3>
+                    <p class="card-excerpt">Roasting heirloom carrots, beets, and parsnips with olive oil, flaky sea salt, and fresh garden herbs.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>4 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 12 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Pantry Staples</div>
+                    <h3 class="card-title">The Well-Stocked Minimalist Pantry</h3>
+                    <p class="card-excerpt">Quality olive oil, flaked salts, aged vinegars, and dried grains that ensure you can always cook a delicious meal.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>5 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 13 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Desserts</div>
+                    <h3 class="card-title">Rustic Fruit Galettes</h3>
+                    <p class="card-excerpt">Why free-form pastry tarts filled with seasonal stone fruits or berries trump complicated, perfect layer cakes.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>4 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 14 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Olive Oil</div>
+                    <h3 class="card-title">Tasting Liquid Gold: Extra Virgin Oils</h3>
+                    <p class="card-excerpt">How to select, store, and pair robust or delicate olive oils to finish your favorite warm dishes and salads.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>5 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 15 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Soup Stories</div>
+                    <h3 class="card-title">The Healing Comfort of Simmered Soups</h3>
+                    <p class="card-excerpt">Hearty bean stews, bright citrus broths, and rustic grain soups designed to warm cold winter afternoons.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>4 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 16 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Kitchen Design</div>
+                    <h3 class="card-title">Styling an Aesthetic Open Kitchen</h3>
+                    <p class="card-excerpt">Displaying glazed stoneware, hanging copper pots, and wooden open shelving for a functional, warm workspace.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>5 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 17 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Family Recipes</div>
+                    <h3 class="card-title">Preserving Culinary Traditions</h3>
+                    <p class="card-excerpt">The importance of writing down handwritten family recipes and passing generational flavor stories to loved ones.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>4 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 18 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Mindful Eating</div>
+                    <h3 class="card-title">The Joy of Eating Without Screens</h3>
+                    <p class="card-excerpt">Reconnecting with texture, taste, and the simple pleasure of a meal enjoyed in absolute quiet presence.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>3 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Scripts for dynamic Header and Footer -->
+    <script src="header.js" defer></script>
+    <script src="footer.js" defer></script>
+</body>
+</html>

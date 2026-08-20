@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+
+<title>Slow Cooking — The Art of Slow-Simmered Broths | Elora Journal</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap');
+
+:root{
+    --bg:#0f142b;
+    --surface:#151b38;
+    --soft:#202951;
+    --text:#d3d7ee;
+    --heading:#ffffff;
+    --muted:#898fae;
+    --accent:#9b7cff;
+    --accent-light:#c9bdff;
+    --accent-dark:#8062e8;
+    --border:rgba(155,124,255,.18);
+    --max:760px;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+    -webkit-text-size-adjust:100%;
+}
+
+body{
+    margin:0;
+    min-width:0;
+    overflow-x:hidden;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'DM Sans',Arial,sans-serif;
+    line-height:1.8;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+
+/* =====================================================
+   ARTICLE PAGE
+===================================================== */
+
+.article-page{
+    width:100%;
+    max-width:var(--max);
+    margin:0 auto;
+    padding:60px 22px 80px;
+}
+
+
+/* =====================================================
+   ARTICLE HEADER
+===================================================== */
+
+.article-header{
+    text-align:center;
+    margin-bottom:38px;
+}
+
+.article-category{
+    display:inline-block;
+    margin-bottom:17px;
+    padding:6px 14px;
+    background:rgba(155,124,255,.10);
+    border:1px solid rgba(155,124,255,.22);
+    border-radius:30px;
+    color:var(--accent-light);
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.article-header h1{
+    margin:0 0 15px;
+    color:var(--heading);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:clamp(32px,5vw,46px);
+    font-weight:500;
+    line-height:1.2;
+    letter-spacing:-.5px;
+}
+
+.article-subtitle{
+    max-width:620px;
+    margin:0 auto;
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.8;
+}
+
+
+/* =====================================================
+   ARTICLE CARD
+===================================================== */
+
+.article-card{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:40px;
+    box-shadow:0 15px 45px rgba(0,0,0,.18);
+}
+
+
+/* =====================================================
+   FEATURED QUOTE
+===================================================== */
+
+.featured-quote{
+    margin:0 0 32px;
+    padding:23px 25px;
+    background:rgba(155,124,255,.07);
+    border-left:3px solid var(--accent);
+    border-radius:0 12px 12px 0;
+    color:var(--accent-light);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:21px;
+    font-style:italic;
+    line-height:1.6;
+}
+
+
+/* =====================================================
+   ARTICLE CONTENT
+===================================================== */
+
+.article-card h2{
+    margin:32px 0 12px;
+    color:var(--heading);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:25px;
+    font-weight:500;
+    line-height:1.4;
+}
+
+.article-card h2:first-of-type{
+    margin-top:0;
+}
+
+.article-card p{
+    margin:0 0 19px;
+    color:var(--text);
+    font-size:14px;
+    line-height:1.85;
+}
+
+.article-card strong{
+    color:var(--accent-light);
+    font-weight:600;
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.find-section{
+    margin:30px 0 34px;
+    padding:25px 22px;
+    background:rgba(155,124,255,.055);
+    border:1px solid rgba(155,124,255,.16);
+    border-radius:14px;
+}
+
+.find-section h3{
+    margin:0 0 8px;
+    color:var(--heading);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:22px;
+    font-weight:500;
+    text-align:center;
+}
+
+.find-section p{
+    max-width:540px;
+    margin:0 auto 18px;
+    color:var(--muted);
+    font-size:12.5px;
+    text-align:center;
+    line-height:1.7;
+}
+
+.find-button{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    width:100%;
+    padding:15px 20px;
+    background:var(--accent);
+    border-radius:8px;
+    color:#ffffff;
+    font-size:13px;
+    font-weight:600;
+    box-shadow:0 5px 16px rgba(155,124,255,.18);
+    transition:
+        background .2s ease,
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.find-button:hover{
+    background:var(--accent-dark);
+    transform:translateY(-1px);
+    box-shadow:0 8px 20px rgba(155,124,255,.25);
+}
+
+.find-button svg{
+    transition:transform .2s ease;
+}
+
+.find-button:hover svg{
+    transform:translateX(3px);
+}
+
+.cta-note{
+    margin:10px 0 0 !important;
+    color:#737a98 !important;
+    font-size:9.5px !important;
+    text-align:center !important;
+}
+
+
+/* =====================================================
+   FOOD LIST
+===================================================== */
+
+.food-list{
+    margin:24px 0 28px;
+    padding:0;
+    list-style:none;
+}
+
+.food-list li{
+    position:relative;
+    margin-bottom:13px;
+    padding-left:25px;
+    color:#bfc4da;
+    font-size:13.5px;
+    line-height:1.7;
+}
+
+.food-list li::before{
+    content:"";
+    position:absolute;
+    left:4px;
+    top:.75em;
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:var(--accent);
+}
+
+
+/* =====================================================
+   REFLECTION BOX
+===================================================== */
+
+.reflection-box{
+    margin:30px 0;
+    padding:22px;
+    background:var(--soft);
+    border:1px solid rgba(155,124,255,.14);
+    border-radius:13px;
+}
+
+.reflection-box h3{
+    margin:0 0 8px;
+    color:var(--heading);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:20px;
+    font-weight:500;
+}
+
+.reflection-box p{
+    margin:0;
+    color:var(--muted);
+    font-size:13px;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:650px){
+
+    .article-page{
+        padding:38px 15px 55px;
+    }
+
+    .article-header{
+        margin-bottom:30px;
+    }
+
+    .article-header h1{
+        font-size:31px;
+    }
+
+    .article-subtitle{
+        font-size:13px;
+    }
+
+    .article-card{
+        padding:25px 20px;
+    }
+
+    .featured-quote{
+        padding:20px;
+        font-size:19px;
+    }
+
+    .article-card h2{
+        font-size:22px;
+    }
+
+    .article-card p{
+        font-size:13.5px;
+    }
+
+    .find-section{
+        padding:22px 17px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media(max-width:420px){
+
+    .article-page{
+        padding:30px 14px 45px;
+    }
+
+    .article-header h1{
+        font-size:28px;
+    }
+
+    .article-card{
+        padding:22px 17px;
+    }
+
+    .featured-quote{
+        font-size:18px;
+        padding:18px;
+    }
+
+    .find-button{
+        padding:14px 12px;
+        font-size:12.5px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SHARED ELORA HEADER
+===================================================== -->
+
+<script src="header.js" defer></script>
+
+
+
+<main class="article-page">
+
+
+    <!-- =================================================
+         ARTICLE HEADER
+    ================================================= -->
+
+    <header class="article-header">
+
+        <span class="article-category">
+            Culinary &amp; Recipes
+        </span>
+
+        <h1>
+            The Art of Slow-Simmered Broths
+        </h1>
+
+        <p class="article-subtitle">
+            Discovering how patience, aromatic vegetables, and gentle
+            simmering create deeply comforting and flavorful stocks.
+        </p>
+
+    </header>
+
+
+
+    <!-- =================================================
+         ARTICLE
+    ================================================= -->
+
+    <article class="article-card">
+
+
+        <blockquote class="featured-quote">
+            “Good food does not always need to be rushed. Sometimes,
+            time is the ingredient that brings everything together.”
+        </blockquote>
+
+
+
+        <h2>
+            The Beauty of Patience
+        </h2>
+
+        <p>
+            Modern cooking often focuses on speed. We look for quick
+            preparations, simple shortcuts, and meals that can be
+            finished in minutes. Slow cooking offers a different
+            philosophy.
+        </p>
+
+        <p>
+            A broth develops gradually. As ingredients spend more time
+            together, their individual flavors become softer, deeper,
+            and more connected. What begins as a collection of simple
+            ingredients eventually becomes a warm and harmonious base.
+        </p>
+
+
+
+        <h2>
+            Start With Aromatic Vegetables
+        </h2>
+
+        <p>
+            The foundation of a flavorful broth does not need to be
+            complicated. Onion, carrot, celery, garlic, and fresh herbs
+            can create an aromatic starting point.
+        </p>
+
+        <p>
+            Gently cooking these ingredients before adding liquid allows
+            their natural flavors to develop. The goal is not to
+            overpower the finished broth, but to create a subtle
+            foundation that supports everything added later.
+        </p>
+
+<!-- =================================================
+             CTA
+        ================================================= -->
+
+        <section class="find-section">
+
+            <h3>
+                Discover More Kitchen Ideas
+            </h3>
+
+            <p>
+                Looking for more ways to make everyday cooking and
+                kitchen routines more enjoyable? Explore selected
+                culinary resources through our featured page.
+            </p>
+
+            <a
+                href="culinaryfind.html"
+                class="find-button"
+            >
+
+                <span>
+                    Explore Culinary Resources
+                </span>
+
+                <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                >
+
+                    <line
+                        x1="5"
+                        y1="12"
+                        x2="19"
+                        y2="12"
+                    ></line>
+
+                    <polyline
+                        points="12 5 19 12 12 19"
+                    ></polyline>
+
+                </svg>
+
+            </a>
+
+            <p class="cta-note">
+                Explore an independent partner page. Availability,
+                eligibility, and other details may vary.
+            </p>
+
+        </section>
+
+        <h2>
+            Keep the Simmer Gentle
+        </h2>
+
+        <p>
+            Temperature plays an important role in slow cooking.
+            A gentle simmer allows ingredients to release their flavors
+            gradually without the aggressive movement of a rolling boil.
+        </p>
+
+        <p>
+            Once the liquid reaches a simmer, lowering the heat and
+            allowing the pot to continue slowly can make the process
+            almost effortless.
+        </p>
+
+
+
+        <h2>
+            Time Does the Heavy Lifting
+        </h2>
+
+        <p>
+            The longer cooking process is part of what makes
+            slow-simmered broth so appealing. Instead of constantly
+            adjusting the pot, you can let the ingredients work
+            together gradually.
+        </p>
+
+        <p>
+            Herbs soften, vegetables release their aromas, and the
+            liquid slowly takes on a richer character.
+        </p>
+
+        <p>
+            Sometimes, <strong>the most important ingredient is simply
+            time.</strong>
+        </p>
+
+
+
+        
+
+
+
+        <h2>
+            A Simple Cooking Ritual
+        </h2>
+
+        <p>
+            Slow cooking can also turn meal preparation into a small
+            daily ritual. The quiet sound of a simmering pot, the aroma
+            gradually filling the kitchen, and the anticipation of
+            tasting the finished broth can make cooking feel less like
+            a task and more like a moment of pause.
+        </p>
+
+        <p>
+            You do not need an elaborate recipe. A simple combination
+            of vegetables, herbs, seasonings, and a suitable cooking
+            liquid can become the beginning of soups, sauces, grains,
+            and comforting meals.
+        </p>
+
+
+
+        <h2>
+            Making Broth Part of Everyday Cooking
+        </h2>
+
+        <p>
+            Once prepared, broth can become one of the most versatile
+            ingredients in the kitchen.
+        </p>
+
+        <ul class="food-list">
+
+            <li>
+                Vegetable and noodle soups
+            </li>
+
+            <li>
+                Rice and grain dishes
+            </li>
+
+            <li>
+                Slow-cooked vegetables
+            </li>
+
+            <li>
+                Sauces and gravies
+            </li>
+
+            <li>
+                Bean and lentil dishes
+            </li>
+
+            <li>
+                Simple seasonal soups
+            </li>
+
+        </ul>
+
+
+
+        <div class="reflection-box">
+
+            <h3>
+                Let the Kitchen Slow You Down
+            </h3>
+
+            <p>
+                There is something comforting about preparing food
+                without rushing. A slowly simmering pot creates space
+                to step away from screens, enjoy familiar aromas, and
+                appreciate the simple rhythm of preparing a meal.
+            </p>
+
+        </div>
+
+
+
+        <h2>
+            The Comfort of Cooking Slowly
+        </h2>
+
+        <p>
+            Perhaps the real charm of slow-simmered broth is that it
+            encourages us to reconsider the pace at which we cook.
+        </p>
+
+        <p>
+            There is pleasure in chopping vegetables without rushing,
+            arranging herbs beside the stove, and watching a simple
+            collection of ingredients gradually become something richer.
+        </p>
+
+        <p>
+            In a kitchen filled with quick recipes and instant
+            solutions, slow cooking feels almost timeless. It asks
+            for very little beyond attention and patience.
+        </p>
+
+        <p>
+            And sometimes, that is exactly what makes a meal feel
+            special.
+        </p>
+
+
+    </article>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     SHARED ELORA FOOTER
+===================================================== -->
+
+<script src="footer.js" defer></script>
+
+
+</body>
+
+</html>

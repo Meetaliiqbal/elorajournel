@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature & Outdoors — Elora Journal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f142b;
+            --container-bg: #151b38;
+            --card-bg: #1a2245;
+            --text-main: #d3d7ee;
+            --text-heading: #ffffff;
+            --accent: #9b7cff;
+            --accent-light: #c9bdff;
+            --border-color: rgba(155, 124, 255, 0.18);
+            --muted: #898fae;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: "Inter", Arial, sans-serif;
+            line-height: 1.7;
+        }
+
+        .page-wrapper {
+            max-width: 1240px;
+            width: 100%;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .page-header h1 {
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: 46px;
+            color: var(--text-heading);
+            font-weight: 600;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        .page-header p {
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-style: italic;
+            color: var(--muted);
+            font-size: 19px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Grid for 18 Nature Article Cards */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .article-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .article-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--accent);
+            box-shadow: 0 15px 35px rgba(155, 124, 255, 0.15);
+        }
+
+        .card-tag {
+            font-family: "Inter", Arial, sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-light);
+            margin-bottom: 12px;
+        }
+
+        .card-title {
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: 24px;
+            color: var(--text-heading);
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 15px;
+        }
+
+        .card-excerpt {
+            font-size: 14px;
+            color: var(--text-main);
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .card-footer-info {
+            dir: ltr;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding-top: 15px;
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .read-more {
+            color: var(--accent-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .read-more:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        /* Responsive Breakpoints */
+        @media(max-width: 1024px) {
+            .articles-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media(max-width: 650px) {
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+            .page-header h1 {
+                font-size: 36px;
+            }
+            .page-wrapper {
+                padding: 0 15px;
+                margin: 25px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-wrapper">
+        <div class="page-header">
+            <h1>Nature & Outdoors</h1>
+            <p>Wild landscapes, seasonal rhythms, and the grounding serenity of the natural world.</p>
+        </div>
+
+        <div class="articles-grid">
+            
+            <!-- Card 1 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Forest Bathing</div>
+                    <h3 class="card-title">The Healing Power of Ancient Woods</h3>
+                    <p class="card-excerpt">Immersing your senses in dense pine forests to reduce stress, lower heart rates, and restore inner equilibrium.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>5 min read</span>
+                    <a href="forest-bathing.html" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Seasons</div>
+                    <h3 class="card-title">Noticing the Shift of Autumn Leaves</h3>
+                    <p class="card-excerpt">Reflecting on cycles of letting go and quiet renewal as green canopies transform into amber and gold.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>4 min read</span>
+                    <a href="seasons.html" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Mountain Trails</div>
+                    <h3 class="card-title">Solitude on High Ridge Lines</h3>
+                    <p class="card-excerpt">The quiet triumph of climbing above the tree line and gazing out at vast, untouched alpine horizons.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>6 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Coastal Tides</div>
+                    <h3 class="card-title">Rhythms of the Saltwater Shore</h3>
+                    <p class="card-excerpt">Watching crashing waves and tidal pools as a reminder of the timeless, unstoppable pulse of our planet.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>4 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Botanical Life</div>
+                    <h3 class="card-title">The Hidden Language of Wildflowers</h3>
+                    <p class="card-excerpt">Discovering resilience, adaptation, and delicate beauty in meadows that bloom against all environmental odds.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>5 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Stargazing</div>
+                    <h3 class="card-title">Finding Perspective Under Dark Skies</h3>
+                    <p class="card-excerpt">Escaping light pollution to gaze at the Milky Way and feel the humbling, peaceful scale of the cosmos.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>5 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">River Valleys</div>
+                    <h3 class="card-title">Following the Path of Flowing Waters</h3>
+                    <p class="card-excerpt">How tracking winding rivers through wooded valleys teaches us the art of persistence and smooth adaptation.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>4 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Wildlife</div>
+                    <h3 class="card-title">The Art of Quiet Observation</h3>
+                    <p class="card-excerpt">Sitting still in a meadow long enough to witness birds, deer, and insects living undisturbed in their habitats.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>6 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 9 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Gardening</div>
+                    <h3 class="card-title">Slow Growth in Backyard Earth</h3>
+                    <p class="card-excerpt">The meditative practice of tending soil, planting seeds, and waiting patiently for green shoots to emerge.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>4 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 10 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Rain & Storms</div>
+                    <h3 class="card-title">The Sanctuary of a Rainy Afternoon</h3>
+                    <p class="card-excerpt">Listening to heavy drops falling on leaves and windowpanes—a natural invitation to rest and read indoors.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>3 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 11 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Desert Silence</div>
+                    <h3 class="card-title">Endless Horizons in Arid Lands</h3>
+                    <p class="card-excerpt">Exploring cracked earth, sunlit canyons, and the stark, sculptural beauty of desert flora and stone.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>5 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 12 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Sunrise Rituals</div>
+                    <h3 class="card-title">Welcoming the First Light of Day</h3>
+                    <p class="card-excerpt">Stepping outside at dawn to watch colors shift across the horizon before the rest of the world wakes up.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>4 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 13 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Fungi & Soil</div>
+                    <h3 class="card-title">The Underground Web of the Forest</h3>
+                    <p class="card-excerpt">How mycelial networks connect trees and share nutrients beneath the forest floor in silent cooperation.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>6 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 14 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Stone & Moss</div>
+                    <h3 class="card-title">The Slow Grace of Weathered Rock</h3>
+                    <p class="card-excerpt">Observing velvet moss growing over ancient boulders as a testament to time, patience, and moisture.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>3 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 15 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Golden Hour</div>
+                    <h3 class="card-title">Capturing the Last Light of Evening</h3>
+                    <p class="card-excerpt">The magical amber glow that bathes fields and trees just before sunset, offering a moment of pure pause.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>4 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 16 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Conservation</div>
+                    <h3 class="card-title">Protecting Wild Sanctuary Spaces</h3>
+                    <p class="card-excerpt">Reflections on our responsibility to preserve natural habitats and live in harmony with fragile ecosystems.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>5 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 17 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Winter Frost</div>
+                    <h3 class="card-title">The Stillness of Snowy Landscapes</h3>
+                    <p class="card-excerpt">Embracing the quiet dormancy of winter as fields rest under blankets of crisp, untouched white frost.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>4 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Card 18 -->
+            <div class="article-card">
+                <div>
+                    <div class="card-tag">Grounding</div>
+                    <h3 class="card-title">Reconnecting With the Earth</h3>
+                    <p class="card-excerpt">Simple practices for stepping outside barefoot, breathing deeply, and anchoring your restless spirit in nature.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span>4 min read</span>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Scripts for dynamic Header and Footer -->
+    <script src="header.js" defer></script>
+    <script src="footer.js" defer></script>
+</body>
+</html>

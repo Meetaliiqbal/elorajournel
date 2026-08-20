@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+>
+
+<meta
+    name="referrer"
+    content="no-referrer"
+>
+
+<title>The Art of Quiet Observation — Elora Journal</title>
+
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+
+:root{
+
+    --bg:#0f142b;
+    --surface:#151b38;
+    --soft:#202951;
+
+    --text:#d3d7ee;
+    --heading:#ffffff;
+    --muted:#898fae;
+
+    --accent:#9b7cff;
+    --accent-light:#c9bdff;
+    --accent-dark:#8062e8;
+
+    --border:rgba(155,124,255,.18);
+
+    --max:760px;
+
+}
+
+
+*,
+*::before,
+*::after{
+    box-sizing:border-box;
+}
+
+
+html{
+    scroll-behavior:smooth;
+    -webkit-text-size-adjust:100%;
+}
+
+
+body{
+
+    margin:0;
+
+    min-width:0;
+
+    overflow-x:hidden;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    font-family:'DM Sans',Arial,sans-serif;
+
+    line-height:1.8;
+
+}
+
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+
+
+/* =====================================================
+   ARTICLE PAGE
+===================================================== */
+
+.article-page{
+
+    width:100%;
+
+    max-width:var(--max);
+
+    margin:0 auto;
+
+    padding:60px 22px 80px;
+
+}
+
+
+
+/* =====================================================
+   ARTICLE HEADER
+===================================================== */
+
+.article-header{
+
+    text-align:center;
+
+    margin-bottom:38px;
+
+}
+
+
+.article-category{
+
+    display:inline-block;
+
+    margin-bottom:17px;
+
+    padding:6px 14px;
+
+    background:rgba(155,124,255,.10);
+
+    border:1px solid rgba(155,124,255,.22);
+
+    border-radius:30px;
+
+    color:var(--accent-light);
+
+    font-size:10px;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+
+.article-header h1{
+
+    margin:0 0 17px;
+
+    color:var(--heading);
+
+    font-family:'Playfair Display',Georgia,serif;
+
+    font-size:clamp(32px,5vw,46px);
+
+    font-weight:500;
+
+    line-height:1.2;
+
+    letter-spacing:-.5px;
+
+}
+
+
+.article-subtitle{
+
+    max-width:620px;
+
+    margin:0 auto;
+
+    color:var(--muted);
+
+    font-size:14px;
+
+    line-height:1.8;
+
+}
+
+
+
+/* =====================================================
+   ARTICLE CARD
+===================================================== */
+
+.article-card{
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    padding:40px;
+
+    box-shadow:
+        0 15px 45px rgba(0,0,0,.18);
+
+}
+
+
+
+/* =====================================================
+   FEATURED QUOTE
+===================================================== */
+
+.featured-quote{
+
+    margin:0 0 32px;
+
+    padding:23px 25px;
+
+    background:rgba(155,124,255,.07);
+
+    border-left:3px solid var(--accent);
+
+    border-radius:0 12px 12px 0;
+
+    color:var(--accent-light);
+
+    font-family:'Playfair Display',Georgia,serif;
+
+    font-size:21px;
+
+    font-style:italic;
+
+    line-height:1.6;
+
+}
+
+
+
+/* =====================================================
+   ARTICLE CONTENT
+===================================================== */
+
+.article-card h2{
+
+    margin:30px 0 12px;
+
+    color:var(--heading);
+
+    font-family:'Playfair Display',Georgia,serif;
+
+    font-size:25px;
+
+    font-weight:500;
+
+    line-height:1.4;
+
+}
+
+
+.article-card h2:first-of-type{
+
+    margin-top:0;
+
+}
+
+
+.article-card p{
+
+    margin:0 0 19px;
+
+    color:var(--text);
+
+    font-size:14px;
+
+    line-height:1.85;
+
+}
+
+
+.article-card strong{
+
+    color:var(--accent-light);
+
+    font-weight:600;
+
+}
+
+
+
+/* =====================================================
+   CTA / FEATURED OPPORTUNITY
+===================================================== */
+
+.find-section{
+
+    margin:28px 0 32px;
+
+    padding:25px 22px;
+
+    background:rgba(155,124,255,.055);
+
+    border:1px solid rgba(155,124,255,.16);
+
+    border-radius:14px;
+
+}
+
+
+.find-section h3{
+
+    margin:0 0 8px;
+
+    color:var(--heading);
+
+    font-family:'Playfair Display',Georgia,serif;
+
+    font-size:22px;
+
+    font-weight:500;
+
+    text-align:center;
+
+}
+
+
+.find-section p{
+
+    max-width:540px;
+
+    margin:0 auto 18px;
+
+    color:var(--muted);
+
+    font-size:12.5px;
+
+    text-align:center;
+
+    line-height:1.7;
+
+}
+
+
+.find-button{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    width:100%;
+
+    padding:15px 20px;
+
+    background:var(--accent);
+
+    border-radius:8px;
+
+    color:#ffffff;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    box-shadow:
+        0 5px 16px rgba(155,124,255,.18);
+
+    transition:
+        background .2s ease,
+        transform .2s ease,
+        box-shadow .2s ease;
+
+}
+
+
+.find-button:hover{
+
+    background:var(--accent-dark);
+
+    transform:translateY(-1px);
+
+    box-shadow:
+        0 8px 20px rgba(155,124,255,.25);
+
+}
+
+
+.find-button svg{
+
+    transition:transform .2s ease;
+
+}
+
+
+.find-button:hover svg{
+
+    transform:translateX(3px);
+
+}
+
+
+.cta-note{
+
+    margin:10px 0 0 !important;
+
+    color:#737a98 !important;
+
+    font-size:9.5px !important;
+
+    text-align:center !important;
+
+}
+
+
+
+/* =====================================================
+   OBSERVATION LIST
+===================================================== */
+
+.observation-list{
+
+    margin:24px 0 28px;
+
+    padding:0;
+
+    list-style:none;
+
+}
+
+
+.observation-list li{
+
+    position:relative;
+
+    margin-bottom:13px;
+
+    padding-left:25px;
+
+    color:#bfc4da;
+
+    font-size:13.5px;
+
+    line-height:1.7;
+
+}
+
+
+.observation-list li::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:4px;
+
+    top:.75em;
+
+    width:7px;
+
+    height:7px;
+
+    border-radius:50%;
+
+    background:var(--accent);
+
+}
+
+
+
+/* =====================================================
+   REFLECTION BOX
+===================================================== */
+
+.reflection-box{
+
+    margin:30px 0;
+
+    padding:22px;
+
+    background:var(--soft);
+
+    border:1px solid rgba(155,124,255,.14);
+
+    border-radius:13px;
+
+}
+
+
+.reflection-box h3{
+
+    margin:0 0 8px;
+
+    color:var(--heading);
+
+    font-family:'Playfair Display',Georgia,serif;
+
+    font-size:20px;
+
+    font-weight:500;
+
+}
+
+
+.reflection-box p{
+
+    margin:0;
+
+    color:var(--muted);
+
+    font-size:13px;
+
+}
+
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:650px){
+
+    .article-page{
+
+        padding:38px 15px 55px;
+
+    }
+
+
+    .article-header{
+
+        margin-bottom:30px;
+
+    }
+
+
+    .article-header h1{
+
+        font-size:31px;
+
+    }
+
+
+    .article-subtitle{
+
+        font-size:13px;
+
+    }
+
+
+    .article-card{
+
+        padding:25px 20px;
+
+    }
+
+
+    .featured-quote{
+
+        padding:20px;
+
+        font-size:19px;
+
+    }
+
+
+    .article-card h2{
+
+        font-size:22px;
+
+    }
+
+
+    .article-card p{
+
+        font-size:13.5px;
+
+    }
+
+
+    .find-section{
+
+        padding:22px 17px;
+
+    }
+
+}
+
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media(max-width:420px){
+
+    .article-page{
+
+        padding:30px 14px 45px;
+
+    }
+
+
+    .article-header h1{
+
+        font-size:28px;
+
+    }
+
+
+    .article-card{
+
+        padding:22px 17px;
+
+    }
+
+
+    .featured-quote{
+
+        font-size:18px;
+
+        padding:18px;
+
+    }
+
+
+    .find-button{
+
+        padding:14px 12px;
+
+        font-size:12.5px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SHARED ELORA HEADER
+===================================================== -->
+
+<script src="header.js" defer></script>
+
+
+
+<main class="article-page">
+
+
+    <!-- =================================================
+         ARTICLE HEADER
+    ================================================= -->
+
+    <header class="article-header">
+
+        <span class="article-category">
+            Wisdom
+        </span>
+
+
+        <h1>
+            The Art of Quiet Observation
+        </h1>
+
+
+        <p class="article-subtitle">
+            A gentle reflection on slowing down, noticing what surrounds us,
+            and finding meaning in the ordinary moments that often pass unseen.
+        </p>
+
+    </header>
+
+
+
+    <!-- =================================================
+         ARTICLE
+    ================================================= -->
+
+    <article class="article-card">
+
+
+        <!-- FEATURED QUOTE -->
+
+        <blockquote class="featured-quote">
+
+            “Silence is not empty; it is full of answers.”
+
+        </blockquote>
+
+
+
+        <!-- =================================================
+             SECTION 1
+        ================================================= -->
+
+        <h2>
+            Learning to Notice
+        </h2>
+
+
+        <p>
+
+            Modern life often encourages us to move quickly from one thought
+            to another. We fill quiet spaces with notifications, conversations,
+            plans, and distractions. In the middle of all that movement,
+            something simple can become surprisingly difficult:
+            <strong>being present.</strong>
+
+        </p>
+
+
+        <p>
+
+            Quiet observation offers another way. It does not require a special
+            place or a complicated routine. It begins with something as simple
+            as pausing long enough to notice what is already there.
+
+        </p>
+
+
+
+        
+
+
+
+        <!-- =================================================
+             SECTION 2
+        ================================================= -->
+
+        <h2>
+            Beauty in Ordinary Moments
+        </h2>
+
+
+        <p>
+
+            A morning window can reveal changing patterns of light.
+            The sound of rain can make an ordinary afternoon feel different.
+            A familiar path may look completely new when we walk it
+            without rushing.
+
+        </p>
+
+
+        <p>
+
+            These moments are easy to overlook because they rarely demand
+            our attention. Yet when we slow down, ordinary details can
+            become surprisingly meaningful.
+
+        </p>
+
+
+
+        <!-- OBSERVATION LIST -->
+
+        <ul class="observation-list">
+
+            <li>
+                Notice the small changes in light throughout the day.
+            </li>
+
+            <li>
+                Listen to the sounds around you without immediately
+                reaching for another distraction.
+            </li>
+
+            <li>
+                Give familiar places a few quiet moments of attention.
+            </li>
+
+            <li>
+                Allow thoughts to settle before deciding what they mean.
+            </li>
+
+        </ul>
+
+<!-- =================================================
+             CTA
+        ================================================= -->
+
+        <section class="find-section">
+
+
+            <h3>
+                Explore Featured Opportunities
+            </h3>
+
+
+            <p>
+
+                Looking for something new to explore?
+                Visit our featured opportunities page to review
+                current partner information and available promotions.
+
+            </p>
+
+
+            <a
+                href="quotesfind.html"
+                class="find-button"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <span>
+                    View Featured Opportunity
+                </span>
+
+
+                <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                >
+
+                    <line
+                        x1="5"
+                        y1="12"
+                        x2="19"
+                        y2="12"
+                    ></line>
+
+
+                    <polyline
+                        points="12 5 19 12 12 19"
+                    ></polyline>
+
+                </svg>
+
+            </a>
+
+
+            <p class="cta-note">
+
+                Details, eligibility, availability, and participation
+                requirements may vary by offer and location.
+
+            </p>
+
+
+        </section>
+
+        <!-- =================================================
+             SECTION 3
+        ================================================= -->
+
+        <h2>
+            The Value of Slowing Down
+        </h2>
+
+
+        <p>
+
+            Slowing down does not mean stepping away from everything.
+            It simply means giving yourself enough space to experience
+            something before moving on to the next thing.
+
+        </p>
+
+
+        <p>
+
+            When the mind becomes quieter, details that were previously
+            unnoticed can become easier to appreciate. A conversation,
+            a landscape, a page in a book, or even a few minutes alone
+            can take on a different quality.
+
+        </p>
+
+
+
+        <!-- =================================================
+             REFLECTION BOX
+        ================================================= -->
+
+        <div class="reflection-box">
+
+
+            <h3>
+                A Moment to Reflect
+            </h3>
+
+
+            <p>
+
+                What is one ordinary detail around you right now that you
+                usually overlook? Give yourself a few quiet moments to
+                observe it without trying to change or explain it.
+
+            </p>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             SECTION 4
+        ================================================= -->
+
+        <h2>
+            Carrying the Practice Forward
+        </h2>
+
+
+        <p>
+
+            Quiet observation is less about creating a perfect routine
+            and more about developing a habit of attention. Even a brief
+            pause during an ordinary day can create room for reflection.
+
+        </p>
+
+
+        <p>
+
+            Perhaps the most useful reminder is that not every meaningful
+            moment needs to be dramatic. Sometimes the answer is already
+            present in the quiet details we have simply not stopped to see.
+
+        </p>
+
+
+    </article>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     SHARED ELORA FOOTER
+===================================================== -->
+
+<script src="footer.js" defer></script>
+
+
+</body>
+
+</html>

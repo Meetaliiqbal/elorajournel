@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disclaimer — Elora Journal</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f142b;
+            --container-bg: #151b38;
+            --text-main: #d3d7ee;
+            --text-heading: #ffffff;
+            --accent: #9b7cff;
+            --accent-light: #c9bdff;
+            --border-color: rgba(155, 124, 255, 0.18);
+            --muted: #898fae;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: "DM Sans", Arial, sans-serif;
+            line-height: 1.7;
+        }
+
+        /* Main Content Wrapper */
+        .page-wrapper {
+            max-width: 850px;
+            width: 100%;
+            margin: 40px auto;
+            background: var(--container-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 50px 40px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+        }
+
+        .back-home {
+            display: inline-block;
+            color: var(--accent-light);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 30px;
+            transition: transform 0.2s;
+        }
+        .back-home:hover { transform: translateX(-4px); color: var(--accent); }
+        
+        h1 {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 38px;
+            color: var(--text-heading);
+            font-weight: 400;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+        
+        .last-updated {
+            font-size: 13px;
+            color: var(--muted);
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+        
+        h2 {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 22px;
+            color: var(--accent-light);
+            margin-top: 35px;
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+        
+        p, ul {
+            font-size: 15px;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+        
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
+        
+        .strict-box {
+            background: rgba(255, 107, 107, 0.08);
+            border-left: 3px solid #ff6b6b;
+            padding: 18px;
+            border-radius: 4px;
+            margin: 25px 0;
+            font-size: 14px;
+        }
+
+        @media(max-width: 600px) {
+            .page-wrapper { 
+                padding: 30px 20px; 
+                margin: 20px 15px;
+            }
+            h1 { font-size: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-wrapper">
+        <a href="index.html" class="back-home">← Back to Elora Journal</a>
+        <h1>Disclaimer</h1>
+        <div class="last-updated">Last Updated: August 18, 2026</div>
+
+        <p>The information provided by <strong>Elora Journal</strong> ("we," "our," or "us") on this website is for general informational and inspirational purposes only. All content on the site is provided in good faith; however, we make no representation or warranty of any kind regarding its accuracy, adequacy, or completeness.</p>
+
+        <h2>1. Affiliate & CPA Marketing Disclosure</h2>
+        <p>Elora Journal participates in affiliate marketing programs, Cost-Per-Action (CPA) networks, and third-party advertising monetization. This means that when you read our articles, click on embedded Call-to-Action (CTA) cards, banners, or promotional links, and complete an action on an external destination, we may earn a financial commission or referral reward at no extra cost to you.</p>
+
+        <div class="strict-box">
+            <strong>Compliance Notice:</strong> Traffic generated from social platforms (such as Pinterest) to our articles is directed toward informational content. From there, users may choose to interact with promotional offer cards. We fully comply with standard network guidelines; however, final availability, terms, and fulfillment of any external offer rest entirely with the respective third-party advertiser and network platforms.
+        </div>
+
+        <h2>2. External Links Disclaimer</h2>
+        <p>Our website contains links to external websites or content belonging to third parties. Such external links are not investigated, monitored, or checked for accuracy, reliability, or completeness by us. We do not warrant, endorse, or assume liability for any information offered by third-party sites linked through our platform.</p>
+
+        <h2>3. Professional & Financial Disclaimer</h2>
+        <p>The content published on Elora Journal does not constitute professional financial, legal, or commercial advice. Always perform your own due diligence before engaging with any online offers, programs, or third-party services.</p>
+    </div>
+
+    <!-- Scripts for dynamic Header and Footer -->
+    <script src="header.js" defer></script>
+    <script src="footer.js" defer></script>
+</body>
+</html>

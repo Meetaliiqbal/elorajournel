@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<meta name="referrer" content="no-referrer">
+
+<title>The Art of Traveling Slowly — Elora Journal</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap');
+
+:root{
+    --bg:#0f142b;
+    --surface:#151b38;
+    --soft:#202951;
+    --text:#d3d7ee;
+    --heading:#ffffff;
+    --muted:#898fae;
+    --accent:#9b7cff;
+    --accent-light:#c9bdff;
+    --accent-dark:#8062e8;
+    --border:rgba(155,124,255,.18);
+    --max:760px;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+    -webkit-text-size-adjust:100%;
+}
+
+body{
+    margin:0;
+    min-width:0;
+    overflow-x:hidden;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'DM Sans',Arial,sans-serif;
+    line-height:1.8;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+
+/* =====================================================
+   ARTICLE PAGE
+===================================================== */
+
+.article-page{
+    width:100%;
+    max-width:var(--max);
+    margin:0 auto;
+    padding:60px 22px 80px;
+}
+
+
+/* =====================================================
+   ARTICLE HEADER
+===================================================== */
+
+.article-header{
+    text-align:center;
+    margin-bottom:38px;
+}
+
+.article-category{
+    display:inline-block;
+    margin-bottom:17px;
+    padding:6px 14px;
+    background:rgba(155,124,255,.10);
+    border:1px solid rgba(155,124,255,.22);
+    border-radius:30px;
+    color:var(--accent-light);
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.article-header h1{
+    margin:0 0 17px;
+    color:var(--heading);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:clamp(32px,5vw,46px);
+    font-weight:500;
+    line-height:1.2;
+    letter-spacing:-.5px;
+}
+
+.article-subtitle{
+    max-width:620px;
+    margin:0 auto;
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.8;
+}
+
+
+/* =====================================================
+   ARTICLE CARD
+===================================================== */
+
+.article-card{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:40px;
+    box-shadow:0 15px 45px rgba(0,0,0,.18);
+}
+
+
+/* =====================================================
+   FEATURED QUOTE
+===================================================== */
+
+.featured-quote{
+    margin:0 0 32px;
+    padding:23px 25px;
+    background:rgba(155,124,255,.07);
+    border-left:3px solid var(--accent);
+    border-radius:0 12px 12px 0;
+    color:var(--accent-light);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:21px;
+    font-style:italic;
+    line-height:1.6;
+}
+
+
+/* =====================================================
+   ARTICLE CONTENT
+===================================================== */
+
+.article-card h2{
+    margin:30px 0 12px;
+    color:var(--heading);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:25px;
+    font-weight:500;
+    line-height:1.4;
+}
+
+.article-card h2:first-of-type{
+    margin-top:0;
+}
+
+.article-card p{
+    margin:0 0 19px;
+    color:var(--text);
+    font-size:14px;
+    line-height:1.85;
+}
+
+.article-card strong{
+    color:var(--accent-light);
+    font-weight:600;
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.find-section{
+    margin:28px 0 32px;
+    padding:25px 22px;
+    background:rgba(155,124,255,.055);
+    border:1px solid rgba(155,124,255,.16);
+    border-radius:14px;
+}
+
+.find-section h3{
+    margin:0 0 8px;
+    color:var(--heading);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:22px;
+    font-weight:500;
+    text-align:center;
+}
+
+.find-section p{
+    max-width:540px;
+    margin:0 auto 18px;
+    color:var(--muted);
+    font-size:12.5px;
+    text-align:center;
+    line-height:1.7;
+}
+
+.find-button{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    width:100%;
+    padding:15px 20px;
+    background:var(--accent);
+    border-radius:8px;
+    color:#ffffff;
+    font-size:13px;
+    font-weight:600;
+    box-shadow:0 5px 16px rgba(155,124,255,.18);
+    transition:
+        background .2s ease,
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.find-button:hover{
+    background:var(--accent-dark);
+    transform:translateY(-1px);
+    box-shadow:0 8px 20px rgba(155,124,255,.25);
+}
+
+.find-button svg{
+    transition:transform .2s ease;
+}
+
+.find-button:hover svg{
+    transform:translateX(3px);
+}
+
+.cta-note{
+    margin:10px 0 0 !important;
+    color:#737a98 !important;
+    font-size:9.5px !important;
+    text-align:center !important;
+}
+
+
+/* =====================================================
+   TRAVEL LIST
+===================================================== */
+
+.travel-list{
+    margin:24px 0 28px;
+    padding:0;
+    list-style:none;
+}
+
+.travel-list li{
+    position:relative;
+    margin-bottom:13px;
+    padding-left:25px;
+    color:#bfc4da;
+    font-size:13.5px;
+    line-height:1.7;
+}
+
+.travel-list li::before{
+    content:"";
+    position:absolute;
+    left:4px;
+    top:.75em;
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:var(--accent);
+}
+
+
+/* =====================================================
+   REFLECTION BOX
+===================================================== */
+
+.reflection-box{
+    margin:30px 0;
+    padding:22px;
+    background:var(--soft);
+    border:1px solid rgba(155,124,255,.14);
+    border-radius:13px;
+}
+
+.reflection-box h3{
+    margin:0 0 8px;
+    color:var(--heading);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:20px;
+    font-weight:500;
+}
+
+.reflection-box p{
+    margin:0;
+    color:var(--muted);
+    font-size:13px;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:650px){
+
+    .article-page{
+        padding:38px 15px 55px;
+    }
+
+    .article-header{
+        margin-bottom:30px;
+    }
+
+    .article-header h1{
+        font-size:31px;
+    }
+
+    .article-subtitle{
+        font-size:13px;
+    }
+
+    .article-card{
+        padding:25px 20px;
+    }
+
+    .featured-quote{
+        padding:20px;
+        font-size:19px;
+    }
+
+    .article-card h2{
+        font-size:22px;
+    }
+
+    .article-card p{
+        font-size:13.5px;
+    }
+
+    .find-section{
+        padding:22px 17px;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media(max-width:420px){
+
+    .article-page{
+        padding:30px 14px 45px;
+    }
+
+    .article-header h1{
+        font-size:28px;
+    }
+
+    .article-card{
+        padding:22px 17px;
+    }
+
+    .featured-quote{
+        font-size:18px;
+        padding:18px;
+    }
+
+    .find-button{
+        padding:14px 12px;
+        font-size:12.5px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- =====================================================
+     SHARED ELORA HEADER
+===================================================== -->
+
+<script src="header.js" defer></script>
+
+<main class="article-page">
+
+
+<!-- =================================================
+     ARTICLE HEADER
+================================================= -->
+
+<header class="article-header">
+
+    <span class="article-category">
+        Travel &amp; Exploration
+    </span>
+
+    <h1>
+        The Art of Traveling Slowly
+    </h1>
+
+    <p class="article-subtitle">
+        Trading rushed itineraries for extended stays in a
+        single place, allowing local culture, landscapes, and
+        everyday moments to become part of the journey.
+    </p>
+
+</header>
+
+
+
+<!-- =================================================
+     ARTICLE
+================================================= -->
+
+<article class="article-card">
+
+
+    <blockquote class="featured-quote">
+        “Travel is not only about how far you go, but how deeply
+        you notice where you are.”
+    </blockquote>
+
+
+
+    <h2>
+        Leaving Room for the Journey
+    </h2>
+
+    <p>
+        Modern travel can sometimes become a race between
+        landmarks. A morning train, an afternoon museum, a
+        restaurant reservation, and another destination waiting
+        the next day can leave surprisingly little space to
+        actually experience a place.
+    </p>
+
+    <p>
+        Slow travel begins with a different idea: <strong>stay
+        longer, plan less, and pay closer attention.</strong>
+        Instead of trying to collect as many destinations as
+        possible, the traveler allows one place enough time to
+        reveal itself gradually.
+    </p>
+
+
+
+   
+
+
+    <h2>
+        Stay Long Enough to Notice
+    </h2>
+
+    <p>
+        Spending several days or even a few weeks in one location
+        changes the rhythm of a trip. Familiar streets begin to
+        feel less like scenery and more like part of your temporary
+        daily life.
+    </p>
+
+    <p>
+        You might return to the same café, recognize a local shop
+        owner, discover a quiet walking route, or simply notice
+        how the neighborhood changes from morning to evening.
+        These small observations are often the memories that stay
+        with you longest.
+    </p>
+
+
+ <!-- =================================================
+         CTA
+    ================================================= -->
+
+    <section class="find-section">
+
+        <h3>
+            Explore Travel Options
+        </h3>
+
+        <p>
+            Planning your next getaway? Explore selected travel
+            options and destination resources through our
+            featured partner page.
+        </p>
+
+        <a
+            href="travelfind.html"
+            class="find-button"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <span>
+                Explore Travel Options
+            </span>
+
+            <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+            >
+
+                <line
+                    x1="5"
+                    y1="12"
+                    x2="19"
+                    y2="12"
+                ></line>
+
+                <polyline
+                    points="12 5 19 12 12 19"
+                ></polyline>
+
+            </svg>
+
+        </a>
+
+        <p class="cta-note">
+            You will continue to an independent travel page.
+            Availability, pricing, and terms may change.
+        </p>
+
+    </section>
+
+    <h2>
+        Culture Beyond the Checklist
+    </h2>
+
+    <p>
+        A destination is more than its most photographed sights.
+        Museums and landmarks can provide valuable context, but
+        everyday life often offers another perspective.
+    </p>
+
+    <p>
+        Visiting a local market, walking through residential
+        streets, learning a few phrases, or observing ordinary
+        routines can create a stronger sense of connection.
+        <strong>The objective is not to become a local overnight,
+        but to become more attentive to the place you are visiting.</strong>
+    </p>
+
+
+
+    <ul class="travel-list">
+
+        <li>
+            Choose fewer destinations and give each one more time.
+        </li>
+
+        <li>
+            Leave open periods in your itinerary instead of filling
+            every hour with activities.
+        </li>
+
+        <li>
+            Explore neighborhoods beyond the main tourist areas.
+        </li>
+
+        <li>
+            Allow recommendations and unexpected discoveries to
+            shape part of your journey.
+        </li>
+
+    </ul>
+
+
+
+    <div class="reflection-box">
+
+        <h3>
+            A Different Travel Question
+        </h3>
+
+        <p>
+            Instead of asking “How many places can I see?”, try
+            asking “What would I notice if I stayed here a little
+            longer?” The answer can completely change the pace
+            of a trip.
+        </p>
+
+    </div>
+
+
+
+    <h2>
+        Geography Feels Different at a Slower Pace
+    </h2>
+
+    <p>
+        Slow travel also changes how landscapes are experienced.
+        A long walk, a regional train, a quiet road, or a day spent
+        exploring nearby villages can reveal details that disappear
+        when moving quickly between major attractions.
+    </p>
+
+    <p>
+        The journey itself becomes part of the destination. Weather,
+        terrain, architecture, food, and changing scenery all become
+        more noticeable when there is no pressure to reach the next
+        point immediately.
+    </p>
+
+
+
+    <h2>
+        Travel That Leaves Space for Memory
+    </h2>
+
+    <p>
+        The most meaningful trips are not necessarily the ones with
+        the longest itinerary. Sometimes they are the ones that
+        leave enough empty space for a place to become familiar.
+    </p>
+
+    <p>
+        Slow travel encourages that kind of attention. It replaces
+        constant movement with curiosity and turns ordinary moments
+        into part of the experience.
+    </p>
+
+    <p>
+        There is something quietly rewarding about returning home
+        with fewer checkboxes completed but a much stronger memory
+        of where you actually were.
+    </p>
+
+
+</article>
+
+
+</main>
+
+<!-- =====================================================
+     SHARED ELORA FOOTER
+===================================================== -->
+
+<script src="footer.js" defer></script>
+
+</body>
+
+</html>

@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Curated Finds &amp; Featured Opportunities — Elora Journal</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        :root {
+            --bg-color: #0f142b;
+            --container-bg: #151b38;
+            --card-bg: #1a2245;
+
+            --text-main: #d3d7ee;
+            --text-heading: #ffffff;
+
+            --accent: #9b7cff;
+            --accent-light: #c9bdff;
+
+            --border-color: rgba(155, 124, 255, 0.18);
+
+            --muted: #898fae;
+        }
+
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+
+            font-family: "Inter", Arial, sans-serif;
+
+            line-height: 1.7;
+
+            min-height: 100vh;
+        }
+
+
+        /* =====================================================
+           PAGE WRAPPER
+        ===================================================== */
+
+        .page-wrapper {
+            max-width: 1240px;
+            width: 100%;
+
+            margin: 50px auto;
+
+            padding: 0 20px;
+        }
+
+
+        /* =====================================================
+           PAGE HEADER
+        ===================================================== */
+
+        .page-header {
+            text-align: center;
+
+            margin-bottom: 55px;
+        }
+
+
+        .page-header h1 {
+            font-family: "Cormorant Garamond", Georgia, serif;
+
+            font-size: 48px;
+
+            color: var(--text-heading);
+
+            font-weight: 600;
+
+            line-height: 1.15;
+
+            margin-bottom: 14px;
+
+            letter-spacing: -0.5px;
+        }
+
+
+        .page-header p {
+            font-family: "Cormorant Garamond", Georgia, serif;
+
+            font-style: italic;
+
+            color: var(--muted);
+
+            font-size: 20px;
+
+            max-width: 650px;
+
+            margin: 0 auto;
+
+            line-height: 1.5;
+        }
+
+
+        /* =====================================================
+           OFFERS GRID
+        ===================================================== */
+
+        .offers-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 30px;
+        }
+
+
+        /* =====================================================
+           OFFER CARD
+        ===================================================== */
+
+        .offer-card {
+            background: var(--card-bg);
+
+            border: 1px solid var(--border-color);
+
+            border-radius: 14px;
+
+            padding: 30px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: space-between;
+
+            min-height: 295px;
+
+            box-shadow:
+                0 10px 25px rgba(0, 0, 0, 0.20);
+
+            transition:
+                transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+
+        .offer-card:hover {
+            transform: translateY(-6px);
+
+            border-color: var(--accent);
+
+            box-shadow:
+                0 15px 35px rgba(155, 124, 255, 0.15);
+        }
+
+
+        /* =====================================================
+           CARD TAG
+        ===================================================== */
+
+        .card-tag {
+            font-family: "Inter", Arial, sans-serif;
+
+            font-size: 11px;
+
+            font-weight: 600;
+
+            text-transform: uppercase;
+
+            letter-spacing: 2px;
+
+            color: var(--accent-light);
+
+            margin-bottom: 13px;
+        }
+
+
+        /* =====================================================
+           CARD TITLE
+        ===================================================== */
+
+        .card-title {
+            font-family: "Cormorant Garamond", Georgia, serif;
+
+            font-size: 27px;
+
+            color: var(--text-heading);
+
+            font-weight: 600;
+
+            line-height: 1.25;
+
+            margin-bottom: 13px;
+        }
+
+
+        /* =====================================================
+           CARD DESCRIPTION
+        ===================================================== */
+
+        .card-excerpt {
+            font-size: 14px;
+
+            color: var(--text-main);
+
+            margin-bottom: 22px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           ACTION AREA
+        ===================================================== */
+
+        .cpa-action-slot {
+            border-top: 1px dashed rgba(255, 255, 255, 0.10);
+
+            padding-top: 18px;
+
+            margin-top: auto;
+        }
+
+
+        /* =====================================================
+           OFFER BUTTON
+        ===================================================== */
+
+        .btn-offer-card {
+            display: block;
+
+            width: 100%;
+
+            text-align: center;
+
+            background: rgba(155, 124, 255, 0.10);
+
+            border: 1px solid var(--accent);
+
+            color: var(--accent-light);
+
+            padding: 11px 16px;
+
+            border-radius: 7px;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            text-decoration: none;
+
+            transition:
+                background 0.25s ease,
+                color 0.25s ease,
+                transform 0.25s ease;
+        }
+
+
+        .btn-offer-card:hover {
+            background: var(--accent);
+
+            color: #ffffff;
+
+            transform: translateY(-1px);
+        }
+
+
+        /* =====================================================
+           TABLET
+        ===================================================== */
+
+        @media (max-width: 1024px) {
+
+            .offers-grid {
+                grid-template-columns: repeat(2, 1fr);
+
+                gap: 25px;
+            }
+
+
+            .page-header h1 {
+                font-size: 44px;
+            }
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 650px) {
+
+            .page-wrapper {
+                padding: 0 15px;
+
+                margin: 35px auto;
+            }
+
+
+            .page-header {
+                margin-bottom: 38px;
+            }
+
+
+            .page-header h1 {
+                font-size: 37px;
+
+                line-height: 1.15;
+            }
+
+
+            .page-header p {
+                font-size: 18px;
+
+                max-width: 500px;
+            }
+
+
+            .offers-grid {
+                grid-template-columns: 1fr;
+
+                gap: 20px;
+            }
+
+
+            .offer-card {
+                padding: 26px;
+
+                min-height: 0;
+            }
+
+
+            .card-title {
+                font-size: 25px;
+            }
+
+
+            .card-excerpt {
+                font-size: 14px;
+            }
+        }
+
+
+        /* =====================================================
+           SMALL MOBILE
+        ===================================================== */
+
+        @media (max-width: 420px) {
+
+            .page-wrapper {
+                padding: 0 13px;
+
+                margin-top: 30px;
+            }
+
+
+            .page-header h1 {
+                font-size: 33px;
+            }
+
+
+            .page-header p {
+                font-size: 17px;
+            }
+
+
+            .offer-card {
+                padding: 23px;
+            }
+
+
+            .card-title {
+                font-size: 24px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ===================================================== -->
+
+    <main class="page-wrapper">
+
+
+        <!-- PAGE INTRO -->
+
+        <header class="page-header">
+
+            <h1>
+                Curated Finds &amp; Featured Opportunities
+            </h1>
+
+            <p>
+                Explore selected recommendations and featured opportunities
+                across the six journals of Elora.
+            </p>
+
+        </header>
+
+
+        <!-- =================================================
+             OFFERS GRID
+        ================================================= -->
+
+        <section
+            class="offers-grid"
+            aria-label="Featured opportunities"
+        >
+
+
+            <!-- =================================================
+                 FASHION
+            ================================================= -->
+
+            <article class="offer-card">
+
+                <div>
+
+                    <div class="card-tag">
+                        Fashion &amp; Style
+                    </div>
+
+                    <h2 class="card-title">
+                        Style Finds &amp; Wardrobe Inspiration
+                    </h2>
+
+                    <p class="card-excerpt">
+                        Explore seasonal style ideas, clothing picks,
+                        and fashion-focused discoveries gathered for
+                        readers who enjoy refreshing their everyday wardrobe.
+                    </p>
+
+                </div>
+
+
+                <div class="cpa-action-slot">
+
+                    <a
+                        href="fashionfind.html"
+                        class="btn-offer-card"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Explore Fashion Find →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 HOME & DECOR
+            ================================================= -->
+
+            <article class="offer-card">
+
+                <div>
+
+                    <div class="card-tag">
+                        Home &amp; Decor
+                    </div>
+
+                    <h2 class="card-title">
+                        Home Inspiration &amp; Decor Finds
+                    </h2>
+
+                    <p class="card-excerpt">
+                        Discover inspiring home ideas, decorative touches,
+                        and thoughtfully selected finds for creating a space
+                        that feels comfortable and personal.
+                    </p>
+
+                </div>
+
+
+                <div class="cpa-action-slot">
+
+                    <a
+                        href="decorfind.html"
+                        class="btn-offer-card"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Explore Home Find →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 TRAVEL
+            ================================================= -->
+
+            <article class="offer-card">
+
+                <div>
+
+                    <div class="card-tag">
+                        Travel &amp; Exploration
+                    </div>
+
+                    <h2 class="card-title">
+                        Travel Ideas &amp; Getaway Finds
+                    </h2>
+
+                    <p class="card-excerpt">
+                        Explore destination inspiration, travel ideas,
+                        and selected opportunities for readers planning
+                        their next escape or weekend adventure.
+                    </p>
+
+                </div>
+
+
+                <div class="cpa-action-slot">
+
+                    <a
+                        href="travelfind.html"
+                        class="btn-offer-card"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Explore Travel Find →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 NATURE
+            ================================================= -->
+
+            <article class="offer-card">
+
+                <div>
+
+                    <div class="card-tag">
+                        Nature &amp; Outdoors
+                    </div>
+
+                    <h2 class="card-title">
+                        Nature Inspiration &amp; Outdoor Finds
+                    </h2>
+
+                    <p class="card-excerpt">
+                        Discover outdoor inspiration, nature-focused ideas,
+                        and selected finds for readers who enjoy exploring
+                        and spending time outdoors.
+                    </p>
+
+                </div>
+
+
+                <div class="cpa-action-slot">
+
+                    <a
+                        href="naturefind.html"
+                        class="btn-offer-card"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Explore Nature Find →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 FOOD
+            ================================================= -->
+
+            <article class="offer-card">
+
+                <div>
+
+                    <div class="card-tag">
+                        Culinary &amp; Recipes
+                    </div>
+
+                    <h2 class="card-title">
+                        Food Inspiration &amp; Kitchen Finds
+                    </h2>
+
+                    <p class="card-excerpt">
+                        Explore recipe inspiration, kitchen ideas,
+                        and selected culinary finds for anyone who enjoys
+                        discovering new flavors and everyday food ideas.
+                    </p>
+
+                </div>
+
+
+                <div class="cpa-action-slot">
+
+                    <a
+                        href="culinaryfind.html"
+                        class="btn-offer-card"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Explore Food Find →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 QUOTES
+            ================================================= -->
+
+            <article class="offer-card">
+
+                <div>
+
+                    <div class="card-tag">
+                        Quotes &amp; Reflection
+                    </div>
+
+                    <h2 class="card-title">
+                        Daily Inspiration &amp; Thoughtful Finds
+                    </h2>
+
+                    <p class="card-excerpt">
+                        Discover inspiring ideas, reflective content,
+                        and selected resources for readers who enjoy
+                        meaningful words and everyday moments of inspiration.
+                    </p>
+
+                </div>
+
+
+                <div class="cpa-action-slot">
+
+                    <a
+                        href="quotesfind.html"
+                        class="btn-offer-card"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Explore Inspiration →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         DYNAMIC HEADER & FOOTER
+    ===================================================== -->
+
+    <script src="header.js" defer></script>
+    <script src="footer.js" defer></script>
+
+
+</body>
+
+</html>

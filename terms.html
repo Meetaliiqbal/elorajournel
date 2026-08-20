@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service — Elora Journal</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f142b;
+            --container-bg: #151b38;
+            --text-main: #d3d7ee;
+            --text-heading: #ffffff;
+            --accent: #9b7cff;
+            --accent-light: #c9bdff;
+            --border-color: rgba(155, 124, 255, 0.18);
+            --muted: #898fae;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: "DM Sans", Arial, sans-serif;
+            line-height: 1.7;
+        }
+
+        .page-wrapper {
+            max-width: 850px;
+            width: 100%;
+            margin: 40px auto;
+            background: var(--container-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 50px 40px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+        }
+
+        .back-home {
+            display: inline-block;
+            color: var(--accent-light);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 30px;
+            transition: transform 0.2s;
+        }
+        .back-home:hover { transform: translateX(-4px); color: var(--accent); }
+        
+        h1 {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 38px;
+            color: var(--text-heading);
+            font-weight: 400;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+        
+        .last-updated {
+            font-size: 13px;
+            color: var(--muted);
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+        
+        h2 {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 22px;
+            color: var(--accent-light);
+            margin-top: 35px;
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+        
+        p, ul {
+            font-size: 15px;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+        
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
+
+        @media(max-width: 600px) {
+            .page-wrapper { 
+                padding: 30px 20px; 
+                margin: 20px 15px;
+            }
+            h1 { font-size: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-wrapper">
+        <a href="index.html" class="back-home">← Back to Elora Journal</a>
+        <h1>Terms of Service</h1>
+        <div class="last-updated">Last Updated: August 18, 2026</div>
+
+        <p>Welcome to <strong>Elora Journal</strong>. By accessing or using our website, you agree to comply with and be bound by the following terms and conditions. Please read them carefully before exploring our content or interacting with any offers.</p>
+
+        <h2>1. Acceptance of Terms</h2>
+        <p>By using Elora Journal, you acknowledge that you have read, understood, and agreed to be bound by these Terms of Service, along with our Privacy Policy and Disclaimer. If you do not agree with any part of these terms, you must discontinue use of our website immediately.</p>
+
+        <h2>2. Intellectual Property Rights</h2>
+        <p>All content published on this website—including articles, typography, layout designs, imagery, and branding elements—is the property of Elora Journal and is protected by copyright laws. You may not reproduce, distribute, or republish any content without prior written permission.</p>
+
+        <h2>3. User Conduct</h2>
+        <p>You agree to use our website only for lawful purposes. You must not attempt to compromise the security of the site, interfere with its functionality, or scrape/harvest data without authorization.</p>
+
+        <h2>4. Changes to Terms</h2>
+        <p>We reserve the right to modify or replace these Terms of Service at any time. Any changes will be posted on this page with an updated revision date.</p>
+    </div>
+
+    <!-- Scripts for dynamic Header and Footer -->
+    <script src="header.js" defer></script>
+    <script src="footer.js" defer></script>
+</body>
+</html>

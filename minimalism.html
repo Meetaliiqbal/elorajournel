@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+>
+
+<meta
+    name="referrer"
+    content="no-referrer"
+>
+
+<title>Designing a Sanctuary of Calm — Elora Journal</title>
+
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+
+:root{
+
+    --bg:#0f142b;
+    --surface:#151b38;
+    --soft:#202951;
+
+    --text:#d3d7ee;
+    --heading:#ffffff;
+    --muted:#898fae;
+
+    --accent:#9b7cff;
+    --accent-light:#c9bdff;
+    --accent-dark:#8062e8;
+
+    --border:rgba(155,124,255,.18);
+
+    --max:760px;
+
+}
+
+
+*,
+*::before,
+*::after{
+    box-sizing:border-box;
+}
+
+
+html{
+    scroll-behavior:smooth;
+    -webkit-text-size-adjust:100%;
+}
+
+
+body{
+
+    margin:0;
+    min-width:0;
+    overflow-x:hidden;
+
+    background:var(--bg);
+    color:var(--text);
+
+    font-family:'DM Sans',Arial,sans-serif;
+
+    line-height:1.8;
+
+}
+
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+
+
+/* =====================================================
+   ARTICLE PAGE
+===================================================== */
+
+.article-page{
+
+    width:100%;
+    max-width:var(--max);
+
+    margin:0 auto;
+
+    padding:60px 22px 80px;
+
+}
+
+
+
+/* =====================================================
+   ARTICLE HEADER
+===================================================== */
+
+.article-header{
+
+    text-align:center;
+    margin-bottom:38px;
+
+}
+
+
+.article-category{
+
+    display:inline-block;
+
+    margin-bottom:17px;
+
+    padding:6px 14px;
+
+    background:rgba(155,124,255,.10);
+
+    border:1px solid rgba(155,124,255,.22);
+
+    border-radius:30px;
+
+    color:var(--accent-light);
+
+    font-size:10px;
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+
+.article-header h1{
+
+    margin:0 0 17px;
+
+    color:var(--heading);
+
+    font-family:'Playfair Display',Georgia,serif;
+
+    font-size:clamp(32px,5vw,46px);
+
+    font-weight:500;
+
+    line-height:1.2;
+
+    letter-spacing:-.5px;
+
+}
+
+
+.article-subtitle{
+
+    max-width:620px;
+
+    margin:0 auto;
+
+    color:var(--muted);
+
+    font-size:14px;
+
+    line-height:1.8;
+
+}
+
+
+
+/* =====================================================
+   ARTICLE CARD
+===================================================== */
+
+.article-card{
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    padding:40px;
+
+    box-shadow:
+        0 15px 45px rgba(0,0,0,.18);
+
+}
+
+
+
+/* =====================================================
+   FEATURED QUOTE
+===================================================== */
+
+.featured-quote{
+
+    margin:0 0 32px;
+
+    padding:23px 25px;
+
+    background:rgba(155,124,255,.07);
+
+    border-left:3px solid var(--accent);
+
+    border-radius:0 12px 12px 0;
+
+    color:var(--accent-light);
+
+    font-family:'Playfair Display',Georgia,serif;
+
+    font-size:21px;
+
+    font-style:italic;
+
+    line-height:1.6;
+
+}
+
+
+
+/* =====================================================
+   ARTICLE CONTENT
+===================================================== */
+
+.article-card h2{
+
+    margin:30px 0 12px;
+
+    color:var(--heading);
+
+    font-family:'Playfair Display',Georgia,serif;
+
+    font-size:25px;
+
+    font-weight:500;
+
+    line-height:1.4;
+
+}
+
+
+.article-card h2:first-of-type{
+    margin-top:0;
+}
+
+
+.article-card p{
+
+    margin:0 0 19px;
+
+    color:var(--text);
+
+    font-size:14px;
+
+    line-height:1.85;
+
+}
+
+
+.article-card strong{
+
+    color:var(--accent-light);
+
+    font-weight:600;
+
+}
+
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.find-section{
+
+    margin:28px 0 32px;
+
+    padding:25px 22px;
+
+    background:rgba(155,124,255,.055);
+
+    border:1px solid rgba(155,124,255,.16);
+
+    border-radius:14px;
+
+}
+
+
+.find-section h3{
+
+    margin:0 0 8px;
+
+    color:var(--heading);
+
+    font-family:'Playfair Display',Georgia,serif;
+
+    font-size:22px;
+
+    font-weight:500;
+
+    text-align:center;
+
+}
+
+
+.find-section p{
+
+    max-width:540px;
+
+    margin:0 auto 18px;
+
+    color:var(--muted);
+
+    font-size:12.5px;
+
+    text-align:center;
+
+    line-height:1.7;
+
+}
+
+
+.find-button{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    width:100%;
+
+    padding:15px 20px;
+
+    background:var(--accent);
+
+    border-radius:8px;
+
+    color:#ffffff;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    box-shadow:
+        0 5px 16px rgba(155,124,255,.18);
+
+    transition:
+        background .2s ease,
+        transform .2s ease,
+        box-shadow .2s ease;
+
+}
+
+
+.find-button:hover{
+
+    background:var(--accent-dark);
+
+    transform:translateY(-1px);
+
+    box-shadow:
+        0 8px 20px rgba(155,124,255,.25);
+
+}
+
+
+.find-button svg{
+
+    transition:transform .2s ease;
+
+}
+
+
+.find-button:hover svg{
+    transform:translateX(3px);
+}
+
+
+.cta-note{
+
+    margin:10px 0 0 !important;
+
+    color:#737a98 !important;
+
+    font-size:9.5px !important;
+
+    text-align:center !important;
+
+}
+
+
+
+/* =====================================================
+   LIST
+===================================================== */
+
+.design-list{
+
+    margin:24px 0 28px;
+
+    padding:0;
+
+    list-style:none;
+
+}
+
+
+.design-list li{
+
+    position:relative;
+
+    margin-bottom:13px;
+
+    padding-left:25px;
+
+    color:#bfc4da;
+
+    font-size:13.5px;
+
+    line-height:1.7;
+
+}
+
+
+.design-list li::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:4px;
+
+    top:.75em;
+
+    width:7px;
+
+    height:7px;
+
+    border-radius:50%;
+
+    background:var(--accent);
+
+}
+
+
+
+/* =====================================================
+   REFLECTION BOX
+===================================================== */
+
+.reflection-box{
+
+    margin:30px 0;
+
+    padding:22px;
+
+    background:var(--soft);
+
+    border:1px solid rgba(155,124,255,.14);
+
+    border-radius:13px;
+
+}
+
+
+.reflection-box h3{
+
+    margin:0 0 8px;
+
+    color:var(--heading);
+
+    font-family:'Playfair Display',Georgia,serif;
+
+    font-size:20px;
+
+    font-weight:500;
+
+}
+
+
+.reflection-box p{
+
+    margin:0;
+
+    color:var(--muted);
+
+    font-size:13px;
+
+}
+
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:650px){
+
+    .article-page{
+
+        padding:38px 15px 55px;
+
+    }
+
+
+    .article-header{
+
+        margin-bottom:30px;
+
+    }
+
+
+    .article-header h1{
+
+        font-size:31px;
+
+    }
+
+
+    .article-subtitle{
+
+        font-size:13px;
+
+    }
+
+
+    .article-card{
+
+        padding:25px 20px;
+
+    }
+
+
+    .featured-quote{
+
+        padding:20px;
+
+        font-size:19px;
+
+    }
+
+
+    .article-card h2{
+
+        font-size:22px;
+
+    }
+
+
+    .article-card p{
+
+        font-size:13.5px;
+
+    }
+
+
+    .find-section{
+
+        padding:22px 17px;
+
+    }
+
+}
+
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media(max-width:420px){
+
+    .article-page{
+
+        padding:30px 14px 45px;
+
+    }
+
+
+    .article-header h1{
+
+        font-size:28px;
+
+    }
+
+
+    .article-card{
+
+        padding:22px 17px;
+
+    }
+
+
+    .featured-quote{
+
+        font-size:18px;
+
+        padding:18px;
+
+    }
+
+
+    .find-button{
+
+        padding:14px 12px;
+
+        font-size:12.5px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SHARED ELORA HEADER
+===================================================== -->
+
+<script src="header.js" defer></script>
+
+
+
+<main class="article-page">
+
+
+    <!-- =================================================
+         ARTICLE HEADER
+    ================================================= -->
+
+    <header class="article-header">
+
+        <span class="article-category">
+            Minimalism
+        </span>
+
+
+        <h1>
+            Designing a Sanctuary of Calm
+        </h1>
+
+
+        <p class="article-subtitle">
+            How stripping away unnecessary clutter can transform
+            a chaotic room into a calmer, more restorative space.
+        </p>
+
+    </header>
+
+
+
+    <!-- =================================================
+         ARTICLE
+    ================================================= -->
+
+    <article class="article-card">
+
+
+        <!-- FEATURED QUOTE -->
+
+        <blockquote class="featured-quote">
+
+            “A peaceful home begins with knowing what deserves
+            a place in your space.”
+
+        </blockquote>
+
+
+
+        <!-- =================================================
+             SECTION 1
+        ================================================= -->
+
+        <h2>
+            When Less Creates More
+        </h2>
+
+
+        <p>
+
+            A room does not have to be completely empty to feel peaceful.
+            In fact, the most comfortable spaces often contain meaningful
+            objects, useful furniture, and small details that reflect the
+            people who live there.
+
+        </p>
+
+
+        <p>
+
+            The difference is intentionality. When every surface becomes
+            crowded with things that have no real purpose, the room can
+            begin to feel visually demanding. <strong>Removing what no
+            longer serves you can create breathing room.</strong>
+
+        </p>
+
+
+
+        
+
+
+
+        <!-- =================================================
+             SECTION 2
+        ================================================= -->
+
+        <h2>
+            Start With What You Can See
+        </h2>
+
+
+        <p>
+
+            Decluttering does not need to become an overwhelming weekend
+            project. Begin with the areas that visually attract your
+            attention most often.
+
+        </p>
+
+
+        <ul class="design-list">
+
+            <li>
+                Clear surfaces that have gradually become storage spaces.
+            </li>
+
+            <li>
+                Keep everyday essentials within easy reach.
+            </li>
+
+            <li>
+                Group similar objects together instead of spreading them
+                throughout the room.
+            </li>
+
+            <li>
+                Remove decorative pieces that no longer feel meaningful
+                or useful.
+            </li>
+
+        </ul>
+
+<!-- =================================================
+             CTA
+        ================================================= -->
+
+        <section class="find-section">
+
+
+            <h3>
+                Explore Home Decor Finds
+            </h3>
+
+
+            <p>
+
+                Looking for simple ways to refresh your space?
+                Explore selected home decor and everyday living
+                products through our featured shopping partner.
+
+            </p>
+
+
+            <a
+                href="decorfind.html"
+                class="find-button"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <span>
+                    Explore Home Decor Picks
+                </span>
+
+
+                <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                >
+
+                    <line
+                        x1="5"
+                        y1="12"
+                        x2="19"
+                        y2="12"
+                    ></line>
+
+
+                    <polyline
+                        points="12 5 19 12 12 19"
+                    ></polyline>
+
+                </svg>
+
+            </a>
+
+
+            <p class="cta-note">
+
+                You will continue to an independent shopping page.
+                Product availability and pricing may change.
+
+            </p>
+
+
+        </section>
+
+        <!-- =================================================
+             SECTION 3
+        ================================================= -->
+
+        <h2>
+            Give Every Object a Reason
+        </h2>
+
+
+        <p>
+
+            Minimalism is not simply about owning fewer things.
+            It is about becoming more deliberate about what stays.
+
+        </p>
+
+
+        <p>
+
+            A chair you genuinely enjoy, a lamp that creates warm light,
+            or a small piece of art with personal meaning can contribute
+            more to a room than a collection of objects chosen simply
+            to fill empty space.
+
+        </p>
+
+
+        <p>
+
+            When the things around you have a clear purpose, the room
+            often becomes easier to maintain and more enjoyable to live in.
+
+        </p>
+
+
+
+        <!-- =================================================
+             REFLECTION BOX
+        ================================================= -->
+
+        <div class="reflection-box">
+
+
+            <h3>
+                A Simple Question
+            </h3>
+
+
+            <p>
+
+                Look around your room and choose one object you rarely
+                use. Ask yourself whether keeping it adds value to your
+                everyday environment or simply occupies space.
+
+            </p>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             SECTION 4
+        ================================================= -->
+
+        <h2>
+            Create Calm Through Contrast
+        </h2>
+
+
+        <p>
+
+            A calm room does not need to be plain. Contrast can actually
+            make a space feel more intentional. A darker accent against
+            a softer background, a textured fabric beside a smooth surface,
+            or a single decorative piece on an open shelf can create visual
+            interest without overwhelming the room.
+
+        </p>
+
+
+        <p>
+
+            The goal is balance. Let some areas remain quiet so that the
+            details you choose to highlight can receive attention.
+
+        </p>
+
+
+
+        <!-- =================================================
+             SECTION 5
+        ================================================= -->
+
+        <h2>
+            A Home That Gives You Room to Breathe
+        </h2>
+
+
+        <p>
+
+            The most restorative spaces are not necessarily the most
+            expensive or perfectly styled. They are spaces that feel
+            comfortable, useful, and connected to the people who live
+            within them.
+
+        </p>
+
+
+        <p>
+
+            Minimalism can be a useful reminder that a home does not
+            need more things to feel complete. Sometimes, it simply
+            needs a little more room for the things that matter.
+
+        </p>
+
+
+    </article>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     SHARED ELORA FOOTER
+===================================================== -->
+
+<script src="footer.js" defer></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<meta name="referrer" content="no-referrer">
+
+<title>Quiet Luxury in Modern Tailoring — Elora Journal</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap');
+
+:root{
+    --bg:#0f142b;
+    --surface:#151b38;
+    --soft:#202951;
+    --text:#d3d7ee;
+    --heading:#ffffff;
+    --muted:#898fae;
+    --accent:#9b7cff;
+    --accent-light:#c9bdff;
+    --accent-dark:#8062e8;
+    --border:rgba(155,124,255,.18);
+    --max:760px;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+    -webkit-text-size-adjust:100%;
+}
+
+body{
+    margin:0;
+    min-width:0;
+    overflow-x:hidden;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'DM Sans',Arial,sans-serif;
+    line-height:1.8;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+
+/* =====================================================
+   ARTICLE PAGE
+===================================================== */
+
+.article-page{
+    width:100%;
+    max-width:var(--max);
+    margin:0 auto;
+    padding:60px 22px 80px;
+}
+
+
+/* =====================================================
+   ARTICLE HEADER
+===================================================== */
+
+.article-header{
+    text-align:center;
+    margin-bottom:38px;
+}
+
+.article-category{
+    display:inline-block;
+    margin-bottom:17px;
+    padding:6px 14px;
+    background:rgba(155,124,255,.10);
+    border:1px solid rgba(155,124,255,.22);
+    border-radius:30px;
+    color:var(--accent-light);
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.article-header h1{
+    margin:0 0 17px;
+    color:var(--heading);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:clamp(32px,5vw,46px);
+    font-weight:500;
+    line-height:1.2;
+    letter-spacing:-.5px;
+}
+
+.article-subtitle{
+    max-width:620px;
+    margin:0 auto;
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.8;
+}
+
+
+/* =====================================================
+   ARTICLE CARD
+===================================================== */
+
+.article-card{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:40px;
+    box-shadow:0 15px 45px rgba(0,0,0,.18);
+}
+
+
+/* =====================================================
+   FEATURED QUOTE
+===================================================== */
+
+.featured-quote{
+    margin:0 0 32px;
+    padding:23px 25px;
+    background:rgba(155,124,255,.07);
+    border-left:3px solid var(--accent);
+    border-radius:0 12px 12px 0;
+    color:var(--accent-light);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:21px;
+    font-style:italic;
+    line-height:1.6;
+}
+
+
+/* =====================================================
+   ARTICLE CONTENT
+===================================================== */
+
+.article-card h2{
+    margin:30px 0 12px;
+    color:var(--heading);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:25px;
+    font-weight:500;
+    line-height:1.4;
+}
+
+.article-card h2:first-of-type{
+    margin-top:0;
+}
+
+.article-card p{
+    margin:0 0 19px;
+    color:var(--text);
+    font-size:14px;
+    line-height:1.85;
+}
+
+.article-card strong{
+    color:var(--accent-light);
+    font-weight:600;
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.find-section{
+    margin:28px 0 32px;
+    padding:25px 22px;
+    background:rgba(155,124,255,.055);
+    border:1px solid rgba(155,124,255,.16);
+    border-radius:14px;
+}
+
+.find-section h3{
+    margin:0 0 8px;
+    color:var(--heading);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:22px;
+    font-weight:500;
+    text-align:center;
+}
+
+.find-section p{
+    max-width:540px;
+    margin:0 auto 18px;
+    color:var(--muted);
+    font-size:12.5px;
+    text-align:center;
+    line-height:1.7;
+}
+
+.find-button{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    width:100%;
+    padding:15px 20px;
+    background:var(--accent);
+    border-radius:8px;
+    color:#ffffff;
+    font-size:13px;
+    font-weight:600;
+    box-shadow:0 5px 16px rgba(155,124,255,.18);
+    transition:
+        background .2s ease,
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.find-button:hover{
+    background:var(--accent-dark);
+    transform:translateY(-1px);
+    box-shadow:0 8px 20px rgba(155,124,255,.25);
+}
+
+.find-button svg{
+    transition:transform .2s ease;
+}
+
+.find-button:hover svg{
+    transform:translateX(3px);
+}
+
+.cta-note{
+    margin:10px 0 0 !important;
+    color:#737a98 !important;
+    font-size:9.5px !important;
+    text-align:center !important;
+}
+
+
+/* =====================================================
+   STYLE LIST
+===================================================== */
+
+.style-list{
+    margin:24px 0 28px;
+    padding:0;
+    list-style:none;
+}
+
+.style-list li{
+    position:relative;
+    margin-bottom:13px;
+    padding-left:25px;
+    color:#bfc4da;
+    font-size:13.5px;
+    line-height:1.7;
+}
+
+.style-list li::before{
+    content:"";
+    position:absolute;
+    left:4px;
+    top:.75em;
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:var(--accent);
+}
+
+
+/* =====================================================
+   REFLECTION BOX
+===================================================== */
+
+.reflection-box{
+    margin:30px 0;
+    padding:22px;
+    background:var(--soft);
+    border:1px solid rgba(155,124,255,.14);
+    border-radius:13px;
+}
+
+.reflection-box h3{
+    margin:0 0 8px;
+    color:var(--heading);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:20px;
+    font-weight:500;
+}
+
+.reflection-box p{
+    margin:0;
+    color:var(--muted);
+    font-size:13px;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:650px){
+
+    .article-page{
+        padding:38px 15px 55px;
+    }
+
+    .article-header{
+        margin-bottom:30px;
+    }
+
+    .article-header h1{
+        font-size:31px;
+    }
+
+    .article-subtitle{
+        font-size:13px;
+    }
+
+    .article-card{
+        padding:25px 20px;
+    }
+
+    .featured-quote{
+        padding:20px;
+        font-size:19px;
+    }
+
+    .article-card h2{
+        font-size:22px;
+    }
+
+    .article-card p{
+        font-size:13.5px;
+    }
+
+    .find-section{
+        padding:22px 17px;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media(max-width:420px){
+
+    .article-page{
+        padding:30px 14px 45px;
+    }
+
+    .article-header h1{
+        font-size:28px;
+    }
+
+    .article-card{
+        padding:22px 17px;
+    }
+
+    .featured-quote{
+        font-size:18px;
+        padding:18px;
+    }
+
+    .find-button{
+        padding:14px 12px;
+        font-size:12.5px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- =====================================================
+     SHARED ELORA HEADER
+===================================================== -->
+
+<script src="header.js" defer></script>
+
+<main class="article-page">
+
+<!-- =================================================
+     ARTICLE HEADER
+================================================= -->
+
+<header class="article-header">
+
+    <span class="article-category">
+        Fashion &amp; Style
+    </span>
+
+    <h1>
+        Quiet Luxury in Modern Tailoring
+    </h1>
+
+    <p class="article-subtitle">
+        Exploring understated fabrics, neutral palettes, and
+        why subtle elegance can remain relevant long after
+        louder trends have passed.
+    </p>
+
+</header>
+
+
+
+<!-- =================================================
+     ARTICLE
+================================================= -->
+
+<article class="article-card">
+
+
+    <blockquote class="featured-quote">
+        “Elegance does not need to announce itself.”
+    </blockquote>
+
+
+
+    <h2>
+        The Appeal of Understatement
+    </h2>
+
+    <p>
+        Fashion often moves quickly. One season can be dominated
+        by bold colors, dramatic silhouettes, and recognizable
+        trends, while the next moves in an entirely different
+        direction.
+    </p>
+
+    <p>
+        Quiet luxury takes a slower approach. Rather than relying
+        on obvious branding or attention-grabbing details, it
+        places emphasis on <strong>proportion, fabric, fit, and
+        simplicity.</strong> The result is clothing that feels
+        considered without appearing overly deliberate.
+    </p>
+
+
+
+    
+
+
+
+    <h2>
+        Neutral Palettes Create Longevity
+    </h2>
+
+    <p>
+        Neutral colors have a quiet strength because they can move
+        easily between seasons. Soft beige, charcoal, cream, navy,
+        muted brown, and understated grey can form a foundation
+        that works with a wide range of combinations.
+    </p>
+
+    <p>
+        The goal is not to remove color completely. Instead,
+        neutrals allow texture, silhouette, and small details to
+        become more noticeable.
+    </p>
+
+<!-- =================================================
+         CTA
+    ================================================= -->
+
+    <section class="find-section">
+
+        <h3>
+            Explore Everyday Style Picks
+        </h3>
+
+        <p>
+            Looking for pieces that complement a more refined,
+            versatile wardrobe? Explore selected fashion and
+            lifestyle products through our featured partner page.
+        </p>
+
+        <a
+            href="fashionfind.html"
+            class="find-button"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <span>
+                Explore Fashion Picks
+            </span>
+
+            <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+            >
+
+                <line
+                    x1="5"
+                    y1="12"
+                    x2="19"
+                    y2="12"
+                ></line>
+
+                <polyline
+                    points="12 5 19 12 12 19"
+                ></polyline>
+
+            </svg>
+
+        </a>
+
+        <p class="cta-note">
+            You will continue to an independent shopping page.
+            Product availability and pricing may change.
+        </p>
+
+    </section>
+
+    <h2>
+        Fabric Matters More Than Noise
+    </h2>
+
+    <p>
+        When a garment does not depend on a prominent logo or
+        dramatic decoration, its material becomes part of its
+        character.
+    </p>
+
+    <p>
+        Natural-looking textures, clean finishes, and fabrics that
+        hold their shape can make even a simple outfit feel more
+        intentional. This is one reason understated clothing often
+        feels timeless: <strong>its appeal comes from how it is made
+        and worn rather than from how loudly it identifies itself.</strong>
+    </p>
+
+
+
+    <ul class="style-list">
+
+        <li>
+            Look for clean and comfortable silhouettes that can
+            work across several occasions.
+        </li>
+
+        <li>
+            Choose colors that combine naturally with pieces already
+            in your wardrobe.
+        </li>
+
+        <li>
+            Pay attention to texture and construction instead of
+            focusing only on labels.
+        </li>
+
+        <li>
+            Prioritize pieces you can realistically wear repeatedly.
+        </li>
+
+    </ul>
+
+
+
+    <div class="reflection-box">
+
+        <h3>
+            A Simple Style Test
+        </h3>
+
+        <p>
+            Before adding something new, ask whether you would still
+            enjoy wearing it if the current trend disappeared tomorrow.
+            If the answer is yes, it may have a stronger place in
+            your personal wardrobe.
+        </p>
+
+    </div>
+
+
+
+    <h2>
+        Tailoring Makes Simplicity Feel Intentional
+    </h2>
+
+    <p>
+        A simple outfit can look remarkably polished when its
+        proportions feel right. The length of a sleeve, the shape
+        of a shoulder, the position of a waistline, and the way
+        trousers fall can all influence the overall impression.
+    </p>
+
+    <p>
+        This is where modern tailoring becomes particularly useful.
+        It does not necessarily mean wearing formal clothing.
+        Even casual pieces can benefit from thoughtful proportions
+        and a comfortable, balanced fit.
+    </p>
+
+
+
+    <h2>
+        Personal Style Outlasts Trends
+    </h2>
+
+    <p>
+        The most lasting form of style is rarely about following
+        every new direction. It is about understanding what makes
+        you feel comfortable, confident, and like yourself.
+    </p>
+
+    <p>
+        Quiet luxury offers one possible framework for that idea:
+        fewer distractions, thoughtful details, and clothing chosen
+        because it works for your life rather than simply because
+        it is currently popular.
+    </p>
+
+    <p>
+        In the end, subtle elegance is less about looking expensive
+        and more about looking intentional. When fit, texture,
+        proportion, and personality come together, simplicity can
+        become its own form of sophistication.
+    </p>
+
+
+</article>
+```
+
+</main>
+
+<!-- =====================================================
+     SHARED ELORA FOOTER
+===================================================== -->
+
+<script src="footer.js" defer></script>
+
+</body>
+
+</html>

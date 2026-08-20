@@ -1,0 +1,2326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+>
+
+<meta
+  name="referrer"
+  content="no-referrer"
+>
+
+<title>Elora Journal — Ideas, Style & Everyday Living</title>
+
+<meta
+  name="description"
+  content="Elora Journal explores style, spaces, travel, food, nature and thoughtful ideas for modern everyday living."
+>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"
+  rel="stylesheet"
+>
+
+
+<style>
+
+/* =========================================================
+   ELORA JOURNAL
+   NEW VISUAL IDENTITY
+========================================================= */
+
+:root{
+
+  /* Core */
+  --navy:#10152d;
+  --navy-2:#171d3d;
+  --navy-3:#202750;
+
+  /* Light */
+  --cloud:#f5f5fb;
+  --mist:#ececf7;
+  --white:#ffffff;
+
+  /* Brand */
+  --lavender:#9b7cff;
+  --lavender-light:#c9bdff;
+  --lilac:#e6ddff;
+
+  /* Secondary accent */
+  --coral:#ff7d87;
+  --coral-light:#ffc1c6;
+
+  /* Text */
+  --text:#171a2d;
+  --text-soft:#565a72;
+  --text-muted:#85899e;
+
+  /* Lines */
+  --line:#dcddea;
+
+  --serif:"Playfair Display", Georgia, serif;
+  --sans:"DM Sans", Arial, sans-serif;
+
+  --max:1240px;
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  margin:0;
+  padding:0;
+
+  width:100%;
+  min-width:0;
+
+  overflow-x:hidden;
+
+  background:var(--cloud);
+  color:var(--text);
+
+  font-family:var(--sans);
+  line-height:1.7;
+}
+
+img{
+  display:block;
+  max-width:100%;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button,
+a{
+  -webkit-tap-highlight-color:transparent;
+}
+
+
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+
+  position:relative;
+
+  overflow:hidden;
+
+  width:100%;
+
+  background:var(--navy);
+
+  color:white;
+
+}
+
+
+/* Decorative shapes */
+
+.hero::before{
+
+  content:"";
+
+  position:absolute;
+
+  width:620px;
+  height:620px;
+
+  right:-230px;
+  top:-270px;
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(155,124,255,.45) 0%,
+      rgba(155,124,255,.15) 42%,
+      rgba(155,124,255,0) 72%
+    );
+
+  pointer-events:none;
+
+}
+
+.hero::after{
+
+  content:"";
+
+  position:absolute;
+
+  width:350px;
+  height:350px;
+
+  left:-180px;
+  bottom:-190px;
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,125,135,.28),
+      rgba(255,125,135,0) 70%
+    );
+
+  pointer-events:none;
+
+}
+
+
+.hero-inner{
+
+  position:relative;
+
+  z-index:2;
+
+  width:100%;
+  max-width:1240px;
+
+  margin:0 auto;
+
+  min-height:650px;
+
+  padding:82px 40px;
+
+  display:grid;
+
+  grid-template-columns:
+    1.08fr
+    .92fr;
+
+  align-items:center;
+
+  gap:70px;
+
+}
+
+
+/* Hero copy */
+
+.hero-copy{
+
+  position:relative;
+
+}
+
+.hero-label{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:10px;
+
+  margin-bottom:26px;
+
+  color:var(--lavender-light);
+
+  font-size:10px;
+
+  font-weight:700;
+
+  letter-spacing:2.8px;
+
+  text-transform:uppercase;
+
+}
+
+.hero-label::before{
+
+  content:"";
+
+  width:30px;
+  height:2px;
+
+  background:var(--coral);
+
+  border-radius:5px;
+
+}
+
+.hero h1{
+
+  max-width:720px;
+
+  margin:0;
+
+  color:#fff;
+
+  font-family:var(--serif);
+
+  font-size:clamp(58px,7.4vw,104px);
+
+  font-weight:400;
+
+  line-height:.98;
+
+  letter-spacing:-4px;
+
+}
+
+.hero h1 em{
+
+  color:var(--lavender);
+
+  font-weight:400;
+
+}
+
+.hero-description{
+
+  max-width:570px;
+
+  margin:30px 0 0;
+
+  color:#c8cbe0;
+
+  font-size:16px;
+
+  line-height:1.9;
+
+}
+
+.hero-actions{
+
+  display:flex;
+
+  align-items:center;
+
+  flex-wrap:wrap;
+
+  gap:13px;
+
+  margin-top:34px;
+
+}
+
+.hero-primary{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:10px;
+
+  padding:14px 22px;
+
+  border-radius:999px;
+
+  background:var(--lavender);
+
+  color:#fff;
+
+  font-size:13px;
+
+  font-weight:700;
+
+  box-shadow:
+    0 10px 30px rgba(155,124,255,.25);
+
+  transition:
+    transform .2s ease,
+    background .2s ease;
+
+}
+
+.hero-primary:hover{
+
+  background:#ad92ff;
+
+  transform:translateY(-2px);
+
+}
+
+.hero-secondary{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:8px;
+
+  padding:13px 17px;
+
+  color:#e1e2ef;
+
+  font-size:13px;
+
+  font-weight:600;
+
+}
+
+.hero-secondary span{
+
+  color:var(--coral);
+
+  transition:transform .2s ease;
+
+}
+
+.hero-secondary:hover span{
+
+  transform:translateX(4px);
+
+}
+
+
+/* =========================================================
+   HERO ART
+========================================================= */
+
+.hero-art{
+
+  position:relative;
+
+  min-height:500px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+}
+
+.art-main{
+
+  position:relative;
+
+  width:min(100%,440px);
+
+  height:510px;
+
+  overflow:hidden;
+
+  border-radius:220px 220px 24px 24px;
+
+  border:1px solid rgba(255,255,255,.14);
+
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.3);
+
+}
+
+.art-main img{
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  filter:
+    saturate(.72)
+    contrast(1.02);
+
+  transform:scale(1.02);
+
+}
+
+.art-main::after{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(16,21,45,0) 40%,
+      rgba(16,21,45,.78) 100%
+    );
+
+}
+
+.art-caption{
+
+  position:absolute;
+
+  z-index:2;
+
+  left:28px;
+  right:28px;
+  bottom:28px;
+
+}
+
+.art-caption small{
+
+  display:block;
+
+  margin-bottom:8px;
+
+  color:var(--lavender-light);
+
+  font-size:9px;
+
+  font-weight:700;
+
+  letter-spacing:2px;
+
+  text-transform:uppercase;
+
+}
+
+.art-caption strong{
+
+  display:block;
+
+  max-width:330px;
+
+  color:#fff;
+
+  font-family:var(--serif);
+
+  font-size:25px;
+
+  font-weight:400;
+
+  line-height:1.25;
+
+}
+
+
+/* Floating label */
+
+.art-badge{
+
+  position:absolute;
+
+  z-index:5;
+
+  top:35px;
+
+  right:-20px;
+
+  width:112px;
+  height:112px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  text-align:center;
+
+  border-radius:50%;
+
+  background:var(--coral);
+
+  color:#fff;
+
+  font-size:9px;
+
+  font-weight:700;
+
+  line-height:1.45;
+
+  letter-spacing:1px;
+
+  text-transform:uppercase;
+
+  box-shadow:
+    0 15px 35px rgba(255,125,135,.28);
+
+}
+
+
+/* =========================================================
+   MINI INTRO
+========================================================= */
+
+.intro{
+
+  background:var(--white);
+
+  border-bottom:1px solid var(--line);
+
+}
+
+.intro-inner{
+
+  max-width:1240px;
+
+  margin:0 auto;
+
+  padding:24px 40px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:30px;
+
+}
+
+.intro-label{
+
+  color:var(--lavender);
+
+  font-size:10px;
+
+  font-weight:700;
+
+  letter-spacing:2.3px;
+
+  text-transform:uppercase;
+
+}
+
+.intro-text{
+
+  max-width:720px;
+
+  color:var(--text-soft);
+
+  font-family:var(--serif);
+
+  font-size:18px;
+
+  line-height:1.4;
+
+  font-style:italic;
+
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.container{
+
+  width:100%;
+
+  max-width:1240px;
+
+  margin:0 auto;
+
+  padding:95px 40px 110px;
+
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.section-heading{
+
+  display:flex;
+
+  align-items:flex-end;
+
+  justify-content:space-between;
+
+  gap:30px;
+
+  margin-bottom:40px;
+
+}
+
+.section-kicker{
+
+  margin-bottom:9px;
+
+  color:var(--coral);
+
+  font-size:10px;
+
+  font-weight:700;
+
+  letter-spacing:2.5px;
+
+  text-transform:uppercase;
+
+}
+
+.section-heading h2{
+
+  margin:0;
+
+  color:var(--navy);
+
+  font-family:var(--serif);
+
+  font-size:clamp(40px,4.2vw,57px);
+
+  font-weight:400;
+
+  line-height:1;
+
+  letter-spacing:-2px;
+
+}
+
+.section-note{
+
+  max-width:330px;
+
+  color:var(--text-muted);
+
+  font-size:12px;
+
+  line-height:1.75;
+
+  text-align:right;
+
+}
+
+
+/* =========================================================
+   JOURNAL CARDS
+========================================================= */
+
+.journal-grid{
+
+  display:grid;
+
+  grid-template-columns:repeat(12,1fr);
+
+  gap:18px;
+
+  margin-bottom:85px;
+
+}
+
+.journal-card{
+
+  position:relative;
+
+  min-height:350px;
+
+  overflow:hidden;
+
+  padding:0;
+
+  border-radius:18px;
+
+  border:1px solid transparent;
+
+  transition:
+    transform .35s cubic-bezier(.16,1,.3,1),
+    box-shadow .35s ease;
+
+}
+
+.journal-card:nth-child(1),
+.journal-card:nth-child(4){
+
+  grid-column:span 7;
+
+}
+
+.journal-card:nth-child(2),
+.journal-card:nth-child(3),
+.journal-card:nth-child(5),
+.journal-card:nth-child(6){
+
+  grid-column:span 5;
+
+}
+
+
+/* Card backgrounds */
+
+.journal-card:nth-child(1){
+  background:#dcd3ff;
+}
+
+.journal-card:nth-child(2){
+  background:#dce9ff;
+}
+
+.journal-card:nth-child(3){
+  background:#ffdce1;
+}
+
+.journal-card:nth-child(4){
+  background:#cfe8df;
+}
+
+.journal-card:nth-child(5){
+  background:#ffe8c9;
+}
+
+.journal-card:nth-child(6){
+  background:#dcdcff;
+}
+
+
+.journal-card:hover{
+
+  transform:translateY(-7px);
+
+  box-shadow:
+    0 24px 55px rgba(16,21,45,.13);
+
+}
+
+
+/* Image */
+
+.card-image{
+
+  position:absolute;
+
+  right:0;
+  top:0;
+
+  width:55%;
+  height:100%;
+
+  overflow:hidden;
+
+}
+
+.journal-card:nth-child(2) .card-image,
+.journal-card:nth-child(3) .card-image,
+.journal-card:nth-child(5) .card-image,
+.journal-card:nth-child(6) .card-image{
+
+  width:52%;
+
+}
+
+.card-image img{
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  filter:
+    saturate(.72)
+    contrast(.96);
+
+  transition:
+    transform .6s cubic-bezier(.16,1,.3,1);
+
+}
+
+.journal-card:hover .card-image img{
+
+  transform:scale(1.07);
+
+}
+
+
+/* Card gradient */
+
+.card-image::after{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(220,211,255,1) 0%,
+      rgba(220,211,255,.12) 65%,
+      rgba(220,211,255,0) 100%
+    );
+
+}
+
+.journal-card:nth-child(2) .card-image::after{
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(220,233,255,1) 0%,
+      rgba(220,233,255,.12) 65%,
+      rgba(220,233,255,0) 100%
+    );
+
+}
+
+.journal-card:nth-child(3) .card-image::after{
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255,220,225,1) 0%,
+      rgba(255,220,225,.12) 65%,
+      rgba(255,220,225,0) 100%
+    );
+
+}
+
+.journal-card:nth-child(4) .card-image::after{
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(207,232,223,1) 0%,
+      rgba(207,232,223,.12) 65%,
+      rgba(207,232,223,0) 100%
+    );
+
+}
+
+.journal-card:nth-child(5) .card-image::after{
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255,232,201,1) 0%,
+      rgba(255,232,201,.12) 65%,
+      rgba(255,232,201,0) 100%
+    );
+
+}
+
+.journal-card:nth-child(6) .card-image::after{
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(220,220,255,1) 0%,
+      rgba(220,220,255,.12) 65%,
+      rgba(220,220,255,0) 100%
+    );
+
+}
+
+
+/* Card content */
+
+.card-content{
+
+  position:relative;
+
+  z-index:3;
+
+  width:55%;
+
+  min-height:350px;
+
+  padding:38px 0 35px 35px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:center;
+
+}
+
+.journal-card:nth-child(2) .card-content,
+.journal-card:nth-child(3) .card-content,
+.journal-card:nth-child(5) .card-content,
+.journal-card:nth-child(6) .card-content{
+
+  width:58%;
+
+}
+
+.card-number{
+
+  display:block;
+
+  margin-bottom:18px;
+
+  color:rgba(16,21,45,.42);
+
+  font-size:10px;
+
+  font-weight:700;
+
+  letter-spacing:2px;
+
+}
+
+.card-category{
+
+  margin-bottom:8px;
+
+  color:var(--navy-3);
+
+  font-size:10px;
+
+  font-weight:700;
+
+  letter-spacing:2px;
+
+  text-transform:uppercase;
+
+}
+
+.card-content h3{
+
+  margin:0 0 14px;
+
+  color:var(--navy);
+
+  font-family:var(--serif);
+
+  font-size:clamp(28px,3vw,40px);
+
+  font-weight:400;
+
+  line-height:1.05;
+
+  letter-spacing:-1.2px;
+
+}
+
+.card-content p{
+
+  max-width:280px;
+
+  margin:0 0 22px;
+
+  color:#55596c;
+
+  font-size:12px;
+
+  line-height:1.7;
+
+}
+
+.card-link{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:8px;
+
+  width:max-content;
+
+  color:var(--navy);
+
+  font-size:11px;
+
+  font-weight:700;
+
+}
+
+.card-link span{
+
+  color:var(--lavender);
+
+  transition:transform .2s ease;
+
+}
+
+.journal-card:hover .card-link span{
+
+  transform:translateX(5px);
+
+}
+
+
+/* =========================================================
+   FEATURED ARCHIVE
+========================================================= */
+
+.featured{
+
+  position:relative;
+
+  overflow:hidden;
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  min-height:470px;
+
+  border-radius:22px;
+
+  background:var(--navy);
+
+  color:#fff;
+
+}
+
+.featured-copy{
+
+  position:relative;
+
+  z-index:2;
+
+  padding:65px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:center;
+
+}
+
+.featured-label{
+
+  margin-bottom:20px;
+
+  color:var(--lavender-light);
+
+  font-size:10px;
+
+  font-weight:700;
+
+  letter-spacing:2.5px;
+
+  text-transform:uppercase;
+
+}
+
+.featured h2{
+
+  max-width:530px;
+
+  margin:0 0 20px;
+
+  color:#fff;
+
+  font-family:var(--serif);
+
+  font-size:clamp(40px,4.5vw,63px);
+
+  font-weight:400;
+
+  line-height:1.02;
+
+  letter-spacing:-2px;
+
+}
+
+.featured p{
+
+  max-width:500px;
+
+  margin:0 0 30px;
+
+  color:#c8cbe0;
+
+  font-size:14px;
+
+  line-height:1.8;
+
+}
+
+.featured-btn{
+
+  align-self:flex-start;
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:10px;
+
+  padding:13px 21px;
+
+  border:1px solid rgba(255,255,255,.2);
+
+  border-radius:999px;
+
+  color:#fff;
+
+  font-size:12px;
+
+  font-weight:700;
+
+  background:rgba(255,255,255,.06);
+
+  transition:
+    background .25s ease,
+    transform .25s ease;
+
+}
+
+.featured-btn:hover{
+
+  background:var(--lavender);
+
+  border-color:var(--lavender);
+
+  transform:translateY(-2px);
+
+}
+
+
+/* Featured image */
+
+.featured-art{
+
+  position:relative;
+
+  min-height:470px;
+
+  overflow:hidden;
+
+}
+
+.featured-art img{
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  filter:
+    saturate(.62)
+    brightness(.75);
+
+  transform:scale(1.03);
+
+}
+
+.featured-art::after{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--navy) 0%,
+      rgba(16,21,45,.2) 65%,
+      rgba(16,21,45,0) 100%
+    );
+
+}
+
+
+/* =========================================================
+   STATEMENT
+========================================================= */
+
+.statement{
+
+  padding:105px 0 25px;
+
+  text-align:center;
+
+}
+
+.statement-mark{
+
+  width:45px;
+
+  height:3px;
+
+  margin:0 auto 28px;
+
+  border-radius:5px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--coral),
+      var(--lavender)
+    );
+
+}
+
+.statement h2{
+
+  max-width:880px;
+
+  margin:0 auto;
+
+  color:var(--navy);
+
+  font-family:var(--serif);
+
+  font-size:clamp(34px,4.5vw,60px);
+
+  font-weight:400;
+
+  line-height:1.18;
+
+  letter-spacing:-1.8px;
+
+}
+
+.statement h2 em{
+
+  color:var(--lavender);
+
+}
+
+.statement p{
+
+  max-width:590px;
+
+  margin:24px auto 0;
+
+  color:var(--text-soft);
+
+  font-size:13px;
+
+  line-height:1.8;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer{
+
+  width:100%;
+
+  border-top:1px solid var(--line);
+
+  background:var(--navy);
+
+  padding:65px 24px;
+
+  text-align:center;
+
+  color:#aeb2ca;
+
+  font-size:13px;
+
+}
+
+.footer-links{
+
+  display:flex;
+
+  justify-content:center;
+
+  flex-wrap:wrap;
+
+  gap:28px;
+
+  margin-bottom:24px;
+
+  font-size:12px;
+
+  font-weight:600;
+
+}
+
+.footer-links a{
+
+  color:#d2d4e3;
+
+  transition:color .2s ease;
+
+}
+
+.footer-links a:hover{
+
+  color:var(--lavender-light);
+
+}
+
+.disclaimer{
+
+  max-width:720px;
+
+  margin:18px auto 0;
+
+  color:#7f849e;
+
+  font-size:10.5px;
+
+  line-height:1.75;
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:1000px){
+
+  .header-inner{
+
+    padding:0 25px;
+
+  }
+
+  .header-nav{
+
+    gap:18px;
+
+  }
+
+  .hero-inner{
+
+    padding:65px 25px 75px;
+
+    gap:45px;
+
+  }
+
+  .hero h1{
+
+    font-size:clamp(54px,7vw,78px);
+
+    letter-spacing:-3px;
+
+  }
+
+  .art-main{
+
+    height:450px;
+
+  }
+
+  .intro-inner{
+
+    padding:21px 25px;
+
+  }
+
+  .container{
+
+    padding-left:25px;
+    padding-right:25px;
+
+  }
+
+  .featured-copy{
+
+    padding:50px;
+
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:760px){
+
+  .header-inner{
+
+    height:72px;
+
+    padding:0 18px;
+
+  }
+
+  .brand-logo{
+
+    font-size:26px;
+
+  }
+
+  .header-nav{
+
+    max-width:55%;
+
+    gap:14px;
+
+    overflow-x:auto;
+
+    scrollbar-width:none;
+
+  }
+
+  .header-nav::-webkit-scrollbar{
+
+    display:none;
+
+  }
+
+  .header-nav a{
+
+    white-space:nowrap;
+
+    font-size:11px;
+
+  }
+
+  .header-nav .highlight-btn{
+
+    padding:8px 13px;
+
+  }
+
+
+  /* Hero */
+
+  .hero-inner{
+
+    min-height:auto;
+
+    padding:58px 20px 70px;
+
+    grid-template-columns:1fr;
+
+    gap:48px;
+
+  }
+
+  .hero h1{
+
+    font-size:clamp(53px,15vw,79px);
+
+    letter-spacing:-3px;
+
+  }
+
+  .hero-description{
+
+    font-size:14px;
+
+  }
+
+  .hero-art{
+
+    min-height:420px;
+
+  }
+
+  .art-main{
+
+    width:calc(100% - 24px);
+
+    height:420px;
+
+    border-radius:210px 210px 20px 20px;
+
+  }
+
+  .art-badge{
+
+    right:-2px;
+
+  }
+
+
+  /* Intro */
+
+  .intro-inner{
+
+    align-items:flex-start;
+
+    flex-direction:column;
+
+    gap:8px;
+
+    padding:20px;
+
+  }
+
+  .intro-text{
+
+    font-size:16px;
+
+  }
+
+
+  /* Main */
+
+  .container{
+
+    padding:68px 20px 80px;
+
+  }
+
+  .section-heading{
+
+    align-items:flex-start;
+
+    flex-direction:column;
+
+    gap:15px;
+
+  }
+
+  .section-note{
+
+    text-align:left;
+
+  }
+
+
+  /* Cards */
+
+  .journal-grid{
+
+    grid-template-columns:1fr;
+
+    gap:15px;
+
+    margin-bottom:60px;
+
+  }
+
+  .journal-card,
+  .journal-card:nth-child(1),
+  .journal-card:nth-child(2),
+  .journal-card:nth-child(3),
+  .journal-card:nth-child(4),
+  .journal-card:nth-child(5),
+  .journal-card:nth-child(6){
+
+    grid-column:span 1;
+
+    min-height:390px;
+
+  }
+
+  .card-image,
+  .journal-card:nth-child(2) .card-image,
+  .journal-card:nth-child(3) .card-image,
+  .journal-card:nth-child(5) .card-image,
+  .journal-card:nth-child(6) .card-image{
+
+    width:54%;
+
+  }
+
+  .card-content,
+  .journal-card:nth-child(2) .card-content,
+  .journal-card:nth-child(3) .card-content,
+  .journal-card:nth-child(5) .card-content,
+  .journal-card:nth-child(6) .card-content{
+
+    width:58%;
+
+    min-height:390px;
+
+    padding:28px 0 28px 25px;
+
+  }
+
+  .card-content h3{
+
+    font-size:30px;
+
+  }
+
+
+  /* Featured */
+
+  .featured{
+
+    grid-template-columns:1fr;
+
+    border-radius:18px;
+
+  }
+
+  .featured-copy{
+
+    min-height:400px;
+
+    padding:43px 27px;
+
+  }
+
+  .featured-art{
+
+    min-height:300px;
+
+  }
+
+  .featured-art::after{
+
+    background:
+      linear-gradient(
+        180deg,
+        var(--navy) 0%,
+        rgba(16,21,45,.1) 60%,
+        rgba(16,21,45,0) 100%
+      );
+
+  }
+
+
+  /* Statement */
+
+  .statement{
+
+    padding:75px 0 15px;
+
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media(max-width:480px){
+
+  .header-inner{
+
+    gap:12px;
+
+  }
+
+  .brand-logo{
+
+    font-size:24px;
+
+  }
+
+  .brand-logo span{
+
+    display:none;
+
+  }
+
+  
+
+
+  .hero h1{
+
+    font-size:52px;
+
+    line-height:1.01;
+
+  }
+
+  .hero-description{
+
+    font-size:13.5px;
+
+  }
+
+  .hero-actions{
+
+    gap:4px;
+
+  }
+
+  .hero-primary{
+
+    padding:13px 17px;
+
+  }
+
+
+  .art-main{
+
+    width:100%;
+
+    height:390px;
+
+    border-radius:195px 195px 15px 15px;
+
+  }
+
+  .art-caption{
+
+    left:22px;
+    right:22px;
+    bottom:22px;
+
+  }
+
+
+  .section-heading h2{
+
+    font-size:40px;
+
+  }
+
+  .card-content h3{
+
+    font-size:28px;
+
+  }
+
+  .card-content p{
+
+    font-size:11.5px;
+
+  }
+
+
+  .featured h2{
+
+    font-size:41px;
+
+  }
+
+  .statement h2{
+
+    font-size:34px;
+
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =======================================================
+     HEADER
+======================================================= -->
+
+<script src="header.js" defer></script>
+
+
+<!-- =======================================================
+     HERO
+======================================================= -->
+
+<section class="hero">
+
+  <div class="hero-inner">
+
+
+    <div class="hero-copy">
+
+      <div class="hero-label">
+        The Elora Journal
+      </div>
+
+      <h1>
+        Ideas for a
+        <em>more curious</em>
+        life.
+      </h1>
+
+      <p class="hero-description">
+        A modern journal exploring style, spaces, places,
+        food, nature and the little ideas that make
+        everyday life more interesting.
+      </p>
+
+      <div class="hero-actions">
+
+        <a
+          href="#journal"
+          class="hero-primary"
+        >
+          Explore Elora
+          <span>↓</span>
+        </a>
+
+        <a
+          href="quotes.html"
+          class="hero-secondary"
+        >
+          Begin with an idea
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="hero-art">
+
+      <div class="art-main">
+
+        <img
+          src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1000&q=85"
+          alt="Creative modern interior"
+          loading="eager"
+        >
+
+        <div class="art-caption">
+
+          <small>
+            Elora / Issue 01
+          </small>
+
+          <strong>
+            Beautiful ideas
+            for everyday living.
+          </strong>
+
+        </div>
+
+      </div>
+
+      <div class="art-badge">
+        Style<br>
+        Places<br>
+        Ideas<br>
+        Life
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     INTRO
+======================================================= -->
+
+<section class="intro">
+
+  <div class="intro-inner">
+
+    <div class="intro-label">
+      Our perspective
+    </div>
+
+    <div class="intro-text">
+      “Stay curious. Notice more. Make room for the unexpected.”
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     MAIN JOURNAL
+======================================================= -->
+
+<main
+  class="container"
+  id="journal"
+>
+
+
+  <!-- Section title -->
+
+  <div class="section-heading">
+
+    <div>
+
+      <div class="section-kicker">
+        Explore the journal
+      </div>
+
+      <h2>
+        Find your next idea.
+      </h2>
+
+    </div>
+
+    <div class="section-note">
+      Six different corners of Elora,
+      each offering something worth
+      discovering.
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       JOURNAL GRID
+  ====================================================== -->
+
+  <div class="journal-grid">
+
+
+    <!-- ===================================================
+         01 — QUOTES
+    ==================================================== -->
+
+    <article class="journal-card">
+
+      <div class="card-image">
+
+        <img
+          src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=1200&q=85"
+          alt="Books and ideas"
+          loading="lazy"
+        >
+
+      </div>
+
+      <div class="card-content">
+
+        <span class="card-number">
+          01
+        </span>
+
+        <div class="card-category">
+          Ideas
+        </div>
+
+        <h3>
+          Words that stay with you.
+        </h3>
+
+        <p>
+          Quotes, reflections and thoughtful
+          ideas for quiet moments.
+        </p>
+
+        <a
+          href="quotes.html"
+          class="card-link"
+        >
+          Explore <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ===================================================
+         02 — DECOR
+    ==================================================== -->
+
+    <article class="journal-card">
+
+      <div class="card-image">
+
+        <img
+          src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85"
+          alt="Modern interior"
+          loading="lazy"
+        >
+
+      </div>
+
+      <div class="card-content">
+
+        <span class="card-number">
+          02
+        </span>
+
+        <div class="card-category">
+          Spaces
+        </div>
+
+        <h3>
+          Make room for beautiful things.
+        </h3>
+
+        <p>
+          Interior inspiration, details and
+          spaces worth coming home to.
+        </p>
+
+        <a
+          href="decor.html"
+          class="card-link"
+        >
+          Explore <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ===================================================
+         03 — FASHION
+    ==================================================== -->
+
+    <article class="journal-card">
+
+      <div class="card-image">
+
+        <img
+          src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1000&q=85"
+          alt="Fashion clothing"
+          loading="lazy"
+        >
+
+      </div>
+
+      <div class="card-content">
+
+        <span class="card-number">
+          03
+        </span>
+
+        <div class="card-category">
+          Style
+        </div>
+
+        <h3>
+          What to wear next.
+        </h3>
+
+        <p>
+          Fresh outfit ideas, seasonal inspiration
+          and personal style discoveries.
+        </p>
+
+        <a
+          href="fashion.html"
+          class="card-link"
+        >
+          Explore <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ===================================================
+         04 — TRAVEL
+    ==================================================== -->
+
+    <article class="journal-card">
+
+      <div class="card-image">
+
+        <img
+          src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=85"
+          alt="Mountain landscape"
+          loading="lazy"
+        >
+
+      </div>
+
+      <div class="card-content">
+
+        <span class="card-number">
+          04
+        </span>
+
+        <div class="card-category">
+          Places
+        </div>
+
+        <h3>
+          Somewhere worth going.
+        </h3>
+
+        <p>
+          Destinations, escapes and places
+          that inspire the next adventure.
+        </p>
+
+        <a
+          href="travel.html"
+          class="card-link"
+        >
+          Explore <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ===================================================
+         05 — FOOD
+    ==================================================== -->
+
+    <article class="journal-card">
+
+      <div class="card-image">
+
+        <img
+          src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=85"
+          alt="Fresh food"
+          loading="lazy"
+        >
+
+      </div>
+
+      <div class="card-content">
+
+        <span class="card-number">
+          05
+        </span>
+
+        <div class="card-category">
+          Food
+        </div>
+
+        <h3>
+          Something delicious.
+        </h3>
+
+        <p>
+          Recipes, ingredients and simple
+          food ideas made for sharing.
+        </p>
+
+        <a
+          href="culinary.html"
+          class="card-link"
+        >
+          Explore <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ===================================================
+         06 — NATURE
+    ==================================================== -->
+
+    <article class="journal-card">
+
+      <div class="card-image">
+
+        <img
+          src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=85"
+          alt="Forest"
+          loading="lazy"
+        >
+
+      </div>
+
+      <div class="card-content">
+
+        <span class="card-number">
+          06
+        </span>
+
+        <div class="card-category">
+          Nature
+        </div>
+
+        <h3>
+          Go outside for a while.
+        </h3>
+
+        <p>
+          Natural spaces, outdoor inspiration
+          and ways to reconnect with the world.
+        </p>
+
+        <a
+          href="nature.html"
+          class="card-link"
+        >
+          Explore <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
+
+  <!-- =====================================================
+       FEATURED ARCHIVE
+  ====================================================== -->
+
+  <section class="featured">
+
+    <div class="featured-copy">
+
+      <div class="featured-label">
+        The Elora Archive
+      </div>
+
+      <h2>
+        Keep a little
+        inspiration close.
+      </h2>
+
+      <p>
+        Discover a curated collection of guides,
+        visual references, seasonal ideas and
+        useful finds gathered by Elora.
+      </p>
+
+      <a
+        href="offer.html"
+        class="featured-btn"
+      >
+        Visit the archive
+        <span>→</span>
+      </a>
+
+    </div>
+
+
+    <div class="featured-art">
+
+      <img
+        src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=1400&q=85"
+        alt="Books and creative workspace"
+        loading="lazy"
+      >
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       FINAL STATEMENT
+  ====================================================== -->
+
+  <section class="statement">
+
+    <div class="statement-mark"></div>
+
+    <h2>
+      There is always something
+      <em>new to notice.</em>
+    </h2>
+
+    <p>
+      Elora Journal is a space for curiosity,
+      inspiration and the beautiful details
+      hiding inside everyday life.
+    </p>
+
+  </section>
+
+
+</main>
+
+
+<!-- =======================================================
+     FOOTER
+======================================================= -->
+
+<script src="footer.js" defer></script>
+
+
+</body>
+
+</html>
