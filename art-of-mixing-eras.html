@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+<title>The Art of Mixing Eras — Elora Journal</title>
+<meta name="description" content="Learn how to combine modern furniture, vintage accents, timeless materials, and personal treasures to create an interior with depth and character.">
+<link rel="canonical" href="art-of-mixing-eras.html">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+:root{
+    --bg:#0f142b;
+    --surface:#151b38;
+    --soft:#202951;
+    --text:#d3d7ee;
+    --heading:#ffffff;
+    --muted:#898fae;
+    --accent:#9b7cff;
+    --accent-light:#c9bdff;
+    --accent-dark:#8062e8;
+    --border:rgba(155,124,255,.18);
+    --max:760px;
+}
+
+*,*::before,*::after{box-sizing:border-box;}
+
+html{
+    scroll-behavior:smooth;
+    -webkit-text-size-adjust:100%;
+}
+
+body{
+    margin:0;
+    min-width:0;
+    overflow-x:hidden;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'DM Sans',Arial,sans-serif;
+    line-height:1.8;
+}
+
+a{color:inherit;text-decoration:none;}
+
+.article-page{
+    width:100%;
+    max-width:var(--max);
+    margin:0 auto;
+    padding:60px 22px 80px;
+}
+
+.article-header{
+    text-align:center;
+    margin-bottom:38px;
+}
+
+.article-category{
+    display:inline-block;
+    margin-bottom:17px;
+    padding:6px 14px;
+    background:rgba(155,124,255,.10);
+    border:1px solid rgba(155,124,255,.22);
+    border-radius:30px;
+    color:var(--accent-light);
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.article-header h1{
+    margin:0 0 17px;
+    color:var(--heading);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:clamp(32px,5vw,46px);
+    font-weight:500;
+    line-height:1.2;
+    letter-spacing:-.5px;
+}
+
+.article-subtitle{
+    max-width:620px;
+    margin:0 auto;
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.8;
+}
+
+.article-card{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:40px;
+    box-shadow:0 15px 45px rgba(0,0,0,.18);
+}
+
+.featured-quote{
+    margin:0 0 32px;
+    padding:23px 25px;
+    background:rgba(155,124,255,.07);
+    border-left:3px solid var(--accent);
+    border-radius:0 12px 12px 0;
+    color:var(--accent-light);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:21px;
+    font-style:italic;
+    line-height:1.6;
+}
+
+.article-card h2{
+    margin:30px 0 12px;
+    color:var(--heading);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:25px;
+    font-weight:500;
+    line-height:1.4;
+}
+
+.article-card h2:first-of-type{margin-top:0;}
+
+.article-card p{
+    margin:0 0 19px;
+    color:var(--text);
+    font-size:14px;
+    line-height:1.85;
+}
+
+.article-card strong{
+    color:var(--accent-light);
+    font-weight:600;
+}
+
+.find-section{
+    margin:28px 0 32px;
+    padding:25px 22px;
+    background:rgba(155,124,255,.055);
+    border:1px solid rgba(155,124,255,.16);
+    border-radius:14px;
+}
+
+.find-section h3{
+    margin:0 0 8px;
+    color:var(--heading);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:22px;
+    font-weight:500;
+    text-align:center;
+}
+
+.find-section p{
+    max-width:540px;
+    margin:0 auto 18px;
+    color:var(--muted);
+    font-size:12.5px;
+    text-align:center;
+    line-height:1.7;
+}
+
+.find-button{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    width:100%;
+    padding:15px 20px;
+    background:var(--accent);
+    border-radius:8px;
+    color:#ffffff;
+    font-size:13px;
+    font-weight:600;
+    box-shadow:0 5px 16px rgba(155,124,255,.18);
+    transition:background .2s ease,transform .2s ease,box-shadow .2s ease;
+}
+
+.find-button:hover{
+    background:var(--accent-dark);
+    transform:translateY(-1px);
+    box-shadow:0 8px 20px rgba(155,124,255,.25);
+}
+
+.find-button svg{transition:transform .2s ease;}
+.find-button:hover svg{transform:translateX(3px);}
+
+.cta-note{
+    margin:10px 0 0 !important;
+    color:#737a98 !important;
+    font-size:9.5px !important;
+    text-align:center !important;
+}
+
+.design-list{
+    margin:24px 0 28px;
+    padding:0;
+    list-style:none;
+}
+
+.design-list li{
+    position:relative;
+    margin-bottom:13px;
+    padding-left:25px;
+    color:#bfc4da;
+    font-size:13.5px;
+    line-height:1.7;
+}
+
+.design-list li::before{
+    content:"";
+    position:absolute;
+    left:4px;
+    top:.75em;
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:var(--accent);
+}
+
+.reflection-box{
+    margin:30px 0;
+    padding:22px;
+    background:var(--soft);
+    border:1px solid rgba(155,124,255,.14);
+    border-radius:13px;
+}
+
+.reflection-box h3{
+    margin:0 0 8px;
+    color:var(--heading);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:20px;
+    font-weight:500;
+}
+
+.reflection-box p{
+    margin:0;
+    color:var(--muted);
+    font-size:13px;
+}
+
+@media(max-width:650px){
+    .article-page{padding:38px 15px 55px;}
+    .article-header{margin-bottom:30px;}
+    .article-header h1{font-size:31px;}
+    .article-subtitle{font-size:13px;}
+    .article-card{padding:25px 20px;}
+    .featured-quote{padding:20px;font-size:19px;}
+    .article-card h2{font-size:22px;}
+    .article-card p{font-size:13.5px;}
+    .find-section{padding:22px 17px;}
+}
+
+@media(max-width:420px){
+    .article-page{padding:30px 14px 45px;}
+    .article-header h1{font-size:28px;}
+    .article-card{padding:22px 17px;}
+    .featured-quote{font-size:18px;padding:18px;}
+    .find-button{padding:14px 12px;font-size:12.5px;}
+}
+</style>
+</head>
+
+<body>
+
+<script src="header.js" defer></script>
+
+<main class="article-page">
+
+    <header class="article-header">
+        <span class="article-category">Vintage Charm</span>
+
+        <h1>The Art of Mixing Eras</h1>
+
+        <p class="article-subtitle">
+            How blending contemporary simplicity with vintage character
+            can create a home that feels collected, personal, and
+            beautifully connected to different moments in time.
+        </p>
+    </header>
+
+    <article class="article-card">
+
+        <blockquote class="featured-quote">
+            “A home becomes interesting when every object does not
+            belong to the same moment in time.”
+        </blockquote>
+
+        <h2>Beyond the Perfectly Matched Room</h2>
+
+        <p>
+            There is something appealing about a beautifully coordinated
+            room. Matching furniture, consistent finishes, and a carefully
+            selected color palette can create an immediate sense of order.
+            Yet a space can sometimes feel more personal when it contains
+            a little contrast.
+        </p>
+
+        <p>
+            Mixing different design eras allows a home to tell a richer
+            story. A contemporary sofa can sit comfortably beside a
+            vintage wooden cabinet. An antique mirror can bring character
+            to a clean, modern hallway. <strong>The contrast between old
+            and new creates visual depth.</strong>
+        </p>
+
+        <p>
+            Rather than making a room feel disconnected, thoughtful
+            combinations can give it the warmth of a space that has
+            developed naturally over time.
+        </p>
+
+        <h2>Find a Common Thread</h2>
+
+        <p>
+            The secret to mixing eras successfully is not to make every
+            piece look alike. It is to find something that connects them.
+            This might be a shared color, a similar material, a repeated
+            shape, or a particular mood.
+        </p>
+
+        <p>
+            For example, a dark walnut side table can complement a modern
+            chair through its warm wood tone. A vintage artwork can feel
+            at home in a contemporary room when its colors repeat elsewhere
+            in the space.
+        </p>
+
+        <p>
+            These small visual connections help different styles feel
+            intentional rather than accidental.
+        </p>
+
+
+<style>
+.adsterra-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  overflow: hidden;
+}
+
+.adsterra-mobile {
+  display: none;
+}
+
+.adsterra-desktop {
+  display: flex;
+}
+
+@media (max-width: 650px) {
+  .adsterra-desktop {
+    display: none;
+  }
+
+  .adsterra-mobile {
+    display: flex;
+  }
+}
+</style>
+
+<div class="adsterra-banner adsterra-mobile">
+<script>
+  atOptions = {
+    'key' : '0ab546df419e4e7876a17c780505a6b9',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://bauval.org/22/0ab546df419e4e7876a17c780505a6b9"></script>
+</div>
+
+<div class="adsterra-banner adsterra-desktop">
+<script>
+  atOptions = {
+    'key' : '26ba8c66308c37fe27ce550392d421d9',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://bauval.org/22/26ba8c66308c37fe27ce550392d421d9"></script>
+</div>
+
+
+
+        <h2>Balance Old and New</h2>
+
+        <p>
+            A useful starting point is to let one design era establish
+            the foundation while the other adds personality. A modern
+            room with clean architectural lines might benefit from
+            one or two vintage accent pieces.
+        </p>
+
+        <p>
+            Alternatively, a room with traditional furniture can feel
+            refreshed through contemporary lighting, simple artwork,
+            or understated accessories.
+        </p>
+
+        <ul class="design-list">
+            <li>Pair a modern sofa with a vintage coffee table.</li>
+            <li>Use contemporary lighting to refresh a traditional dining space.</li>
+            <li>Combine antique frames with simple, modern wall arrangements.</li>
+            <li>Repeat a material or color to connect pieces from different periods.</li>
+            <li>Leave enough open space so distinctive objects can stand out.</li>
+        </ul>
+
+        <section class="find-section">
+
+            <h3>Explore Timeless Decor Finds</h3>
+
+            <p>
+                Discover home decor pieces that combine classic character
+                with modern simplicity. Find thoughtful accents to help
+                create a space that feels uniquely yours.
+            </p>
+
+            <a href="decorfind.html" class="find-button" target="_blank" rel="noopener noreferrer">
+                <span>Explore Vintage-Inspired Decor</span>
+
+                <svg width="16" height="16" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </a>
+
+            <p class="cta-note">
+                You will continue to an independent shopping page.
+                Product availability and pricing may change.
+            </p>
+
+        </section>
+
+        <h2>Let Materials Tell Their Stories</h2>
+
+        <p>
+            Materials often provide the strongest connection between
+            different periods. Aged brass, natural wood, linen, leather,
+            stone, and ceramic have a timeless quality that can work
+            across many interior styles.
+        </p>
+
+        <p>
+            A weathered wooden chest can add warmth to a minimalist
+            bedroom. A simple linen curtain can soften the presence
+            of a traditional furniture piece. Natural textures create
+            continuity even when the shapes and styles are different.
+        </p>
+
+        <p>
+            Allow the materials to show their character. Small marks,
+            changes in tone, and signs of age can make a room feel
+            more authentic.
+        </p>
+
+        <h2>Avoid Making Everything a Statement</h2>
+
+        <p>
+            When combining different eras, it can be tempting to
+            introduce too many distinctive objects at once. A room
+            filled with competing statement pieces may feel visually
+            restless instead of thoughtfully layered.
+        </p>
+
+        <p>
+            Give special objects space to breathe. Let one vintage
+            cabinet become the focal point, or allow a contemporary
+            light fixture to draw attention without surrounding it
+            with equally dramatic details.
+        </p>
+
+        <div class="reflection-box">
+            <h3>A Simple Question</h3>
+            <p>
+                Is there an older object in your home that you have
+                never quite known how to style? What modern piece
+                could help it feel more connected to your surroundings?
+            </p>
+        </div>
+
+        <h2>Decorate With Personal History</h2>
+
+        <p>
+            Some of the most meaningful interiors include objects
+            that carry memories. A chair inherited from a relative,
+            a mirror discovered in a secondhand shop, or a decorative
+            bowl collected during a journey can bring a sense of
+            personal history into a room.
+        </p>
+
+        <p>
+            These objects do not need to be valuable or rare.
+            Their significance comes from the stories attached
+            to them and the way they become part of everyday life.
+        </p>
+
+        <h2>A Home That Feels Collected, Not Manufactured</h2>
+
+        <p>
+            Mixing eras encourages you to move beyond the idea that
+            every room needs to follow a single design language.
+            It gives you permission to combine what you love,
+            experiment with contrast, and let your surroundings
+            evolve gradually.
+        </p>
+
+        <p>
+            The result is often a home that feels less like a
+            completed design project and more like a reflection
+            of a life being lived.
+        </p>
+
+        <div class="reflection-box">
+            <h3>Carry This Thought With You</h3>
+            <p>
+                Your home does not need to belong to one particular
+                era. Let old treasures and new discoveries exist
+                together, connected by the story only you can create.
+            </p>
+        </div>
+
+    </article>
+
+</main>
+
+<script src="footer.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+<title>Micro-Moments of Delight — Elora Journal</title>
+<meta name="description" content="Discover the quiet joy hidden in ordinary moments and learn to notice the small experiences that make everyday life meaningful.">
+<link rel="canonical" href="micro-moments-of-delight.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --bg: #0f142b;
+    --surface: #151b38;
+    --soft: #202951;
+    --accent: #9b7cff;
+    --accent-light: #c9bdff;
+    --text: #f4f1ff;
+    --muted: #b3b1ca;
+    --border: rgba(201,189,255,0.15);
+    --max: 760px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.8;
+    min-height: 100vh;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.article-page {
+    width: 100%;
+    padding: 72px 24px 90px;
+}
+
+.article-header {
+    max-width: var(--max);
+    margin: 0 auto 42px;
+    text-align: center;
+}
+
+.category-pill {
+    display: inline-block;
+    padding: 7px 17px;
+    margin-bottom: 24px;
+    border: 1px solid rgba(155,124,255,0.4);
+    border-radius: 30px;
+    color: var(--accent-light);
+    background: rgba(155,124,255,0.09);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.article-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 500;
+    line-height: 1.17;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+}
+
+.article-header .subtitle {
+    max-width: 610px;
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: 1.08rem;
+    line-height: 1.8;
+}
+
+.article-card {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 48px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    box-shadow: 0 25px 70px rgba(0,0,0,0.18);
+}
+
+.featured-quote {
+    padding: 27px 30px;
+    margin-bottom: 40px;
+    background: var(--soft);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 12px 12px 0;
+    color: var(--accent-light);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem;
+    font-style: italic;
+    line-height: 1.65;
+}
+
+.article-card h2 {
+    margin: 38px 0 16px;
+    color: var(--text);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.35;
+}
+
+.article-card h2:first-of-type {
+    margin-top: 0;
+}
+
+.article-card p {
+    margin-bottom: 19px;
+    color: var(--muted);
+    font-size: 0.98rem;
+}
+
+.observation-list {
+    margin: 24px 0 30px;
+    padding: 0;
+    list-style: none;
+}
+
+.observation-list li {
+    position: relative;
+    margin-bottom: 14px;
+    padding: 15px 18px 15px 43px;
+    background: rgba(32,41,81,0.65);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--muted);
+}
+
+.observation-list li::before {
+    content: "✦";
+    position: absolute;
+    left: 17px;
+    top: 14px;
+    color: var(--accent);
+}
+
+.reflection-box {
+    margin-top: 34px;
+    padding: 25px 27px;
+    background: rgba(155,124,255,0.08);
+    border: 1px solid rgba(155,124,255,0.25);
+    border-radius: 14px;
+}
+
+.reflection-box h3 {
+    margin-bottom: 10px;
+    color: var(--accent-light);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem;
+    font-weight: 500;
+}
+
+.reflection-box p {
+    margin-bottom: 0;
+}
+
+.find-section {
+    margin-top: 45px;
+    padding: 32px 28px;
+    text-align: center;
+    background: var(--soft);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+}
+
+.find-section h2 {
+    margin: 0 0 12px;
+}
+
+.find-section p {
+    max-width: 520px;
+    margin: 0 auto 22px;
+}
+
+.find-button {
+    display: inline-block;
+    padding: 13px 25px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.find-button:hover {
+    background: #8665ec;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 650px) {
+    .article-page {
+        padding: 52px 18px 65px;
+    }
+
+    .article-card {
+        padding: 32px 25px;
+    }
+
+    .article-header {
+        margin-bottom: 32px;
+    }
+
+    .featured-quote {
+        padding: 23px;
+        font-size: 1.2rem;
+    }
+
+    .article-card h2 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .article-page {
+        padding: 40px 14px 55px;
+    }
+
+    .article-card {
+        padding: 25px 19px;
+        border-radius: 16px;
+    }
+
+    .article-header h1 {
+        font-size: 2.35rem;
+    }
+
+    .article-header .subtitle {
+        font-size: 0.96rem;
+    }
+
+    .featured-quote {
+        padding: 19px;
+        font-size: 1.1rem;
+    }
+
+    .article-card h2 {
+        font-size: 1.45rem;
+    }
+
+    .find-section {
+        padding: 26px 18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<script src="header.js" defer></script>
+
+<main class="article-page">
+
+    <header class="article-header">
+        <span class="category-pill">Mindfulness &amp; Everyday Joy</span>
+        <h1>Micro-Moments of Delight</h1>
+        <p class="subtitle">
+            Happiness does not always arrive as a grand event. Sometimes it
+            appears quietly in the smallest moments we almost overlook.
+        </p>
+    </header>
+
+    <article class="article-card">
+
+        <blockquote class="featured-quote">
+            “A beautiful life is not made only of extraordinary days,
+            but of ordinary moments we learn to notice.”
+        </blockquote>
+
+        <h2>The Small Things We Almost Miss</h2>
+
+        <p>
+            We often imagine happiness as something waiting in the future:
+            a long-awaited achievement, a special celebration, a journey,
+            or a moment when everything finally falls into place.
+            While these experiences can bring genuine joy, they are not
+            the only places where delight lives.
+        </p>
+
+        <p>
+            There is also the warmth of sunlight reaching a quiet room,
+            the first sip of a favorite drink, a familiar song playing
+            unexpectedly, or the comfort of hearing someone laugh.
+            These experiences may last only a few seconds, yet they
+            can soften an entire day.
+        </p>
+
+        <p>
+            Micro-moments of delight are small experiences that invite
+            us to feel present, grateful, or simply a little lighter.
+            They rarely demand attention. We have to become willing
+            to notice them.
+        </p>
+
+        <h2>Why Small Joys Matter</h2>
+
+        <p>
+            Everyday life is made up of transitions, routines, and
+            responsibilities. When we focus only on the next task,
+            the next deadline, or the next destination, much of the
+            present can pass without being experienced.
+        </p>
+
+        <p>
+            Small joys offer gentle interruptions to this pattern.
+            They remind us that life is happening now, not only when
+            our plans are complete. A pleasant breeze, a kind message,
+            or a few peaceful minutes can give an ordinary afternoon
+            a different feeling.
+        </p>
+
+
+<style>
+.adsterra-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  overflow: hidden;
+}
+
+.adsterra-mobile {
+  display: none;
+}
+
+.adsterra-desktop {
+  display: flex;
+}
+
+@media (max-width: 650px) {
+  .adsterra-desktop {
+    display: none;
+  }
+
+  .adsterra-mobile {
+    display: flex;
+  }
+}
+</style>
+
+<div class="adsterra-banner adsterra-mobile">
+<script>
+  atOptions = {
+    'key' : '0ab546df419e4e7876a17c780505a6b9',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://bauval.org/22/0ab546df419e4e7876a17c780505a6b9"></script>
+</div>
+
+<div class="adsterra-banner adsterra-desktop">
+<script>
+  atOptions = {
+    'key' : '26ba8c66308c37fe27ce550392d421d9',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://bauval.org/22/26ba8c66308c37fe27ce550392d421d9"></script>
+</div>
+
+
+
+        <p>
+            These moments do not erase difficult experiences, nor do
+            they require us to pretend that every day is wonderful.
+            They simply make room for something good to exist alongside
+            whatever else we may be carrying.
+        </p>
+
+        <h2>Learning the Art of Noticing</h2>
+
+        <p>
+            Delight is sometimes less about finding something new and
+            more about seeing familiar things with fresh attention.
+            A daily walk can become more meaningful when you notice
+            the changing sky. A routine meal can feel different when
+            you slow down enough to enjoy its taste.
+        </p>
+
+        <p>
+            You do not need to turn every moment into a special occasion.
+            Instead, allow yourself to pause when something feels pleasant.
+            Let the experience last a little longer before moving on.
+        </p>
+
+        <ul class="observation-list">
+            <li>Notice the first comfortable moment after waking up.</li>
+            <li>Listen closely to a sound that usually becomes background noise.</li>
+            <li>Enjoy a familiar meal without rushing through it.</li>
+            <li>Take a moment to appreciate a thoughtful gesture.</li>
+            <li>Look for one small detail that makes your surroundings beautiful.</li>
+        </ul>
+
+        <h2>Making Room for Everyday Wonder</h2>
+
+        <p>
+            Our routines can sometimes become so familiar that we stop
+            seeing them. Yet repetition does not remove the possibility
+            of wonder. It only makes attention more important.
+        </p>
+
+        <p>
+            Try changing the pace of one ordinary activity. Walk a little
+            more slowly. Open a window. Sit outside for a few minutes.
+            Put away your phone while sharing a conversation. Small
+            adjustments can help familiar experiences feel more alive.
+        </p>
+
+        <p>
+            It can also be helpful to keep a simple record of these moments.
+            At the end of the day, remember one thing that made you smile,
+            feel calm, or appreciate being where you were. Over time,
+            this practice can reveal how much quiet goodness already
+            exists in your everyday life.
+        </p>
+
+        <h2>Joy Without the Pressure to Be Happy</h2>
+
+        <p>
+            There is an important difference between noticing joy and
+            forcing yourself to feel it. You do not have to search for
+            a positive side to every difficult experience. Some days
+            are tiring, disappointing, or uncertain, and those feelings
+            deserve room too.
+        </p>
+
+        <p>
+            Micro-moments of delight are not another task to complete.
+            They are invitations, not expectations. If you notice one,
+            enjoy it. If you do not, there is no need to turn that into
+            a reason for criticism.
+        </p>
+
+        <p>
+            A gentle relationship with joy allows happiness to be small,
+            imperfect, and real.
+        </p>
+
+        <div class="reflection-box">
+            <h3>A Moment to Reflect</h3>
+            <p>
+                Think about the last ordinary moment that made you feel
+                unexpectedly happy. What was happening, and what might
+                help you notice more moments like it?
+            </p>
+        </div>
+
+        <section class="find-section">
+            <h2>Celebrate the Little Things</h2>
+            <p>
+                Explore quotes and reflections about gratitude, presence,
+                simple pleasures, and the quiet beauty hidden in everyday life.
+            </p>
+            <a href="quotesfind.html" class="find-button" target="_blank" rel="noopener noreferrer">
+                Discover Everyday Inspiration
+            </a>
+        </section>
+
+        <div class="reflection-box">
+            <h3>Carry This Thought With You</h3>
+            <p>
+                Do not wait for life to become extraordinary before you
+                allow yourself to enjoy it. Sometimes the smallest moments
+                are already enough.
+            </p>
+        </div>
+
+    </article>
+
+</main>
+
+<script src="footer.js" defer></script>
+
+</body>
+</html>

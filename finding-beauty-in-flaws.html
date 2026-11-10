@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+<title>Finding Beauty in Flaws — Elora Journal</title>
+<meta name="description" content="Discover the beauty of imperfect interiors through natural materials, handmade objects, weathered finishes, and the art of embracing character.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="header.js" defer></script>
+
+<style>
+:root {
+    --bg:#0f142b;
+    --surface:#151b38;
+    --soft:#202951;
+    --text:#d3d7ee;
+    --heading:#ffffff;
+    --muted:#898fae;
+    --accent:#9b7cff;
+    --accent-light:#c9bdff;
+    --accent-dark:#8062e8;
+    --border:rgba(155,124,255,.18);
+    --max:760px;
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+    background:var(--bg);
+    color:var(--text);
+    font-family:'DM Sans',sans-serif;
+    line-height:1.8;
+}
+
+.article-page {
+    max-width:var(--max);
+    margin:0 auto;
+    padding:60px 22px 80px;
+}
+
+.article-header {
+    text-align:center;
+    margin-bottom:42px;
+}
+
+.article-category {
+    display:inline-block;
+    color:var(--accent-light);
+    background:rgba(155,124,255,.12);
+    border:1px solid var(--border);
+    padding:7px 16px;
+    border-radius:30px;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:22px;
+}
+
+.article-header h1 {
+    color:var(--heading);
+    font-family:'Playfair Display',serif;
+    font-size:clamp(38px,7vw,56px);
+    font-weight:500;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+.article-subtitle {
+    color:var(--muted);
+    font-size:16px;
+    max-width:590px;
+    margin:0 auto;
+    line-height:1.8;
+}
+
+.article-card {
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:22px;
+    padding:32px;
+    margin-bottom:30px;
+}
+
+.featured-quote {
+    color:var(--accent-light);
+    font-family:'Playfair Display',serif;
+    font-size:25px;
+    font-style:italic;
+    line-height:1.55;
+    text-align:center;
+    padding:34px 25px;
+    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
+    margin:35px 0;
+}
+
+.article-card h2 {
+    color:var(--heading);
+    font-family:'Playfair Display',serif;
+    font-size:29px;
+    font-weight:500;
+    line-height:1.35;
+    margin:38px 0 15px;
+}
+
+.article-card h2:first-child {
+    margin-top:0;
+}
+
+.article-card p {
+    color:var(--text);
+    font-size:15px;
+    margin-bottom:18px;
+}
+
+.article-card strong {
+    color:var(--accent-light);
+    font-weight:600;
+}
+
+.design-list {
+    list-style:none;
+    margin:22px 0;
+}
+
+.design-list li {
+    position:relative;
+    padding:13px 16px 13px 42px;
+    margin-bottom:10px;
+    background:rgba(155,124,255,.07);
+    border:1px solid var(--border);
+    border-radius:12px;
+    color:var(--text);
+    font-size:14px;
+}
+
+.design-list li::before {
+    content:"✦";
+    position:absolute;
+    left:17px;
+    color:var(--accent-light);
+}
+
+.reflection-box {
+    background:var(--soft);
+    border-left:3px solid var(--accent);
+    border-radius:0 15px 15px 0;
+    padding:24px;
+    margin:30px 0;
+}
+
+.reflection-box p {
+    margin:0;
+    color:var(--accent-light);
+    font-family:'Playfair Display',serif;
+    font-size:19px;
+    font-style:italic;
+}
+
+.find-section {
+    text-align:center;
+    padding:35px 25px;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:22px;
+    margin-top:35px;
+}
+
+.find-section h2 {
+    color:var(--heading);
+    font-family:'Playfair Display',serif;
+    font-size:29px;
+    font-weight:500;
+    margin-bottom:12px;
+}
+
+.find-section p {
+    color:var(--muted);
+    font-size:14px;
+    margin-bottom:23px;
+}
+
+.find-button {
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    background:var(--accent);
+    color:#fff;
+    text-decoration:none;
+    padding:13px 24px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:700;
+    transition:.25s ease;
+}
+
+.find-button:hover {
+    background:var(--accent-dark);
+    transform:translateY(-2px);
+}
+
+.find-button svg {
+    width:17px;
+    height:17px;
+}
+
+.cta-note {
+    color:var(--muted);
+    font-size:12px;
+    margin-top:16px;
+}
+
+@media(max-width:600px) {
+    .article-page {
+        padding:42px 17px 60px;
+    }
+
+    .article-card {
+        padding:23px;
+    }
+
+    .article-card h2 {
+        font-size:25px;
+    }
+
+    .featured-quote {
+        font-size:21px;
+        padding:27px 15px;
+    }
+
+    .find-section {
+        padding:28px 18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<main class="article-page">
+
+<header class="article-header">
+    <span class="article-category">Home & Decor</span>
+    <h1>Finding Beauty in Flaws</h1>
+    <p class="article-subtitle">
+        Explore the charm of imperfect spaces, where natural materials, handmade details, and signs of time create interiors filled with warmth and personality.
+    </p>
+</header>
+
+<article class="article-card">
+
+<div class="featured-quote">
+    “Perfection may catch the eye, but character is what makes a space unforgettable.”
+</div>
+
+<h2>The Charm of Imperfection</h2>
+
+<p>
+We often imagine a beautiful home as a perfectly arranged collection of flawless surfaces, matching furniture, and carefully coordinated details. Yet the spaces that feel most welcoming are rarely the ones that look untouched.
+</p>
+
+<p>
+A slightly uneven handmade bowl, a wooden table marked by years of use, or a vintage chair with a faded finish can bring something special to a room. These details tell stories. They remind us that a home is not a showroom but a living place shaped by everyday experiences.
+</p>
+
+<p>
+Finding beauty in flaws means learning to appreciate the individuality of materials and objects rather than trying to make everything look identical.
+</p>
+
+<h2>Celebrate Natural Materials</h2>
+
+<p>
+Nature rarely creates two things in exactly the same way. Wood carries individual grain patterns, stone reveals subtle variations, and handmade ceramics often have small differences in shape and glaze.
+</p>
+
+<p>
+These qualities make natural materials especially valuable in interiors. Instead of hiding every variation, allow them to become part of the visual character of your home.
+</p>
+
+<p>
+A timber dining table with visible grain, a stone surface with gentle irregularities, or a woven basket with handmade texture can add depth without requiring elaborate decoration.
+</p>
+
+
+<style>
+.adsterra-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  overflow: hidden;
+}
+
+.adsterra-mobile {
+  display: none;
+}
+
+.adsterra-desktop {
+  display: flex;
+}
+
+@media (max-width: 650px) {
+  .adsterra-desktop {
+    display: none;
+  }
+
+  .adsterra-mobile {
+    display: flex;
+  }
+}
+</style>
+
+<div class="adsterra-banner adsterra-mobile">
+<script>
+  atOptions = {
+    'key' : '0ab546df419e4e7876a17c780505a6b9',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://bauval.org/22/0ab546df419e4e7876a17c780505a6b9"></script>
+</div>
+
+<div class="adsterra-banner adsterra-desktop">
+<script>
+  atOptions = {
+    'key' : '26ba8c66308c37fe27ce550392d421d9',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://bauval.org/22/26ba8c66308c37fe27ce550392d421d9"></script>
+</div>
+
+
+
+<h2>Give Handmade Objects a Place</h2>
+
+<p>
+Handcrafted objects bring a sense of human touch into a space. Unlike mass-produced pieces that are designed to look identical, handmade items often carry small variations that make each one distinct.
+</p>
+
+<p>
+Display pottery, woven textiles, carved wooden accessories, or artwork made by independent creators. A single handmade object can become a meaningful focal point when surrounded by simpler pieces.
+</p>
+
+<p>
+You do not need to fill your home with decorative objects. Select a few items that you genuinely enjoy looking at and using.
+</p>
+
+<h2>Let Old and New Live Together</h2>
+
+<p>
+An interior becomes more interesting when every object does not come from the same period or design style. A contemporary sofa can sit comfortably beside a vintage side table. Modern lighting can highlight an antique mirror, while a simple dining space can be warmed by an inherited wooden cabinet.
+</p>
+
+<p>
+The contrast between old and new creates visual depth and makes a room feel collected over time rather than purchased all at once.
+</p>
+
+<p>
+Look for shared qualities such as material, color, proportion, or shape. These subtle connections help different pieces feel harmonious without making them match.
+</p>
+
+<h2>Appreciate the Beauty of Patina</h2>
+
+<p>
+Patina is the gentle change that occurs as materials age and are used. It may appear as softened wood, slightly faded fabric, aged metal, or a finish that has become richer over time.
+</p>
+
+<p>
+Rather than treating every sign of age as damage, consider whether it adds character to the object. A well-loved piece can bring warmth and authenticity that a brand-new item may not immediately offer.
+</p>
+
+<p>
+Of course, beauty should never come at the expense of safety or function. Repair structural damage, address harmful wear, and preserve the details that make an object special.
+</p>
+
+<h2>Choose a Relaxed Approach to Styling</h2>
+
+<p>
+A room does not need to be perfectly symmetrical to feel balanced. A collection of objects with different shapes, heights, and textures can create a more natural arrangement when there is enough breathing space between them.
+</p>
+
+<p>
+Try combining smooth and rough finishes, placing a handmade vase beside a clean-lined lamp, or arranging books with a personal keepsake. Let the arrangement feel considered but not overly controlled.
+</p>
+
+<h2>Ways to Welcome Imperfection Into Your Home</h2>
+
+<ul class="design-list">
+    <li>Choose natural wood and stone with visible variations in texture.</li>
+    <li>Display handmade ceramics and objects with individual character.</li>
+    <li>Mix vintage furniture with contemporary pieces.</li>
+    <li>Preserve attractive signs of age on well-loved objects.</li>
+    <li>Combine different textures instead of relying on matching finishes.</li>
+    <li>Use personal collections to make shelves and surfaces feel meaningful.</li>
+    <li>Allow a little visual asymmetry while keeping the overall room balanced.</li>
+</ul>
+
+<div class="reflection-box">
+    <p>
+        A home becomes personal through the things that carry memories, the materials that age gracefully, and the details that refuse to be ordinary.
+    </p>
+</div>
+
+<h2>A Home That Feels Real</h2>
+
+<p>
+Embracing imperfection is not about neglecting your surroundings or abandoning thoughtful design. It is about recognizing that beauty can exist beyond flawless finishes and perfectly coordinated arrangements.
+</p>
+
+<p>
+When you allow natural variation, meaningful objects, and signs of everyday life into your interiors, your home begins to feel more authentic. It becomes a reflection of the people who live there rather than an image of an idealized room.
+</p>
+
+<p>
+Choose what you love, care for what you own, and leave space for life to leave its gentle marks. Sometimes the most beautiful part of a home is precisely what makes it different.
+</p>
+
+</article>
+
+<section class="find-section">
+    <h2>Discover Your Decor Style</h2>
+    <p>
+        Find thoughtful home accents and design inspiration that celebrate individuality, texture, and timeless character.
+    </p>
+    <a href="decorfind.html" class="find-button">
+        Explore Home & Decor
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M13 6l6 6-6 6"/>
+        </svg>
+    </a>
+    <p class="cta-note">Make room for the beauty of being imperfect.</p>
+</section>
+
+</main>
+
+<script src="footer.js" defer></script>
+</body>
+</html>

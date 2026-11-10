@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+<title>Bringing the Outdoors Inside — Elora Journal</title>
+<meta name="description" content="Explore biophilic home design through indoor plants, natural materials, botanical details, and sunlight that bring the outdoors into everyday living.">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+:root{
+    --bg:#0f142b;
+    --surface:#151b38;
+    --soft:#202951;
+    --text:#d3d7ee;
+    --heading:#ffffff;
+    --muted:#898fae;
+    --accent:#9b7cff;
+    --accent-light:#c9bdff;
+    --accent-dark:#8062e8;
+    --border:rgba(155,124,255,.18);
+    --max:760px;
+}
+
+*,*::before,*::after{box-sizing:border-box;}
+
+html{
+    scroll-behavior:smooth;
+    -webkit-text-size-adjust:100%;
+}
+
+body{
+    margin:0;
+    min-width:0;
+    overflow-x:hidden;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'DM Sans',Arial,sans-serif;
+    line-height:1.8;
+}
+
+a{color:inherit;text-decoration:none;}
+
+.article-page{
+    width:100%;
+    max-width:var(--max);
+    margin:0 auto;
+    padding:60px 22px 80px;
+}
+
+.article-header{
+    text-align:center;
+    margin-bottom:38px;
+}
+
+.article-category{
+    display:inline-block;
+    margin-bottom:17px;
+    padding:6px 14px;
+    background:rgba(155,124,255,.10);
+    border:1px solid rgba(155,124,255,.22);
+    border-radius:30px;
+    color:var(--accent-light);
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.article-header h1{
+    margin:0 0 17px;
+    color:var(--heading);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:clamp(32px,5vw,46px);
+    font-weight:500;
+    line-height:1.2;
+    letter-spacing:-.5px;
+}
+
+.article-subtitle{
+    max-width:620px;
+    margin:0 auto;
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.8;
+}
+
+.article-card{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:40px;
+    box-shadow:0 15px 45px rgba(0,0,0,.18);
+}
+
+.featured-quote{
+    margin:0 0 32px;
+    padding:23px 25px;
+    background:rgba(155,124,255,.07);
+    border-left:3px solid var(--accent);
+    border-radius:0 12px 12px 0;
+    color:var(--accent-light);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:21px;
+    font-style:italic;
+    line-height:1.6;
+}
+
+.article-card h2{
+    margin:30px 0 12px;
+    color:var(--heading);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:25px;
+    font-weight:500;
+    line-height:1.4;
+}
+
+.article-card h2:first-of-type{margin-top:0;}
+
+.article-card p{
+    margin:0 0 19px;
+    color:var(--text);
+    font-size:14px;
+    line-height:1.85;
+}
+
+.article-card strong{
+    color:var(--accent-light);
+    font-weight:600;
+}
+
+.find-section{
+    margin:28px 0 32px;
+    padding:25px 22px;
+    background:rgba(155,124,255,.055);
+    border:1px solid rgba(155,124,255,.16);
+    border-radius:14px;
+}
+
+.find-section h3{
+    margin:0 0 8px;
+    color:var(--heading);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:22px;
+    font-weight:500;
+    text-align:center;
+}
+
+.find-section p{
+    max-width:540px;
+    margin:0 auto 18px;
+    color:var(--muted);
+    font-size:12.5px;
+    text-align:center;
+    line-height:1.7;
+}
+
+.find-button{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    width:100%;
+    padding:15px 20px;
+    background:var(--accent);
+    border-radius:8px;
+    color:#ffffff;
+    font-size:13px;
+    font-weight:600;
+    box-shadow:0 5px 16px rgba(155,124,255,.18);
+    transition:background .2s ease,transform .2s ease,box-shadow .2s ease;
+}
+
+.find-button:hover{
+    background:var(--accent-dark);
+    transform:translateY(-1px);
+    box-shadow:0 8px 20px rgba(155,124,255,.25);
+}
+
+.find-button svg{transition:transform .2s ease;}
+.find-button:hover svg{transform:translateX(3px);}
+
+.cta-note{
+    margin:10px 0 0 !important;
+    color:#737a98 !important;
+    font-size:9.5px !important;
+    text-align:center !important;
+}
+
+.design-list{
+    margin:24px 0 28px;
+    padding:0;
+    list-style:none;
+}
+
+.design-list li{
+    position:relative;
+    margin-bottom:13px;
+    padding-left:25px;
+    color:#bfc4da;
+    font-size:13.5px;
+    line-height:1.7;
+}
+
+.design-list li::before{
+    content:"";
+    position:absolute;
+    left:4px;
+    top:.75em;
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:var(--accent);
+}
+
+.reflection-box{
+    margin:30px 0;
+    padding:22px;
+    background:var(--soft);
+    border:1px solid rgba(155,124,255,.14);
+    border-radius:13px;
+}
+
+.reflection-box h3{
+    margin:0 0 8px;
+    color:var(--heading);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:20px;
+    font-weight:500;
+}
+
+.reflection-box p{
+    margin:0;
+    color:var(--muted);
+    font-size:13px;
+}
+
+@media(max-width:650px){
+    .article-page{padding:38px 15px 55px;}
+    .article-header{margin-bottom:30px;}
+    .article-header h1{font-size:31px;}
+    .article-subtitle{font-size:13px;}
+    .article-card{padding:25px 20px;}
+    .featured-quote{padding:20px;font-size:19px;}
+    .article-card h2{font-size:22px;}
+    .article-card p{font-size:13.5px;}
+    .find-section{padding:22px 17px;}
+}
+
+@media(max-width:420px){
+    .article-page{padding:30px 14px 45px;}
+    .article-header h1{font-size:28px;}
+    .article-card{padding:22px 17px;}
+    .featured-quote{font-size:18px;padding:18px;}
+    .find-button{padding:14px 12px;font-size:12.5px;}
+}
+</style>
+</head>
+
+<body>
+
+<script src="header.js" defer></script>
+
+<main class="article-page">
+
+    <header class="article-header">
+        <span class="article-category">Biophilic Design</span>
+
+        <h1>Bringing the Outdoors Inside</h1>
+
+        <p class="article-subtitle">
+            How greenery, natural light, organic materials, and botanical
+            details can make everyday interiors feel more connected
+            to the natural world.
+        </p>
+    </header>
+
+    <article class="article-card">
+
+        <blockquote class="featured-quote">
+            “A little nature in a room can remind us that calm,
+            growth, and beauty are never far away.”
+        </blockquote>
+
+        <h2>A Natural Connection at Home</h2>
+
+        <p>
+            There is something comforting about being surrounded by nature.
+            The sight of green leaves, the warmth of sunlight, and the
+            presence of natural materials can make an environment feel
+            softer and more welcoming.
+        </p>
+
+        <p>
+            Bringing the outdoors inside is about creating a connection
+            between our living spaces and the natural world. This approach,
+            often associated with biophilic design, can be introduced
+            through plants, natural textures, organic shapes, and views
+            of the outdoors.
+        </p>
+
+        <p>
+            <strong>You do not need a large garden or an elaborate
+            renovation to create this feeling.</strong> Even a few
+            thoughtful details can change the atmosphere of a room.
+        </p>
+
+        <h2>Let Indoor Plants Bring Life to Your Space</h2>
+
+        <p>
+            Plants are one of the most familiar ways to introduce nature
+            into an interior. Their leaves add movement, color, and
+            variation to spaces that might otherwise feel static.
+        </p>
+
+        <p>
+            A tall floor plant can soften an empty corner, while a small
+            potted plant can bring life to a shelf, desk, or windowsill.
+            Hanging plants can also add greenery without taking up
+            valuable floor space.
+        </p>
+
+
+<style>
+.adsterra-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  overflow: hidden;
+}
+
+.adsterra-mobile {
+  display: none;
+}
+
+.adsterra-desktop {
+  display: flex;
+}
+
+@media (max-width: 650px) {
+  .adsterra-desktop {
+    display: none;
+  }
+
+  .adsterra-mobile {
+    display: flex;
+  }
+}
+</style>
+
+<div class="adsterra-banner adsterra-mobile">
+<script>
+  atOptions = {
+    'key' : '0ab546df419e4e7876a17c780505a6b9',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://bauval.org/22/0ab546df419e4e7876a17c780505a6b9"></script>
+</div>
+
+<div class="adsterra-banner adsterra-desktop">
+<script>
+  atOptions = {
+    'key' : '26ba8c66308c37fe27ce550392d421d9',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://bauval.org/22/26ba8c66308c37fe27ce550392d421d9"></script>
+</div>
+
+
+
+        <ul class="design-list">
+            <li>Choose plants that suit the natural light available in your room.</li>
+            <li>Use ceramic or clay pots to introduce earthy character.</li>
+            <li>Place larger plants in corners that need visual softness.</li>
+            <li>Group smaller plants at different heights for gentle variation.</li>
+            <li>Choose manageable plants that fit your care routine.</li>
+        </ul>
+
+        <section class="find-section">
+            <h3>Explore Nature-Inspired Decor</h3>
+
+            <p>
+                Find decorative planters, natural accessories, and
+                thoughtful home pieces that can help bring an organic
+                feeling into your everyday surroundings.
+            </p>
+
+            <a href="decorfind.html" class="find-button" target="_blank" rel="noopener noreferrer">
+                <span>Explore Home Decor Picks</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </a>
+
+            <p class="cta-note">
+                You will continue to an independent shopping page.
+                Product availability and pricing may change.
+            </p>
+        </section>
+
+        <h2>Make Natural Light Part of the Design</h2>
+
+        <p>
+            Sunlight can transform the feeling of an interior. It changes
+            throughout the day, creates gentle shadows, and brings out
+            the natural colors and textures of the materials around us.
+        </p>
+
+        <p>
+            Keep windows as unobstructed as practical. Lightweight
+            curtains can soften incoming light while maintaining
+            a connection with the outdoors.
+        </p>
+
+        <p>
+            If a room receives limited daylight, consider using mirrors
+            to reflect available light and choosing lighter finishes
+            that help the space feel open.
+        </p>
+
+        <h2>Choose Materials Inspired by Nature</h2>
+
+        <p>
+            Natural materials can reinforce the connection between
+            indoor and outdoor environments. Wood, stone, jute, linen,
+            cotton, clay, and rattan introduce visual warmth and
+            tactile variety.
+        </p>
+
+        <p>
+            These materials do not need to dominate the room. A woven
+            basket, a wooden stool, a stone-textured accessory, or
+            a linen cushion can create a subtle natural influence.
+        </p>
+
+        <p>
+            Their imperfect details often make interiors feel more
+            relaxed and less artificial.
+        </p>
+
+        <h2>Bring Nature Into Your Color Palette</h2>
+
+        <p>
+            Nature-inspired colors can help create a calm and cohesive
+            interior. Soft greens, muted browns, warm beige, gentle
+            creams, and earthy terracotta tones work beautifully
+            alongside natural materials.
+        </p>
+
+        <p>
+            You might introduce these shades through cushions, artwork,
+            pottery, curtains, or a carefully selected accent wall.
+            A neutral foundation allows green and earthy details
+            to stand out without overwhelming the space.
+        </p>
+
+        <div class="reflection-box">
+            <h3>A Simple Question</h3>
+            <p>
+                Which part of your home feels most disconnected from
+                nature? Would a plant, a little more daylight, or
+                a natural material make it feel more welcoming?
+            </p>
+        </div>
+
+        <h2>Create a Small Indoor Nature Corner</h2>
+
+        <p>
+            You can create a simple nature-inspired corner without
+            changing your entire home. Start with a plant, a comfortable
+            chair, and a small table made from a natural material.
+        </p>
+
+        <p>
+            Add a favorite book, soft lighting, or a woven accessory
+            if they serve the purpose of the space. Keep the arrangement
+            simple enough that it remains easy to enjoy and maintain.
+        </p>
+
+        <p>
+            This small area can become a place to read, pause, reflect,
+            or simply enjoy a few quiet minutes during the day.
+        </p>
+
+        <h2>Let Your Home Grow Naturally</h2>
+
+        <p>
+            Bringing the outdoors inside is not about following a strict
+            design formula. It is about noticing which natural elements
+            make you feel comfortable and finding thoughtful ways
+            to include them.
+        </p>
+
+        <p>
+            A home can evolve gradually through new plants, changing
+            light, natural fabrics, and meaningful decorative details.
+            There is no need to complete everything at once.
+        </p>
+
+        <p>
+            Sometimes, one healthy plant near a window is enough
+            to make a room feel a little more alive.
+        </p>
+
+        <div class="reflection-box">
+            <h3>Carry This Thought With You</h3>
+            <p>
+                Let nature become a gentle part of your everyday life.
+                A little greenery, a touch of sunlight, and a few
+                natural details can make a home feel more alive.
+            </p>
+        </div>
+
+    </article>
+
+</main>
+
+<script src="footer.js" defer></script>
+
+</body>
+</html>

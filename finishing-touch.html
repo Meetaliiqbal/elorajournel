@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+<title>The Finishing Touch — Elora Journal</title>
+<meta name="description" content="Discover how thoughtful accessories, subtle details, and carefully chosen finishing touches can bring personality and balance to everyday outfits.">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap');
+
+:root{
+    --bg:#0f142b;
+    --surface:#151b38;
+    --soft:#202951;
+    --text:#d3d7ee;
+    --heading:#ffffff;
+    --muted:#898fae;
+    --accent:#9b7cff;
+    --accent-light:#c9bdff;
+    --accent-dark:#8062e8;
+    --border:rgba(155,124,255,.18);
+    --max:760px;
+}
+
+*,*::before,*::after{box-sizing:border-box;}
+
+html{
+    scroll-behavior:smooth;
+    -webkit-text-size-adjust:100%;
+}
+
+body{
+    margin:0;
+    min-width:0;
+    overflow-x:hidden;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'DM Sans',Arial,sans-serif;
+    line-height:1.8;
+}
+
+a{color:inherit;text-decoration:none;}
+
+.article-page{
+    width:100%;
+    max-width:var(--max);
+    margin:0 auto;
+    padding:60px 22px 80px;
+}
+
+.article-header{
+    text-align:center;
+    margin-bottom:38px;
+}
+
+.article-category{
+    display:inline-block;
+    margin-bottom:17px;
+    padding:6px 14px;
+    background:rgba(155,124,255,.10);
+    border:1px solid rgba(155,124,255,.22);
+    border-radius:30px;
+    color:var(--accent-light);
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.article-header h1{
+    margin:0 0 17px;
+    color:var(--heading);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:clamp(32px,5vw,46px);
+    font-weight:500;
+    line-height:1.2;
+    letter-spacing:-.5px;
+}
+
+.article-subtitle{
+    max-width:620px;
+    margin:0 auto;
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.8;
+}
+
+.article-card{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:40px;
+    box-shadow:0 15px 45px rgba(0,0,0,.18);
+}
+
+.featured-quote{
+    margin:0 0 32px;
+    padding:23px 25px;
+    background:rgba(155,124,255,.07);
+    border-left:3px solid var(--accent);
+    border-radius:0 12px 12px 0;
+    color:var(--accent-light);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:21px;
+    font-style:italic;
+    line-height:1.6;
+}
+
+.article-card h2{
+    margin:30px 0 12px;
+    color:var(--heading);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:25px;
+    font-weight:500;
+    line-height:1.4;
+}
+
+.article-card h2:first-of-type{margin-top:0;}
+
+.article-card p{
+    margin:0 0 19px;
+    color:var(--text);
+    font-size:14px;
+    line-height:1.85;
+}
+
+.article-card strong{
+    color:var(--accent-light);
+    font-weight:600;
+}
+
+.find-section{
+    margin:28px 0 32px;
+    padding:25px 22px;
+    background:rgba(155,124,255,.055);
+    border:1px solid rgba(155,124,255,.16);
+    border-radius:14px;
+}
+
+.find-section h3{
+    margin:0 0 8px;
+    color:var(--heading);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:22px;
+    font-weight:500;
+    text-align:center;
+}
+
+.find-section p{
+    max-width:540px;
+    margin:0 auto 18px;
+    color:var(--muted);
+    font-size:12.5px;
+    text-align:center;
+    line-height:1.7;
+}
+
+.find-button{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    width:100%;
+    padding:15px 20px;
+    background:var(--accent);
+    border-radius:8px;
+    color:#ffffff;
+    font-size:13px;
+    font-weight:600;
+    box-shadow:0 5px 16px rgba(155,124,255,.18);
+    transition:background .2s ease,transform .2s ease,box-shadow .2s ease;
+}
+
+.find-button:hover{
+    background:var(--accent-dark);
+    transform:translateY(-1px);
+    box-shadow:0 8px 20px rgba(155,124,255,.25);
+}
+
+.find-button svg{transition:transform .2s ease;}
+.find-button:hover svg{transform:translateX(3px);}
+
+.cta-note{
+    margin:10px 0 0 !important;
+    color:#737a98 !important;
+    font-size:9.5px !important;
+    text-align:center !important;
+}
+
+.wardrobe-list{
+    margin:24px 0 28px;
+    padding:0;
+    list-style:none;
+}
+
+.wardrobe-list li{
+    position:relative;
+    margin-bottom:13px;
+    padding-left:25px;
+    color:#bfc4da;
+    font-size:13.5px;
+    line-height:1.7;
+}
+
+.wardrobe-list li::before{
+    content:"";
+    position:absolute;
+    left:4px;
+    top:.75em;
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:var(--accent);
+}
+
+.reflection-box{
+    margin:30px 0;
+    padding:22px;
+    background:var(--soft);
+    border:1px solid rgba(155,124,255,.14);
+    border-radius:13px;
+}
+
+.reflection-box h3{
+    margin:0 0 8px;
+    color:var(--heading);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:20px;
+    font-weight:500;
+}
+
+.reflection-box p{
+    margin:0;
+    color:var(--muted);
+    font-size:13px;
+}
+
+@media(max-width:650px){
+    .article-page{padding:38px 15px 55px;}
+    .article-header{margin-bottom:30px;}
+    .article-header h1{font-size:31px;}
+    .article-subtitle{font-size:13px;}
+    .article-card{padding:25px 20px;}
+    .featured-quote{padding:20px;font-size:19px;}
+    .article-card h2{font-size:22px;}
+    .article-card p{font-size:13.5px;}
+    .find-section{padding:22px 17px;}
+}
+
+@media(max-width:420px){
+    .article-page{padding:30px 14px 45px;}
+    .article-header h1{font-size:28px;}
+    .article-card{padding:22px 17px;}
+    .featured-quote{font-size:18px;padding:18px;}
+    .find-button{padding:14px 12px;font-size:12.5px;}
+}
+</style>
+</head>
+
+<body>
+
+<script src="header.js" defer></script>
+
+<main class="article-page">
+
+    <header class="article-header">
+        <span class="article-category">Fashion &amp; Style</span>
+
+        <h1>The Finishing Touch</h1>
+
+        <p class="article-subtitle">
+            How carefully chosen accessories, subtle details, and
+            personal accents can transform simple outfits into
+            thoughtful expressions of individual style.
+        </p>
+    </header>
+
+    <article class="article-card">
+
+        <blockquote class="featured-quote">
+            “The smallest details often leave the most lasting impression.”
+        </blockquote>
+
+        <h2>Why the Details Matter</h2>
+
+        <p>
+            An outfit does not always need another layer or a completely
+            different combination to feel complete. Sometimes, a simple
+            accessory or a thoughtful detail can bring everything together.
+            The right finishing touch adds personality without making
+            an outfit feel overly complicated.
+        </p>
+
+        <p>
+            Accessories help communicate individual style. A delicate
+            necklace, a structured handbag, a classic belt, or a favorite
+            pair of sunglasses can make familiar clothing feel different.
+            <strong>It is often the details that turn an ordinary
+            combination into something distinctly personal.</strong>
+        </p>
+
+        <h2>Start With a Strong Foundation</h2>
+
+        <p>
+            Before adding accessories, consider the outfit itself.
+            A balanced foundation makes it easier to understand which
+            details will complement the overall look.
+        </p>
+
+        <ul class="wardrobe-list">
+            <li>Begin with clothing that fits comfortably and suits the occasion.</li>
+            <li>Notice whether the outfit feels minimal, structured, or relaxed.</li>
+            <li>Choose accessories that support the existing silhouette.</li>
+            <li>Leave enough visual space for each detail to be appreciated.</li>
+        </ul>
+
+        <section class="find-section">
+            <h3>Explore Fashion Finds</h3>
+
+            <p>
+                Looking for accessories and versatile pieces to complete
+                your everyday outfits? Explore selected fashion and
+                lifestyle picks through our featured partner page.
+            </p>
+
+
+<style>
+.adsterra-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  overflow: hidden;
+}
+
+.adsterra-mobile {
+  display: none;
+}
+
+.adsterra-desktop {
+  display: flex;
+}
+
+@media (max-width: 650px) {
+  .adsterra-desktop {
+    display: none;
+  }
+
+  .adsterra-mobile {
+    display: flex;
+  }
+}
+</style>
+
+<div class="adsterra-banner adsterra-mobile">
+<script>
+  atOptions = {
+    'key' : '0ab546df419e4e7876a17c780505a6b9',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://bauval.org/22/0ab546df419e4e7876a17c780505a6b9"></script>
+</div>
+
+<div class="adsterra-banner adsterra-desktop">
+<script>
+  atOptions = {
+    'key' : '26ba8c66308c37fe27ce550392d421d9',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://bauval.org/22/26ba8c66308c37fe27ce550392d421d9"></script>
+</div>
+
+
+
+            <a
+                href="fashionfind.html"
+                class="find-button"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <span>Explore Fashion Picks</span>
+
+                <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                >
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </a>
+
+            <p class="cta-note">
+                You will continue to an independent shopping page.
+                Product availability and pricing may change.
+            </p>
+        </section>
+
+        <h2>Choose Accessories With Purpose</h2>
+
+        <p>
+            A useful accessory should do more than simply fill an empty
+            space. It might introduce texture, add contrast, provide
+            practicality, or become a recognizable part of your personal
+            style.
+        </p>
+
+        <p>
+            Think about the items you naturally reach for. Perhaps you
+            prefer understated jewelry, a dependable everyday bag,
+            or a watch that works with both casual and tailored clothing.
+            <strong>Choosing pieces you genuinely enjoy wearing is more
+            rewarding than collecting accessories for occasional use.</strong>
+        </p>
+
+        <div class="reflection-box">
+            <h3>Your Signature Detail</h3>
+            <p>
+                Think of one accessory you wear repeatedly. What makes
+                it feel like yours? Consider how that detail reflects
+                your preferences and how you might incorporate similar
+                elements into future outfits.
+            </p>
+        </div>
+
+        <h2>Balance Is More Important Than Quantity</h2>
+
+        <p>
+            Wearing several accessories at once can be expressive,
+            but every outfit benefits from a little consideration.
+            Too many competing details can make it difficult for
+            individual pieces to stand out.
+        </p>
+
+        <p>
+            Try choosing one main accessory and allowing smaller
+            details to support it. If a necklace is the focal point,
+            keep other jewelry understated. If a handbag has an
+            interesting shape or finish, let it become the most
+            noticeable element.
+        </p>
+
+        <h2>Play With Texture and Contrast</h2>
+
+        <p>
+            Accessories can introduce visual interest through material
+            and finish. Leather, polished metal, soft fabric, natural
+            stones, and woven textures each bring a different character
+            to an outfit.
+        </p>
+
+        <p>
+            A smooth outfit can feel more interesting with a textured
+            bag, while a structured look may benefit from a softer
+            accessory. These subtle contrasts create depth without
+            requiring dramatic changes.
+        </p>
+
+        <h2>Consider the Occasion</h2>
+
+        <p>
+            The best finishing touches depend on where you are going
+            and how you want to feel. Everyday accessories should
+            generally be comfortable and practical, while special
+            occasions may leave more room for expressive details.
+        </p>
+
+        <p>
+            Consider the setting, your clothing, and the level of
+            formality before choosing the final pieces. A thoughtful
+            accessory should feel appropriate without making you
+            feel unlike yourself.
+        </p>
+
+        <h2>Make Personal Style Your Guide</h2>
+
+        <p>
+            There is no universal rule for choosing the perfect
+            finishing touch. Some people find confidence in minimal
+            jewelry and clean lines, while others enjoy bold shapes,
+            layered pieces, or distinctive colors.
+        </p>
+
+        <p>
+            Rather than following every accessory trend, notice
+            what you naturally enjoy. <strong>The most memorable
+            finishing touches are often the ones that feel authentic
+            to the person wearing them.</strong>
+        </p>
+
+        <h2>Let the Little Things Speak</h2>
+
+        <p>
+            Accessories do not need to be expensive or elaborate
+            to make a difference. A well-loved watch, a meaningful
+            piece of jewelry, or a practical bag can bring a familiar
+            outfit together in a way that feels effortless.
+        </p>
+
+        <p>
+            When chosen with care, these details become part of
+            your everyday style rather than additions that are
+            quickly forgotten. Sometimes, completing an outfit
+            is simply a matter of noticing what it already needs.
+        </p>
+
+    </article>
+</main>
+
+<script src="footer.js" defer></script>
+
+</body>
+</html>

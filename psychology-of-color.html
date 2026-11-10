@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+<title>The Psychology of Color — Elora Journal</title>
+<meta name="description" content="Explore the role of color in personal style, how different palettes influence the mood of an outfit, and how to create harmonious combinations.">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap');
+:root{
+    --bg:#0f142b;--surface:#151b38;--soft:#202951;--text:#d3d7ee;
+    --heading:#fff;--muted:#898fae;--accent:#9b7cff;
+    --accent-light:#c9bdff;--accent-dark:#8062e8;
+    --border:rgba(155,124,255,.18);--max:760px;
+}
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{margin:0;min-width:0;overflow-x:hidden;background:var(--bg);color:var(--text);font-family:'DM Sans',Arial,sans-serif;line-height:1.8;}
+a{color:inherit;text-decoration:none;}
+.article-page{width:100%;max-width:var(--max);margin:0 auto;padding:60px 22px 80px;}
+.article-header{text-align:center;margin-bottom:38px;}
+.article-category{display:inline-block;margin-bottom:17px;padding:6px 14px;background:rgba(155,124,255,.10);border:1px solid rgba(155,124,255,.22);border-radius:30px;color:var(--accent-light);font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;}
+.article-header h1{margin:0 0 17px;color:var(--heading);font-family:'Playfair Display',Georgia,serif;font-size:clamp(32px,5vw,46px);font-weight:500;line-height:1.2;}
+.article-subtitle{max-width:620px;margin:0 auto;color:var(--muted);font-size:14px;line-height:1.8;}
+.article-card{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:40px;box-shadow:0 15px 45px rgba(0,0,0,.18);}
+.featured-quote{margin:0 0 32px;padding:23px 25px;background:rgba(155,124,255,.07);border-left:3px solid var(--accent);border-radius:0 12px 12px 0;color:var(--accent-light);font-family:'Playfair Display',Georgia,serif;font-size:21px;font-style:italic;line-height:1.6;}
+.article-card h2{margin:30px 0 12px;color:var(--heading);font-family:'Playfair Display',Georgia,serif;font-size:25px;font-weight:500;line-height:1.4;}
+.article-card h2:first-of-type{margin-top:0;}
+.article-card p{margin:0 0 19px;color:var(--text);font-size:14px;line-height:1.85;}
+.article-card strong{color:var(--accent-light);font-weight:600;}
+.find-section{margin:28px 0 32px;padding:25px 22px;background:rgba(155,124,255,.055);border:1px solid rgba(155,124,255,.16);border-radius:14px;}
+.find-section h3{margin:0 0 8px;color:var(--heading);font-family:'Playfair Display',Georgia,serif;font-size:22px;font-weight:500;text-align:center;}
+.find-section p{max-width:540px;margin:0 auto 18px;color:var(--muted);font-size:12.5px;text-align:center;line-height:1.7;}
+.find-button{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:15px 20px;background:var(--accent);border-radius:8px;color:#fff;font-size:13px;font-weight:600;box-shadow:0 5px 16px rgba(155,124,255,.18);transition:background .2s ease,transform .2s ease;}
+.find-button:hover{background:var(--accent-dark);transform:translateY(-1px);}
+.find-button svg{transition:transform .2s ease;}
+.find-button:hover svg{transform:translateX(3px);}
+.cta-note{margin:10px 0 0!important;color:#737a98!important;font-size:9.5px!important;text-align:center!important;}
+.wardrobe-list{margin:24px 0 28px;padding:0;list-style:none;}
+.wardrobe-list li{position:relative;margin-bottom:13px;padding-left:25px;color:#bfc4da;font-size:13.5px;line-height:1.7;}
+.wardrobe-list li::before{content:"";position:absolute;left:4px;top:.75em;width:7px;height:7px;border-radius:50%;background:var(--accent);}
+.reflection-box{margin:30px 0;padding:22px;background:var(--soft);border:1px solid rgba(155,124,255,.14);border-radius:13px;}
+.reflection-box h3{margin:0 0 8px;color:var(--heading);font-family:'Playfair Display',Georgia,serif;font-size:20px;font-weight:500;}
+.reflection-box p{margin:0;color:var(--muted);font-size:13px;}
+@media(max-width:650px){
+.article-page{padding:38px 15px 55px;}.article-header{margin-bottom:30px;}
+.article-header h1{font-size:31px;}.article-subtitle{font-size:13px;}
+.article-card{padding:25px 20px;}.featured-quote{padding:20px;font-size:19px;}
+.article-card h2{font-size:22px;}.article-card p{font-size:13.5px;}
+.find-section{padding:22px 17px;}
+}
+@media(max-width:420px){
+.article-page{padding:30px 14px 45px;}.article-header h1{font-size:28px;}
+.article-card{padding:22px 17px;}.featured-quote{font-size:18px;padding:18px;}
+.find-button{padding:14px 12px;font-size:12.5px;}
+}
+</style>
+</head>
+
+<body>
+<script src="header.js" defer></script>
+
+<main class="article-page">
+<header class="article-header">
+    <span class="article-category">Fashion &amp; Style</span>
+    <h1>The Psychology of Color</h1>
+    <p class="article-subtitle">
+        Discover how color shapes the mood of an outfit,
+        communicates personal expression, and helps create
+        a wardrobe that feels balanced and individual.
+    </p>
+</header>
+
+<article class="article-card">
+
+<blockquote class="featured-quote">
+    “Color is more than decoration; it is a quiet language
+    woven into the way we present ourselves.”
+</blockquote>
+
+<h2>The Emotional Language of Color</h2>
+
+<p>
+    Color is one of the first things we notice about clothing.
+    Before we consider a garment's cut or construction,
+    its shade can influence the overall impression of an outfit.
+    A soft neutral may feel understated, while a vibrant tone
+    can introduce energy and personality.
+</p>
+
+<p>
+    Our responses to color are shaped by personal experiences,
+    culture, context, and individual preference. There is no
+    universal rule that says one shade must create the same
+    feeling for everyone. <strong>The most meaningful color
+    choices are often the ones that feel authentic to the person
+    wearing them.</strong>
+</p>
+
+<h2>Understand the Role of Neutrals</h2>
+
+<p>
+    Neutral colors provide a flexible foundation for everyday
+    dressing. Shades such as ivory, beige, charcoal, navy,
+    and black can be combined in countless ways and make
+    it easier to build outfits from a smaller collection
+    of clothing.
+</p>
+
+<ul class="wardrobe-list">
+    <li>Use light neutrals to create a soft and understated palette.</li>
+    <li>Choose darker shades when you want visual depth and contrast.</li>
+    <li>Combine warm and cool neutrals for a more layered effect.</li>
+    <li>Introduce texture to keep simple color combinations interesting.</li>
+</ul>
+
+<section class="find-section">
+    <h3>Find Your Next Favorite Shade</h3>
+    <p>
+        Explore clothing, accessories, and style details in
+        a variety of colors to bring fresh inspiration
+        to your personal wardrobe.
+    </p>
+
+
+<style>
+.adsterra-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  overflow: hidden;
+}
+
+.adsterra-mobile {
+  display: none;
+}
+
+.adsterra-desktop {
+  display: flex;
+}
+
+@media (max-width: 650px) {
+  .adsterra-desktop {
+    display: none;
+  }
+
+  .adsterra-mobile {
+    display: flex;
+  }
+}
+</style>
+
+<div class="adsterra-banner adsterra-mobile">
+<script>
+  atOptions = {
+    'key' : '0ab546df419e4e7876a17c780505a6b9',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://bauval.org/22/0ab546df419e4e7876a17c780505a6b9"></script>
+</div>
+
+<div class="adsterra-banner adsterra-desktop">
+<script>
+  atOptions = {
+    'key' : '26ba8c66308c37fe27ce550392d421d9',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://bauval.org/22/26ba8c66308c37fe27ce550392d421d9"></script>
+</div>
+
+
+    <a href="fashionfind.html" class="find-button" target="_blank" rel="noopener noreferrer">
+        <span>Explore Colorful Style Finds</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+    </a>
+    <p class="cta-note">Discover selected fashion inspiration and lifestyle picks. Product availability may vary.</p>
+</section>
+
+<h2>Explore Warm and Cool Tones</h2>
+
+<p>
+    Colors are often described in terms of temperature.
+    Warm shades may include earthy browns, rust, mustard,
+    and certain reds, while cool shades often include
+    blues, greens, and some purples.
+</p>
+
+<p>
+    Understanding these broad categories can help you
+    experiment with combinations. However, you do not
+    need to follow strict color rules. Mixing different
+    tones can create interesting and personal results.
+</p>
+
+<div class="reflection-box">
+    <h3>Notice Your Natural Preferences</h3>
+    <p>
+        Look through the clothes you wear most frequently.
+        Which colors appear again and again? These shades
+        may reveal the palette that feels most comfortable
+        and expressive to you.
+    </p>
+</div>
+
+<h2>Create Harmony Through Color Pairing</h2>
+
+<p>
+    A balanced outfit does not necessarily need to use
+    several matching shades. Sometimes a simple combination
+    of two colors can create a polished result.
+</p>
+
+<p>
+    You might pair navy with cream, olive with beige,
+    or charcoal with a soft pastel. The aim is not to
+    follow a strict formula but to understand how different
+    shades interact with one another.
+</p>
+
+<h2>Use Contrast to Create Interest</h2>
+
+<p>
+    Contrast can bring energy to an outfit. A light garment
+    paired with a darker piece creates visual definition,
+    while a bright accessory can become a focal point
+    against a more understated background.
+</p>
+
+<p>
+    Small contrasts can be especially effective. A colorful
+    scarf, a distinctive handbag, or a pair of shoes in
+    an unexpected shade can change the mood of familiar clothing.
+</p>
+
+<h2>Build a Personal Color Palette</h2>
+
+<p>
+    A personal palette can make getting dressed easier.
+    Start with a few shades you enjoy wearing and identify
+    colors that work naturally alongside them.
+</p>
+
+<p>
+    You might prefer a wardrobe built around earth tones,
+    cool neutrals, soft pastels, or deeper jewel shades.
+    The best palette is one that feels flexible enough
+    for your daily routine and expressive enough to reflect
+    your personality.
+</p>
+
+<h2>Let Occasion Influence Your Choices</h2>
+
+<p>
+    Different settings may invite different color choices.
+    Work environments might call for more understated
+    combinations, while social occasions can provide
+    an opportunity to experiment with expressive shades.
+</p>
+
+<p>
+    Think about the atmosphere of the occasion and how
+    you want your outfit to feel. Color can help communicate
+    that intention without requiring elaborate styling.
+</p>
+
+<h2>Experiment Without Following Every Trend</h2>
+
+<p>
+    Seasonal color trends can introduce interesting ideas,
+    but they do not need to determine your entire wardrobe.
+    A shade that is popular one season may not suit your
+    preferences or work with the clothing you already own.
+</p>
+
+<p>
+    Try new colors through smaller pieces first. Accessories,
+    scarves, or simple tops can offer an easy way to explore
+    a different palette without making a major wardrobe change.
+</p>
+
+<h2>Color as Personal Expression</h2>
+
+<p>
+    Clothing gives us an opportunity to communicate
+    something about ourselves without saying a word.
+    Color can express simplicity, creativity, confidence,
+    calmness, or a desire to stand out.
+</p>
+
+<p>
+    There is no need to assign a fixed meaning to every shade.
+    What matters is how you connect with the colors you choose.
+    <strong>Personal style becomes more interesting when color
+    is used as a form of individual expression rather than
+    a set of rules to follow.</strong>
+</p>
+
+<h2>Find Balance in Your Everyday Wardrobe</h2>
+
+<p>
+    Understanding color can make styling feel more intuitive.
+    A considered palette helps different garments work
+    together and makes it easier to create combinations
+    from pieces you already own.
+</p>
+
+<p>
+    Keep experimenting, notice what you enjoy wearing,
+    and allow your preferences to evolve. The right colors
+    are not necessarily the most fashionable ones;
+    they are the shades that help your wardrobe feel
+    genuinely yours.
+</p>
+
+</article>
+</main>
+
+<script src="footer.js" defer></script>
+</body>
+</html>

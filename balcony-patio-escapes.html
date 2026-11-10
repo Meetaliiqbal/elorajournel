@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+<title>Balcony & Patio Escapes — Elora Journal</title>
+<meta name="description" content="Transform your balcony or patio into a peaceful outdoor escape with thoughtful furniture, greenery, soft lighting, and inviting details.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="header.js" defer></script>
+
+<style>
+:root {
+    --bg:#0f142b;
+    --surface:#151b38;
+    --soft:#202951;
+    --text:#d3d7ee;
+    --heading:#ffffff;
+    --muted:#898fae;
+    --accent:#9b7cff;
+    --accent-light:#c9bdff;
+    --accent-dark:#8062e8;
+    --border:rgba(155,124,255,.18);
+    --max:760px;
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+    background:var(--bg);
+    color:var(--text);
+    font-family:'DM Sans',sans-serif;
+    line-height:1.8;
+}
+
+.article-page {
+    max-width:var(--max);
+    margin:0 auto;
+    padding:60px 22px 80px;
+}
+
+.article-header {
+    text-align:center;
+    margin-bottom:42px;
+}
+
+.article-category {
+    display:inline-block;
+    color:var(--accent-light);
+    background:rgba(155,124,255,.12);
+    border:1px solid var(--border);
+    padding:7px 16px;
+    border-radius:30px;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:22px;
+}
+
+.article-header h1 {
+    color:var(--heading);
+    font-family:'Playfair Display',serif;
+    font-size:clamp(38px,7vw,56px);
+    font-weight:500;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+.article-subtitle {
+    color:var(--muted);
+    font-size:16px;
+    max-width:590px;
+    margin:0 auto;
+    line-height:1.8;
+}
+
+.article-card {
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:22px;
+    padding:32px;
+    margin-bottom:30px;
+}
+
+.featured-quote {
+    color:var(--accent-light);
+    font-family:'Playfair Display',serif;
+    font-size:25px;
+    font-style:italic;
+    line-height:1.55;
+    text-align:center;
+    padding:34px 25px;
+    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
+    margin:35px 0;
+}
+
+.article-card h2 {
+    color:var(--heading);
+    font-family:'Playfair Display',serif;
+    font-size:29px;
+    font-weight:500;
+    line-height:1.35;
+    margin:38px 0 15px;
+}
+
+.article-card h2:first-child {
+    margin-top:0;
+}
+
+.article-card p {
+    color:var(--text);
+    font-size:15px;
+    margin-bottom:18px;
+}
+
+.article-card strong {
+    color:var(--accent-light);
+    font-weight:600;
+}
+
+.design-list {
+    list-style:none;
+    margin:22px 0;
+}
+
+.design-list li {
+    position:relative;
+    padding:13px 16px 13px 42px;
+    margin-bottom:10px;
+    background:rgba(155,124,255,.07);
+    border:1px solid var(--border);
+    border-radius:12px;
+    color:var(--text);
+    font-size:14px;
+}
+
+.design-list li::before {
+    content:"✦";
+    position:absolute;
+    left:17px;
+    color:var(--accent-light);
+}
+
+.reflection-box {
+    background:var(--soft);
+    border-left:3px solid var(--accent);
+    border-radius:0 15px 15px 0;
+    padding:24px;
+    margin:30px 0;
+}
+
+.reflection-box p {
+    margin:0;
+    color:var(--accent-light);
+    font-family:'Playfair Display',serif;
+    font-size:19px;
+    font-style:italic;
+}
+
+.find-section {
+    text-align:center;
+    padding:35px 25px;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:22px;
+    margin-top:35px;
+}
+
+.find-section h2 {
+    color:var(--heading);
+    font-family:'Playfair Display',serif;
+    font-size:29px;
+    font-weight:500;
+    margin-bottom:12px;
+}
+
+.find-section p {
+    color:var(--muted);
+    font-size:14px;
+    margin-bottom:23px;
+}
+
+.find-button {
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    background:var(--accent);
+    color:#fff;
+    text-decoration:none;
+    padding:13px 24px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:700;
+    transition:.25s ease;
+}
+
+.find-button:hover {
+    background:var(--accent-dark);
+    transform:translateY(-2px);
+}
+
+.find-button svg {
+    width:17px;
+    height:17px;
+}
+
+.cta-note {
+    color:var(--muted);
+    font-size:12px;
+    margin-top:16px;
+}
+
+@media(max-width:600px) {
+    .article-page {
+        padding:42px 17px 60px;
+    }
+
+    .article-card {
+        padding:23px;
+    }
+
+    .article-card h2 {
+        font-size:25px;
+    }
+
+    .featured-quote {
+        font-size:21px;
+        padding:27px 15px;
+    }
+
+    .find-section {
+        padding:28px 18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<main class="article-page">
+
+<header class="article-header">
+    <span class="article-category">Home & Decor</span>
+    <h1>Balcony & Patio Escapes</h1>
+    <p class="article-subtitle">
+        Discover how even the smallest outdoor corner can become a beautiful retreat for slow mornings, quiet evenings, and moments of fresh-air inspiration.
+    </p>
+</header>
+
+<article class="article-card">
+
+<div class="featured-quote">
+    “A little space beneath the open sky can become your favorite place to breathe.”
+</div>
+
+<h2>A Room Without a Ceiling</h2>
+
+<p>
+A balcony or patio is more than an extra area attached to your home. It is an opportunity to reconnect with the outdoors without leaving the comfort of your own space. A few thoughtful choices can turn an overlooked corner into a personal sanctuary.
+</p>
+
+<p>
+Whether you have a generous terrace or a narrow apartment balcony, the secret is to approach it with the same care you would give an indoor room. Consider how you want to feel there. Perhaps you imagine reading with morning coffee, enjoying a quiet meal, or watching the evening sky change colors.
+</p>
+
+<p>
+Let that feeling guide your design decisions. A beautiful outdoor escape does not need to be large or elaborate. It simply needs to feel welcoming.
+</p>
+
+<h2>Begin With Comfortable Foundations</h2>
+
+<p>
+Furniture determines how naturally you will use your outdoor space. Choose pieces that suit its proportions and leave enough room to move comfortably. A compact bistro set can make a small balcony feel purposeful, while a low lounge chair can create a relaxed reading corner.
+</p>
+
+<p>
+Natural materials such as wood, rattan, bamboo, and woven fibers bring warmth and texture. For a more contemporary look, combine clean-lined furniture with soft cushions and understated accessories.
+</p>
+
+
+<style>
+.adsterra-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  overflow: hidden;
+}
+
+.adsterra-mobile {
+  display: none;
+}
+
+.adsterra-desktop {
+  display: flex;
+}
+
+@media (max-width: 650px) {
+  .adsterra-desktop {
+    display: none;
+  }
+
+  .adsterra-mobile {
+    display: flex;
+  }
+}
+</style>
+
+<div class="adsterra-banner adsterra-mobile">
+<script>
+  atOptions = {
+    'key' : '0ab546df419e4e7876a17c780505a6b9',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://bauval.org/22/0ab546df419e4e7876a17c780505a6b9"></script>
+</div>
+
+<div class="adsterra-banner adsterra-desktop">
+<script>
+  atOptions = {
+    'key' : '26ba8c66308c37fe27ce550392d421d9',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://bauval.org/22/26ba8c66308c37fe27ce550392d421d9"></script>
+</div>
+
+
+
+<p>
+Always consider the weather when selecting materials. Outdoor fabrics, treated wood, and durable finishes help your furniture remain beautiful through changing seasons.
+</p>
+
+<h2>Let Greenery Bring the Space to Life</h2>
+
+<p>
+Plants are among the simplest ways to make an outdoor area feel peaceful and inviting. Their shapes, colors, and natural movement soften hard architectural lines and create a stronger connection with the surrounding environment.
+</p>
+
+<p>
+Use a combination of floor planters, railing boxes, and smaller pots to introduce greenery at different heights. If floor space is limited, vertical planters or hanging containers can provide a lush atmosphere without crowding the area.
+</p>
+
+<p>
+Choose plants according to the amount of sunlight, wind exposure, and care you can realistically provide. A small collection of healthy plants is more beautiful than an overcrowded arrangement that becomes difficult to maintain.
+</p>
+
+<h2>Create Atmosphere With Gentle Lighting</h2>
+
+<p>
+Outdoor lighting changes the character of a balcony as the day fades. Instead of relying on one bright source, layer several softer forms of illumination to create a relaxed atmosphere.
+</p>
+
+<p>
+Warm string lights can add a gentle glow overhead, while lanterns and rechargeable table lamps provide intimate pools of light. Solar-powered garden lights are another practical option for spaces that receive sufficient daylight.
+</p>
+
+<p>
+Keep the lighting subtle. The goal is to make the space comfortable after sunset while preserving the calm feeling of being outdoors.
+</p>
+
+<h2>Bring Comfort Through Layers</h2>
+
+<p>
+Textiles make outdoor spaces feel more like an extension of the home. Weather-resistant cushions, a soft outdoor rug, and a lightweight throw can introduce color and comfort without requiring major changes.
+</p>
+
+<p>
+Choose a simple palette inspired by nature. Sand, cream, olive, terracotta, and muted brown work beautifully with greenery and natural furniture. Small patterns can add personality, while solid colors create a more peaceful visual rhythm.
+</p>
+
+<h2>Small Details, Meaningful Moments</h2>
+
+<p>
+The most memorable outdoor spaces often contain a few personal details. A favorite ceramic pot, a small side table, a handmade object, or a tray for morning tea can make the setting feel uniquely yours.
+</p>
+
+<p>
+Avoid filling every available surface. Leave room for sunlight, fresh air, and the natural beauty of the space. Thoughtful editing allows each detail to feel intentional.
+</p>
+
+<h2>Simple Ways to Style Your Outdoor Escape</h2>
+
+<ul class="design-list">
+    <li>Choose furniture that fits comfortably without blocking movement.</li>
+    <li>Use plants at different heights to create a natural layered effect.</li>
+    <li>Add outdoor cushions and rugs for softness and warmth.</li>
+    <li>Introduce warm, low-level lighting for peaceful evenings.</li>
+    <li>Use vertical planters when floor space is limited.</li>
+    <li>Keep a small surface available for books, drinks, or everyday essentials.</li>
+    <li>Choose weather-resistant materials that suit your local climate.</li>
+</ul>
+
+<div class="reflection-box">
+    <p>
+        Your outdoor retreat does not have to impress anyone. It only has to invite you to pause, look up, and enjoy the moment.
+    </p>
+</div>
+
+<h2>A Little Escape, Every Day</h2>
+
+<p>
+A thoughtfully designed balcony or patio can become one of the most meaningful places in your home. It offers a change of scenery, a moment of stillness, and a gentle reminder to make room for the outdoors.
+</p>
+
+<p>
+Start with one comfortable seat, a favorite plant, or a warm light. Allow the space to grow naturally as you discover how you like to use it. Over time, even a modest corner can become a treasured everyday escape.
+</p>
+
+</article>
+
+<section class="find-section">
+    <h2>Find Your Outdoor Inspiration</h2>
+    <p>
+        Explore thoughtful decor ideas and details to help you create a welcoming space that feels like your own.
+    </p>
+    <a href="decorfind.html" class="find-button">
+        Explore Home & Decor
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M13 6l6 6-6 6"/>
+        </svg>
+    </a>
+    <p class="cta-note">Create a little space for the moments that matter.</p>
+</section>
+
+</main>
+
+<script src="footer.js" defer></script>
+</body>
+</html>

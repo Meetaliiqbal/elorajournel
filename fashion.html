@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+
     <title>Fashion & Style — Elora Journal</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
     <style>
         :root {
             --bg-color: #0f142b;
@@ -17,8 +21,13 @@
             --border-color: rgba(155, 124, 255, 0.18);
             --muted: #898fae;
         }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             background-color: var(--bg-color);
             color: var(--text-main);
@@ -57,6 +66,7 @@
         }
 
         /* Grid for 18 Fashion Article Cards */
+
         .articles-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -130,6 +140,7 @@
         }
 
         /* Responsive Breakpoints */
+
         @media(max-width: 1024px) {
             .articles-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -140,9 +151,11 @@
             .articles-grid {
                 grid-template-columns: 1fr;
             }
+
             .page-header h1 {
                 font-size: 36px;
             }
+
             .page-wrapper {
                 padding: 0 15px;
                 margin: 25px auto;
@@ -150,23 +163,27 @@
         }
     </style>
 </head>
+
 <body>
 
     <div class="page-wrapper">
+
         <div class="page-header">
             <h1>Fashion & Style</h1>
             <p>Curated wardrobes, timeless aesthetics, and the art of expressing identity through clothing.</p>
         </div>
 
         <div class="articles-grid">
-            
+
             <!-- Card 1 -->
+
             <div class="article-card">
                 <div>
                     <div class="card-tag">Capsule Wardrobe</div>
                     <h3 class="card-title">The Art of Essential Dressing</h3>
                     <p class="card-excerpt">How curating fewer, higher-quality pieces can entirely eliminate decision fatigue and elevate your daily look.</p>
                 </div>
+
                 <div class="card-footer-info">
                     <span>4 min read</span>
                     <a href="capsule-wardrobe.html" class="read-more">Read Article →</a>
@@ -174,12 +191,14 @@
             </div>
 
             <!-- Card 2 -->
+
             <div class="article-card">
                 <div>
                     <div class="card-tag">Aesthetics</div>
                     <h3 class="card-title">Quiet Luxury in Modern Tailoring</h3>
                     <p class="card-excerpt">Exploring understated fabrics, neutral palettes, and why subtle elegance always outlasts loud trends.</p>
                 </div>
+
                 <div class="card-footer-info">
                     <span>5 min read</span>
                     <a href="quiet-luxury.html" class="read-more">Read Article →</a>
@@ -187,210 +206,242 @@
             </div>
 
             <!-- Card 3 -->
+
             <div class="article-card">
                 <div>
                     <div class="card-tag">Sustainability</div>
                     <h3 class="card-title">Mindful Consumption in Fashion</h3>
                     <p class="card-excerpt">Embracing vintage pieces and second-hand treasures to build a distinct wardrobe with a conscience.</p>
                 </div>
+
                 <div class="card-footer-info">
                     <span>6 min read</span>
-                    <a href="#" class="read-more">Read Article →</a>
+                    <a href="mindful-consumption-fashion.html" class="read-more">Read Article →</a>
                 </div>
             </div>
 
             <!-- Card 4 -->
+
             <div class="article-card">
                 <div>
                     <div class="card-tag">Textiles</div>
                     <h3 class="card-title">The Beauty of Natural Fibers</h3>
                     <p class="card-excerpt">Why linen, silk, and pure wool drape better, feel superior, and age with grace over the years.</p>
                 </div>
+
                 <div class="card-footer-info">
                     <span>4 min read</span>
-                    <a href="#" class="read-more">Read Article →</a>
+                    <a href="beauty-natural-fibers.html" class="read-more">Read Article →</a>
                 </div>
             </div>
 
             <!-- Card 5 -->
+
             <div class="article-card">
                 <div>
                     <div class="card-tag">Styling</div>
                     <h3 class="card-title">Monochromatic Mastery</h3>
                     <p class="card-excerpt">Techniques for mixing different textures within the same color family to create depth and sophistication.</p>
                 </div>
+
                 <div class="card-footer-info">
                     <span>3 min read</span>
-                    <a href="#" class="read-more">Read Article →</a>
+                    <a href="monochromatic-mastery.html" class="read-more">Read Article →</a>
                 </div>
             </div>
 
             <!-- Card 6 -->
+
             <div class="article-card">
                 <div>
                     <div class="card-tag">Accessories</div>
                     <h3 class="card-title">The Finishing Touch</h3>
                     <p class="card-excerpt">How statement jewelry, classic leather belts, and scarves can transform a basic outfit into a signature statement.</p>
                 </div>
+
                 <div class="card-footer-info">
                     <span>4 min read</span>
-                    <a href="#" class="read-more">Read Article →</a>
+                    <a href="finishing-touch.html" class="read-more">Read Article →</a>
                 </div>
             </div>
 
             <!-- Card 7 -->
+
             <div class="article-card">
                 <div>
                     <div class="card-tag">Footwear</div>
                     <h3 class="card-title">Timeless Shoes Every Closet Needs</h3>
                     <p class="card-excerpt">A breakdown of foundational footwear that bridges the gap between casual comfort and formal polish.</p>
                 </div>
+
                 <div class="card-footer-info">
                     <span>5 min read</span>
-                    <a href="#" class="read-more">Read Article →</a>
+                    <a href="timeless-shoes.html" class="read-more">Read Article →</a>
                 </div>
             </div>
 
             <!-- Card 8 -->
+
             <div class="article-card">
                 <div>
                     <div class="card-tag">Seasonal</div>
                     <h3 class="card-title">Transitioning Between Seasons</h3>
                     <p class="card-excerpt">Smart layering strategies to carry your favorite summer staples smoothly into crisp autumn evenings.</p>
                 </div>
+
                 <div class="card-footer-info">
                     <span>4 min read</span>
-                    <a href="#" class="read-more">Read Article →</a>
+                    <a href="transitioning-between-seasons.html" class="read-more">Read Article →</a>
                 </div>
             </div>
 
             <!-- Card 9 -->
+
             <div class="article-card">
                 <div>
                     <div class="card-tag">Heritage</div>
                     <h3 class="card-title">Classic Trench Coats & Beyond</h3>
                     <p class="card-excerpt">Celebrating iconic outerwear pieces that have defined cinematic style and everyday elegance for decades.</p>
                 </div>
+
                 <div class="card-footer-info">
                     <span>5 min read</span>
-                    <a href="#" class="read-more">Read Article →</a>
+                    <a href="classic-trench-coats.html" class="read-more">Read Article →</a>
                 </div>
             </div>
 
             <!-- Card 10 -->
+
             <div class="article-card">
                 <div>
                     <div class="card-tag">Denim</div>
                     <h3 class="card-title">The Perfect Fit Evolution</h3>
                     <p class="card-excerpt">Navigating cuts, washes, and craftsmanship to find denim that feels custom-made for your lifestyle.</p>
                 </div>
+
                 <div class="card-footer-info">
                     <span>4 min read</span>
-                    <a href="#" class="read-more">Read Article →</a>
+                    <a href="perfect-fit-evolution.html" class="read-more">Read Article →</a>
                 </div>
             </div>
 
             <!-- Card 11 -->
+
             <div class="article-card">
                 <div>
                     <div class="card-tag">Evening Wear</div>
                     <h3 class="card-title">Effortless Evening Elegance</h3>
                     <p class="card-excerpt">Dressing for late-night gatherings with an emphasis on comfort, fluid silhouettes, and understated chic.</p>
                 </div>
+
                 <div class="card-footer-info">
                     <span>3 min read</span>
-                    <a href="#" class="read-more">Read Article →</a>
+                    <a href="effortless-evening-elegance.html" class="read-more">Read Article →</a>
                 </div>
             </div>
 
             <!-- Card 12 -->
+
             <div class="article-card">
                 <div>
                     <div class="card-tag">Grooming</div>
                     <h3 class="card-title">Garment Care & Longevity</h3>
                     <p class="card-excerpt">Simple maintenance rituals—from proper steaming to cedar hangers—that double the lifespan of your wardrobe.</p>
                 </div>
+
                 <div class="card-footer-info">
                     <span>5 min read</span>
-                    <a href="#" class="read-more">Read Article →</a>
+                    <a href="garment-care-longevity.html" class="read-more">Read Article →</a>
                 </div>
             </div>
 
             <!-- Card 13 -->
+
             <div class="article-card">
                 <div>
                     <div class="card-tag">Palette</div>
                     <h3 class="card-title">The Psychology of Color</h3>
                     <p class="card-excerpt">How wearing specific hues can influence your mood, confidence, and how the world interacts with you.</p>
                 </div>
+
                 <div class="card-footer-info">
                     <span>4 min read</span>
-                    <a href="#" class="read-more">Read Article →</a>
+                    <a href="psychology-of-color.html" class="read-more">Read Article →</a>
                 </div>
             </div>
 
             <!-- Card 14 -->
+
             <div class="article-card">
                 <div>
                     <div class="card-tag">Workwear</div>
                     <h3 class="card-title">Redefining Modern Professional Style</h3>
                     <p class="card-excerpt">Moving away from rigid corporate uniforms toward flexible, expressive, and comfortable professional attire.</p>
                 </div>
+
                 <div class="card-footer-info">
                     <span>5 min read</span>
-                    <a href="#" class="read-more">Read Article →</a>
+                    <a href="modern-professional-style.html" class="read-more">Read Article →</a>
                 </div>
             </div>
 
             <!-- Card 15 -->
+
             <div class="article-card">
                 <div>
                     <div class="card-tag">Minimalism</div>
                     <h3 class="card-title">The Parisian Chic Philosophy</h3>
                     <p class="card-excerpt">Decoding the effortless balance of tailored structure and casual nonchalance inherent in French street style.</p>
                 </div>
+
                 <div class="card-footer-info">
                     <span>4 min read</span>
-                    <a href="#" class="read-more">Read Article →</a>
+                    <a href="parisian-chic.html" class="read-more">Read Article →</a>
                 </div>
             </div>
 
             <!-- Card 16 -->
+
             <div class="article-card">
                 <div>
                     <div class="card-tag">Travel Style</div>
                     <h3 class="card-title">Packing Light and Stylish</h3>
                     <p class="card-excerpt">Curating a multi-destination weekend bag using mix-and-match pieces that resist wrinkles and look polished.</p>
                 </div>
+
                 <div class="card-footer-info">
                     <span>6 min read</span>
-                    <a href="#" class="read-more">Read Article →</a>
+                    <a href="packing-light-stylish.html" class="read-more">Read Article →</a>
                 </div>
             </div>
 
             <!-- Card 17 -->
+
             <div class="article-card">
                 <div>
                     <div class="card-tag">Bags</div>
-                    <h3 class="card-title>The Investment Handbag Guide</h3>
+                    <h3 class="card-title">The Investment Handbag Guide</h3>
                     <p class="card-excerpt">Evaluating leather quality, craftsmanship, and timeless structure when purchasing a lifetime companion bag.</p>
                 </div>
+
                 <div class="card-footer-info">
                     <span>5 min read</span>
-                    <a href="#" class="read-more">Read Article →</a>
+                    <a href="investment-handbag-guide.html" class="read-more">Read Article →</a>
                 </div>
             </div>
 
             <!-- Card 18 -->
+
             <div class="article-card">
                 <div>
                     <div class="card-tag">Identity</div>
                     <h3 class="card-title">Style as Personal Storytelling</h3>
                     <p class="card-excerpt">Viewing your closet not as a collection of garments, but as a visual narrative of who you are and where you're going.</p>
                 </div>
+
                 <div class="card-footer-info">
                     <span>4 min read</span>
-                    <a href="#" class="read-more">Read Article →</a>
+                    <a href="style-personal-storytelling.html" class="read-more">Read Article →</a>
                 </div>
             </div>
 
@@ -398,7 +449,9 @@
     </div>
 
     <!-- Scripts for dynamic Header and Footer -->
+
     <script src="header.js" defer></script>
     <script src="footer.js" defer></script>
+
 </body>
 </html>

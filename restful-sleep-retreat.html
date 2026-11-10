@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+<title>Crafting a Restful Sleep Retreat — Elora Journal</title>
+<meta name="description" content="Explore simple bedroom styling ideas, soft lighting, calming colors, natural textures, and thoughtful routines for creating a restful sleep retreat.">
+<link rel="canonical" href="restful-sleep-retreat.html">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+:root{
+    --bg:#0f142b;
+    --surface:#151b38;
+    --soft:#202951;
+    --text:#d3d7ee;
+    --heading:#ffffff;
+    --muted:#898fae;
+    --accent:#9b7cff;
+    --accent-light:#c9bdff;
+    --accent-dark:#8062e8;
+    --border:rgba(155,124,255,.18);
+    --max:760px;
+}
+
+*,*::before,*::after{box-sizing:border-box;}
+
+html{
+    scroll-behavior:smooth;
+    -webkit-text-size-adjust:100%;
+}
+
+body{
+    margin:0;
+    min-width:0;
+    overflow-x:hidden;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'DM Sans',Arial,sans-serif;
+    line-height:1.8;
+}
+
+a{color:inherit;text-decoration:none;}
+
+.article-page{
+    width:100%;
+    max-width:var(--max);
+    margin:0 auto;
+    padding:60px 22px 80px;
+}
+
+.article-header{
+    text-align:center;
+    margin-bottom:38px;
+}
+
+.article-category{
+    display:inline-block;
+    margin-bottom:17px;
+    padding:6px 14px;
+    background:rgba(155,124,255,.10);
+    border:1px solid rgba(155,124,255,.22);
+    border-radius:30px;
+    color:var(--accent-light);
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.article-header h1{
+    margin:0 0 17px;
+    color:var(--heading);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:clamp(32px,5vw,46px);
+    font-weight:500;
+    line-height:1.2;
+    letter-spacing:-.5px;
+}
+
+.article-subtitle{
+    max-width:620px;
+    margin:0 auto;
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.8;
+}
+
+.article-card{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:40px;
+    box-shadow:0 15px 45px rgba(0,0,0,.18);
+}
+
+.featured-quote{
+    margin:0 0 32px;
+    padding:23px 25px;
+    background:rgba(155,124,255,.07);
+    border-left:3px solid var(--accent);
+    border-radius:0 12px 12px 0;
+    color:var(--accent-light);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:21px;
+    font-style:italic;
+    line-height:1.6;
+}
+
+.article-card h2{
+    margin:30px 0 12px;
+    color:var(--heading);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:25px;
+    font-weight:500;
+    line-height:1.4;
+}
+
+.article-card h2:first-of-type{margin-top:0;}
+
+.article-card p{
+    margin:0 0 19px;
+    color:var(--text);
+    font-size:14px;
+    line-height:1.85;
+}
+
+.article-card strong{
+    color:var(--accent-light);
+    font-weight:600;
+}
+
+.find-section{
+    margin:28px 0 32px;
+    padding:25px 22px;
+    background:rgba(155,124,255,.055);
+    border:1px solid rgba(155,124,255,.16);
+    border-radius:14px;
+}
+
+.find-section h3{
+    margin:0 0 8px;
+    color:var(--heading);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:22px;
+    font-weight:500;
+    text-align:center;
+}
+
+.find-section p{
+    max-width:540px;
+    margin:0 auto 18px;
+    color:var(--muted);
+    font-size:12.5px;
+    text-align:center;
+    line-height:1.7;
+}
+
+.find-button{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    width:100%;
+    padding:15px 20px;
+    background:var(--accent);
+    border-radius:8px;
+    color:#ffffff;
+    font-size:13px;
+    font-weight:600;
+    box-shadow:0 5px 16px rgba(155,124,255,.18);
+    transition:background .2s ease,transform .2s ease,box-shadow .2s ease;
+}
+
+.find-button:hover{
+    background:var(--accent-dark);
+    transform:translateY(-1px);
+    box-shadow:0 8px 20px rgba(155,124,255,.25);
+}
+
+.find-button svg{transition:transform .2s ease;}
+.find-button:hover svg{transform:translateX(3px);}
+
+.cta-note{
+    margin:10px 0 0 !important;
+    color:#737a98 !important;
+    font-size:9.5px !important;
+    text-align:center !important;
+}
+
+.design-list{
+    margin:24px 0 28px;
+    padding:0;
+    list-style:none;
+}
+
+.design-list li{
+    position:relative;
+    margin-bottom:13px;
+    padding-left:25px;
+    color:#bfc4da;
+    font-size:13.5px;
+    line-height:1.7;
+}
+
+.design-list li::before{
+    content:"";
+    position:absolute;
+    left:4px;
+    top:.75em;
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:var(--accent);
+}
+
+.reflection-box{
+    margin:30px 0;
+    padding:22px;
+    background:var(--soft);
+    border:1px solid rgba(155,124,255,.14);
+    border-radius:13px;
+}
+
+.reflection-box h3{
+    margin:0 0 8px;
+    color:var(--heading);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:20px;
+    font-weight:500;
+}
+
+.reflection-box p{
+    margin:0;
+    color:var(--muted);
+    font-size:13px;
+}
+
+@media(max-width:650px){
+    .article-page{padding:38px 15px 55px;}
+    .article-header{margin-bottom:30px;}
+    .article-header h1{font-size:31px;}
+    .article-subtitle{font-size:13px;}
+    .article-card{padding:25px 20px;}
+    .featured-quote{padding:20px;font-size:19px;}
+    .article-card h2{font-size:22px;}
+    .article-card p{font-size:13.5px;}
+    .find-section{padding:22px 17px;}
+}
+
+@media(max-width:420px){
+    .article-page{padding:30px 14px 45px;}
+    .article-header h1{font-size:28px;}
+    .article-card{padding:22px 17px;}
+    .featured-quote{font-size:18px;padding:18px;}
+    .find-button{padding:14px 12px;font-size:12.5px;}
+}
+</style>
+</head>
+
+<body>
+
+<script src="header.js" defer></script>
+
+<main class="article-page">
+
+    <header class="article-header">
+        <span class="article-category">Bedroom Sanctuary</span>
+
+        <h1>Crafting a Restful Sleep Retreat</h1>
+
+        <p class="article-subtitle">
+            Transform your bedroom into a peaceful retreat with calming
+            colors, inviting textures, gentle lighting, and thoughtful
+            details that make rest feel like a daily ritual.
+        </p>
+    </header>
+
+    <article class="article-card">
+
+        <blockquote class="featured-quote">
+            “A restful bedroom is not simply a place to sleep.
+            It is a quiet reminder that you deserve time to pause.”
+        </blockquote>
+
+        <h2>A Room That Welcomes Rest</h2>
+
+        <p>
+            The bedroom is often the last space we experience before
+            sleep and the first place we see when a new day begins.
+            Yet it can easily become a storage area for unfinished
+            tasks, scattered belongings, and the distractions of
+            everyday life.
+        </p>
+
+        <p>
+            Creating a restful bedroom is less about achieving a
+            perfect interior and more about shaping an environment
+            that feels comfortable and peaceful. <strong>Every
+            detail should support a sense of ease rather than demand
+            more attention.</strong>
+        </p>
+
+        <p>
+            A soft color palette, comfortable bedding, and a little
+            breathing room can make a meaningful difference to how
+            the space feels.
+        </p>
+
+        <h2>Choose Colors That Feel Gentle</h2>
+
+        <p>
+            Color has a strong influence on the atmosphere of a room.
+            For a sleep retreat, consider tones that feel soft and
+            restful rather than overly stimulating.
+        </p>
+
+        <p>
+            Warm whites, muted taupe, gentle beige, dusty lavender,
+            and soft sage can create a quiet foundation. These shades
+            work beautifully with natural wood, woven textures, and
+            understated decorative accents.
+        </p>
+
+        <p>
+            You do not need to repaint the entire room to introduce
+            a calmer palette. Bedding, curtains, cushions, and
+            smaller accessories can gradually shift the overall mood.
+        </p>
+
+        <h2>Layer the Bed With Comfort</h2>
+
+        <p>
+            The bed naturally becomes the visual center of the bedroom.
+            Thoughtful layers can make it feel inviting while adding
+            depth and softness to the room.
+        </p>
+
+        <p>
+            Begin with bedding that feels comfortable against your skin.
+            Add a quilt or lightweight blanket, then introduce a small
+            number of cushions in complementary textures. A neatly
+            folded throw at the foot of the bed can provide a final
+            layer without making the arrangement feel crowded.
+        </p>
+
+
+<style>
+.adsterra-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  overflow: hidden;
+}
+
+.adsterra-mobile {
+  display: none;
+}
+
+.adsterra-desktop {
+  display: flex;
+}
+
+@media (max-width: 650px) {
+  .adsterra-desktop {
+    display: none;
+  }
+
+  .adsterra-mobile {
+    display: flex;
+  }
+}
+</style>
+
+<div class="adsterra-banner adsterra-mobile">
+<script>
+  atOptions = {
+    'key' : '0ab546df419e4e7876a17c780505a6b9',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://bauval.org/22/0ab546df419e4e7876a17c780505a6b9"></script>
+</div>
+
+<div class="adsterra-banner adsterra-desktop">
+<script>
+  atOptions = {
+    'key' : '26ba8c66308c37fe27ce550392d421d9',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://bauval.org/22/26ba8c66308c37fe27ce550392d421d9"></script>
+</div>
+
+
+
+        <ul class="design-list">
+            <li>Choose breathable bedding suited to your climate and comfort.</li>
+            <li>Use soft, coordinated colors to create a cohesive appearance.</li>
+            <li>Add one textured throw for warmth and visual interest.</li>
+            <li>Keep decorative cushions manageable and easy to move.</li>
+            <li>Refresh bedding regularly to keep the room feeling clean and inviting.</li>
+        </ul>
+
+        <h2>Let Lighting Set the Mood</h2>
+
+        <p>
+            Lighting can completely change the atmosphere of a bedroom.
+            A bright overhead light may be useful for cleaning or
+            organizing, but softer lighting can make the room feel
+            more relaxing in the evening.
+        </p>
+
+        <p>
+            Bedside lamps, warm-toned bulbs, and subtle accent lighting
+            create a gentler environment. If possible, use separate
+            light sources so that you can adjust the atmosphere
+            according to the activity.
+        </p>
+
+        <p>
+            Natural daylight also deserves attention. During the day,
+            open curtains to welcome sunlight and fresh air. In the
+            evening, softer illumination can help the room transition
+            into a quieter atmosphere.
+        </p>
+
+        <section class="find-section">
+
+            <h3>Explore Restful Bedroom Finds</h3>
+
+            <p>
+                Discover thoughtful bedroom accessories, cozy textiles,
+                soft lighting, and decor pieces that can help make your
+                personal retreat feel more comfortable and inviting.
+            </p>
+
+            <a href="decorfind.html" class="find-button" target="_blank" rel="noopener noreferrer">
+                <span>Explore Bedroom Decor Picks</span>
+
+                <svg width="16" height="16" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </a>
+
+            <p class="cta-note">
+                You will continue to an independent shopping page.
+                Product availability and pricing may change.
+            </p>
+
+        </section>
+
+        <h2>Reduce Visual Distractions</h2>
+
+        <p>
+            A bedroom can feel less restful when every surface is
+            occupied. Clothes waiting to be put away, unrelated work
+            materials, and unnecessary objects can make the room
+            feel connected to responsibilities rather than relaxation.
+        </p>
+
+        <p>
+            Create simple storage habits that make it easier to keep
+            the space clear. A basket for laundry, a drawer for small
+            belongings, and a dedicated place for everyday essentials
+            can reduce visual clutter.
+        </p>
+
+        <p>
+            If possible, keep work-related items outside the bedroom.
+            Separating your sleeping space from your daily tasks can
+            help establish a clearer distinction between activity
+            and rest.
+        </p>
+
+        <h2>Bring in Natural Textures</h2>
+
+        <p>
+            Natural materials can make a bedroom feel warm without
+            adding visual complexity. Linen, cotton, wool, wood,
+            and woven fibers introduce subtle variations that
+            create a comfortable atmosphere.
+        </p>
+
+        <p>
+            A woven basket, a wooden bedside table, or a soft
+            fabric lampshade can add character while keeping
+            the overall design understated.
+        </p>
+
+        <p>
+            Plants can also introduce a gentle connection with
+            nature, provided they suit the room's light and
+            maintenance conditions. Even a simple arrangement
+            of natural branches can create a quiet decorative detail.
+        </p>
+
+        <div class="reflection-box">
+            <h3>A Simple Question</h3>
+            <p>
+                What is the first thing you notice when you enter
+                your bedroom? Does it make you feel relaxed, or
+                remind you of tasks that are still unfinished?
+            </p>
+        </div>
+
+        <h2>Create a Gentle Evening Ritual</h2>
+
+        <p>
+            The feeling of a bedroom is shaped not only by its
+            appearance but also by the habits that take place
+            within it.
+        </p>
+
+        <p>
+            A simple evening ritual can help create a sense of
+            transition. You might dim the lights, put away
+            unnecessary items, prepare tomorrow's essentials,
+            and spend a few quiet minutes reading.
+        </p>
+
+        <p>
+            Keeping digital distractions away from the bed can
+            also make the space feel more intentional. Small
+            repeated habits can gradually turn the bedroom into
+            a place associated with slowing down.
+        </p>
+
+        <h2>Allow Your Retreat to Evolve</h2>
+
+        <p>
+            Your needs and preferences may change with the seasons
+            and different stages of life. Perhaps you want lighter
+            bedding in warmer months, additional layers in winter,
+            or a different arrangement when your routines change.
+        </p>
+
+        <p>
+            Let your bedroom evolve naturally. You do not need
+            to complete every detail at once. Add thoughtful
+            pieces when they serve a purpose, and remove anything
+            that no longer contributes to the feeling you want.
+        </p>
+
+        <p>
+            A restful retreat is not defined by expensive furniture
+            or perfectly arranged photographs. It is defined by
+            how comfortably it welcomes you at the end of the day.
+        </p>
+
+        <div class="reflection-box">
+            <h3>Carry This Thought With You</h3>
+            <p>
+                Your bedroom should not ask anything more of you.
+                Let it be a place where the day can gently end
+                and where tomorrow can begin with a little more ease.
+            </p>
+        </div>
+
+    </article>
+
+</main>
+
+<script src="footer.js" defer></script>
+
+</body>
+</html>

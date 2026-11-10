@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+<title>Garment Care &amp; Longevity — Elora Journal</title>
+<meta name="description" content="Learn how thoughtful garment care, proper storage, and simple maintenance habits can help your favorite clothes last longer.">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap');
+
+:root{
+    --bg:#0f142b;--surface:#151b38;--soft:#202951;
+    --text:#d3d7ee;--heading:#fff;--muted:#898fae;
+    --accent:#9b7cff;--accent-light:#c9bdff;
+    --accent-dark:#8062e8;--border:rgba(155,124,255,.18);
+    --max:760px;
+}
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{
+    margin:0;min-width:0;overflow-x:hidden;background:var(--bg);
+    color:var(--text);font-family:'DM Sans',Arial,sans-serif;line-height:1.8;
+}
+a{color:inherit;text-decoration:none;}
+.article-page{width:100%;max-width:var(--max);margin:0 auto;padding:60px 22px 80px;}
+.article-header{text-align:center;margin-bottom:38px;}
+.article-category{
+    display:inline-block;margin-bottom:17px;padding:6px 14px;
+    background:rgba(155,124,255,.10);border:1px solid rgba(155,124,255,.22);
+    border-radius:30px;color:var(--accent-light);font-size:10px;
+    font-weight:600;letter-spacing:2px;text-transform:uppercase;
+}
+.article-header h1{
+    margin:0 0 17px;color:var(--heading);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:clamp(32px,5vw,46px);font-weight:500;line-height:1.2;
+}
+.article-subtitle{max-width:620px;margin:0 auto;color:var(--muted);font-size:14px;line-height:1.8;}
+.article-card{
+    background:var(--surface);border:1px solid var(--border);
+    border-radius:18px;padding:40px;box-shadow:0 15px 45px rgba(0,0,0,.18);
+}
+.featured-quote{
+    margin:0 0 32px;padding:23px 25px;background:rgba(155,124,255,.07);
+    border-left:3px solid var(--accent);border-radius:0 12px 12px 0;
+    color:var(--accent-light);font-family:'Playfair Display',Georgia,serif;
+    font-size:21px;font-style:italic;line-height:1.6;
+}
+.article-card h2{
+    margin:30px 0 12px;color:var(--heading);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:25px;font-weight:500;line-height:1.4;
+}
+.article-card h2:first-of-type{margin-top:0;}
+.article-card p{margin:0 0 19px;color:var(--text);font-size:14px;line-height:1.85;}
+.article-card strong{color:var(--accent-light);font-weight:600;}
+.find-section{
+    margin:28px 0 32px;padding:25px 22px;
+    background:rgba(155,124,255,.055);border:1px solid rgba(155,124,255,.16);
+    border-radius:14px;
+}
+.find-section h3{
+    margin:0 0 8px;color:var(--heading);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:22px;font-weight:500;text-align:center;
+}
+.find-section p{
+    max-width:540px;margin:0 auto 18px;color:var(--muted);
+    font-size:12.5px;text-align:center;line-height:1.7;
+}
+.find-button{
+    display:flex;align-items:center;justify-content:center;gap:8px;width:100%;
+    padding:15px 20px;background:var(--accent);border-radius:8px;color:#fff;
+    font-size:13px;font-weight:600;box-shadow:0 5px 16px rgba(155,124,255,.18);
+    transition:background .2s ease,transform .2s ease;
+}
+.find-button:hover{background:var(--accent-dark);transform:translateY(-1px);}
+.find-button svg{transition:transform .2s ease;}
+.find-button:hover svg{transform:translateX(3px);}
+.cta-note{margin:10px 0 0!important;color:#737a98!important;font-size:9.5px!important;text-align:center!important;}
+.wardrobe-list{margin:24px 0 28px;padding:0;list-style:none;}
+.wardrobe-list li{
+    position:relative;margin-bottom:13px;padding-left:25px;
+    color:#bfc4da;font-size:13.5px;line-height:1.7;
+}
+.wardrobe-list li::before{
+    content:"";position:absolute;left:4px;top:.75em;width:7px;height:7px;
+    border-radius:50%;background:var(--accent);
+}
+.reflection-box{
+    margin:30px 0;padding:22px;background:var(--soft);
+    border:1px solid rgba(155,124,255,.14);border-radius:13px;
+}
+.reflection-box h3{
+    margin:0 0 8px;color:var(--heading);
+    font-family:'Playfair Display',Georgia,serif;font-size:20px;font-weight:500;
+}
+.reflection-box p{margin:0;color:var(--muted);font-size:13px;}
+@media(max-width:650px){
+    .article-page{padding:38px 15px 55px;}
+    .article-header{margin-bottom:30px;}
+    .article-header h1{font-size:31px;}
+    .article-subtitle{font-size:13px;}
+    .article-card{padding:25px 20px;}
+    .featured-quote{padding:20px;font-size:19px;}
+    .article-card h2{font-size:22px;}
+    .article-card p{font-size:13.5px;}
+    .find-section{padding:22px 17px;}
+}
+@media(max-width:420px){
+    .article-page{padding:30px 14px 45px;}
+    .article-header h1{font-size:28px;}
+    .article-card{padding:22px 17px;}
+    .featured-quote{font-size:18px;padding:18px;}
+    .find-button{padding:14px 12px;font-size:12.5px;}
+}
+</style>
+</head>
+
+<body>
+<script src="header.js" defer></script>
+
+<main class="article-page">
+<header class="article-header">
+    <span class="article-category">Fashion &amp; Style</span>
+    <h1>Garment Care &amp; Longevity</h1>
+    <p class="article-subtitle">
+        Discover how simple care routines, mindful maintenance,
+        and thoughtful storage can preserve the beauty of your
+        favorite garments and help your wardrobe last longer.
+    </p>
+</header>
+
+<article class="article-card">
+
+<blockquote class="featured-quote">
+    “The most sustainable garment is often the one you already own
+    and continue to care for.”
+</blockquote>
+
+<h2>Why Caring for Clothes Matters</h2>
+
+<p>
+    A thoughtfully built wardrobe is not only about choosing
+    beautiful clothing. It is also about looking after the
+    pieces you already have. Regular care can help garments
+    retain their appearance, comfort, and usefulness over time.
+</p>
+
+<p>
+    Small habits such as washing carefully, storing clothing
+    correctly, and repairing minor damage can make a meaningful
+    difference. <strong>When we care for what we own, we make
+    more room for lasting style and less need for constant replacement.</strong>
+</p>
+
+<h2>Understand Your Garment Labels</h2>
+
+<p>
+    Every fabric has different care requirements. Before washing
+    or treating a garment, take a moment to read its care label.
+    These instructions provide useful guidance about water
+    temperature, drying methods, ironing, and professional cleaning.
+</p>
+
+<ul class="wardrobe-list">
+    <li>Check washing temperatures before placing garments in the machine.</li>
+    <li>Separate delicate fabrics from heavier clothing.</li>
+    <li>Follow drying instructions to reduce shrinkage and damage.</li>
+    <li>Use suitable ironing temperatures for each material.</li>
+</ul>
+
+<section class="find-section">
+    <h3>Discover Better Wardrobe Essentials</h3>
+    <p>
+        Explore practical clothing essentials, useful accessories,
+        and thoughtful fashion finds that complement a wardrobe
+        built to last.
+    </p>
+
+
+<style>
+.adsterra-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  overflow: hidden;
+}
+
+.adsterra-mobile {
+  display: none;
+}
+
+.adsterra-desktop {
+  display: flex;
+}
+
+@media (max-width: 650px) {
+  .adsterra-desktop {
+    display: none;
+  }
+
+  .adsterra-mobile {
+    display: flex;
+  }
+}
+</style>
+
+<div class="adsterra-banner adsterra-mobile">
+<script>
+  atOptions = {
+    'key' : '0ab546df419e4e7876a17c780505a6b9',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://bauval.org/22/0ab546df419e4e7876a17c780505a6b9"></script>
+</div>
+
+<div class="adsterra-banner adsterra-desktop">
+<script>
+  atOptions = {
+    'key' : '26ba8c66308c37fe27ce550392d421d9',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://bauval.org/22/26ba8c66308c37fe27ce550392d421d9"></script>
+</div>
+
+
+    <a href="fashionfind.html" class="find-button" target="_blank" rel="noopener noreferrer">
+        <span>Discover Wardrobe Essentials</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+    </a>
+    <p class="cta-note">Explore selected fashion and lifestyle finds. Availability and pricing may vary.</p>
+</section>
+
+<h2>Wash With Greater Intention</h2>
+
+<p>
+    Washing clothing too frequently or using unsuitable settings
+    can contribute to fading, stretching, and fabric wear.
+    Not every garment needs to be washed after a single use.
+    Some pieces may simply benefit from airing or gentle
+    spot cleaning, depending on the material and how they were worn.
+</p>
+
+<p>
+    When a full wash is needed, use an appropriate cycle and
+    avoid overcrowding the machine. Gentle treatment can help
+    preserve fibers and maintain the original shape of clothing.
+</p>
+
+<div class="reflection-box">
+    <h3>A Small Care Habit</h3>
+    <p>
+        Choose one item from your wardrobe that you wear often.
+        Read its care label and consider whether your current
+        washing and storage routine is helping it stay in good condition.
+    </p>
+</div>
+
+<h2>Give Delicate Fabrics Extra Attention</h2>
+
+<p>
+    Materials such as silk, fine wool, lace, and delicate knits
+    often need more careful handling. Use the recommended
+    cleaning method and avoid rough treatment that could
+    weaken fibers or distort the garment.
+</p>
+
+<p>
+    For knitwear, folding is often preferable to hanging
+    because the weight of the garment can stretch its shape.
+    Delicate items should also be protected from unnecessary
+    friction and sharp accessories.
+</p>
+
+<h2>Store Clothing Properly</h2>
+
+<p>
+    Good storage protects clothing between wears and between
+    seasons. Use suitable hangers for structured garments,
+    fold heavier knitwear, and leave enough space for air
+    to circulate.
+</p>
+
+<p>
+    Keep clothing in a clean, dry environment. Before storing
+    seasonal pieces for an extended period, make sure they
+    are clean and completely dry. This helps reduce the
+    risk of unwanted odors and fabric problems.
+</p>
+
+<h2>Repair Instead of Replacing</h2>
+
+<p>
+    A loose button, a small seam opening, or a missing hook
+    does not necessarily mean a garment has reached the end
+    of its life. Many everyday clothing issues can be repaired
+    with basic sewing skills or help from a professional tailor.
+</p>
+
+<p>
+    Learning a few simple repairs can make your wardrobe
+    more adaptable. It also encourages a more considered
+    relationship with the clothing you choose to keep.
+</p>
+
+<h2>Protect Clothing From Everyday Wear</h2>
+
+<p>
+    Some damage happens gradually through daily habits.
+    Repeated friction, overloaded bags, rough surfaces,
+    and unsuitable accessories can affect the condition
+    of clothing.
+</p>
+
+<p>
+    Being aware of these small details can help you prevent
+    unnecessary wear. Rotate frequently worn items when
+    possible and give garments time to rest between uses.
+</p>
+
+<h2>Refresh Your Wardrobe Seasonally</h2>
+
+<p>
+    A seasonal wardrobe review is a useful opportunity
+    to check the condition of your clothing. Look for
+    loose stitching, missing buttons, worn areas, and
+    pieces that need cleaning or repair.
+</p>
+
+<p>
+    This process also helps you rediscover items you may
+    have forgotten. Sometimes a simple repair or thoughtful
+    styling change can make an old favorite feel useful again.
+</p>
+
+<h2>Choose Quality and Care Together</h2>
+
+<p>
+    Well-made clothing can offer greater longevity, but
+    quality alone does not guarantee that a garment will
+    remain in good condition. Proper care is an important
+    part of making the most of any purchase.
+</p>
+
+<p>
+    Consider construction, fabric, and maintenance requirements
+    before buying something new. <strong>A garment that suits
+    your lifestyle and can be cared for properly is more likely
+    to become a lasting wardrobe favorite.</strong>
+</p>
+
+<h2>Make Longevity Part of Your Style</h2>
+
+<p>
+    Caring for clothing does not need to be complicated.
+    A few consistent habits can help your favorite pieces
+    remain comfortable, attractive, and ready to wear.
+</p>
+
+<p>
+    By washing thoughtfully, repairing small problems,
+    and storing garments with care, you can build a wardrobe
+    that feels more personal and considered. Lasting style
+    begins not only with what you buy, but with how you
+    look after what you already own.
+</p>
+
+</article>
+</main>
+
+<script src="footer.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+<title>The Beauty of Natural Fibers — Elora Journal</title>
+<meta name="description" content="Explore the comfort, character, and timeless appeal of natural fibers such as cotton, linen, wool, and silk.">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap');
+
+:root{
+    --bg:#0f142b;
+    --surface:#151b38;
+    --soft:#202951;
+    --text:#d3d7ee;
+    --heading:#ffffff;
+    --muted:#898fae;
+    --accent:#9b7cff;
+    --accent-light:#c9bdff;
+    --accent-dark:#8062e8;
+    --border:rgba(155,124,255,.18);
+    --max:760px;
+}
+
+*,*::before,*::after{box-sizing:border-box;}
+
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+
+body{
+    margin:0;
+    min-width:0;
+    overflow-x:hidden;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'DM Sans',Arial,sans-serif;
+    line-height:1.8;
+}
+
+a{color:inherit;text-decoration:none;}
+
+.article-page{
+    width:100%;
+    max-width:var(--max);
+    margin:0 auto;
+    padding:60px 22px 80px;
+}
+
+.article-header{text-align:center;margin-bottom:38px;}
+
+.article-category{
+    display:inline-block;
+    margin-bottom:17px;
+    padding:6px 14px;
+    background:rgba(155,124,255,.10);
+    border:1px solid rgba(155,124,255,.22);
+    border-radius:30px;
+    color:var(--accent-light);
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.article-header h1{
+    margin:0 0 17px;
+    color:var(--heading);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:clamp(32px,5vw,46px);
+    font-weight:500;
+    line-height:1.2;
+    letter-spacing:-.5px;
+}
+
+.article-subtitle{
+    max-width:620px;
+    margin:0 auto;
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.8;
+}
+
+.article-card{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:40px;
+    box-shadow:0 15px 45px rgba(0,0,0,.18);
+}
+
+.featured-quote{
+    margin:0 0 32px;
+    padding:23px 25px;
+    background:rgba(155,124,255,.07);
+    border-left:3px solid var(--accent);
+    border-radius:0 12px 12px 0;
+    color:var(--accent-light);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:21px;
+    font-style:italic;
+    line-height:1.6;
+}
+
+.article-card h2{
+    margin:30px 0 12px;
+    color:var(--heading);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:25px;
+    font-weight:500;
+    line-height:1.4;
+}
+
+.article-card h2:first-of-type{margin-top:0;}
+
+.article-card p{
+    margin:0 0 19px;
+    color:var(--text);
+    font-size:14px;
+    line-height:1.85;
+}
+
+.article-card strong{color:var(--accent-light);font-weight:600;}
+
+.find-section{
+    margin:28px 0 32px;
+    padding:25px 22px;
+    background:rgba(155,124,255,.055);
+    border:1px solid rgba(155,124,255,.16);
+    border-radius:14px;
+}
+
+.find-section h3{
+    margin:0 0 8px;
+    color:var(--heading);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:22px;
+    font-weight:500;
+    text-align:center;
+}
+
+.find-section p{
+    max-width:540px;
+    margin:0 auto 18px;
+    color:var(--muted);
+    font-size:12.5px;
+    text-align:center;
+    line-height:1.7;
+}
+
+.find-button{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    width:100%;
+    padding:15px 20px;
+    background:var(--accent);
+    border-radius:8px;
+    color:#ffffff;
+    font-size:13px;
+    font-weight:600;
+    box-shadow:0 5px 16px rgba(155,124,255,.18);
+    transition:background .2s ease,transform .2s ease,box-shadow .2s ease;
+}
+
+.find-button:hover{
+    background:var(--accent-dark);
+    transform:translateY(-1px);
+    box-shadow:0 8px 20px rgba(155,124,255,.25);
+}
+
+.find-button svg{transition:transform .2s ease;}
+.find-button:hover svg{transform:translateX(3px);}
+
+.cta-note{
+    margin:10px 0 0 !important;
+    color:#737a98 !important;
+    font-size:9.5px !important;
+    text-align:center !important;
+}
+
+.wardrobe-list{
+    margin:24px 0 28px;
+    padding:0;
+    list-style:none;
+}
+
+.wardrobe-list li{
+    position:relative;
+    margin-bottom:13px;
+    padding-left:25px;
+    color:#bfc4da;
+    font-size:13.5px;
+    line-height:1.7;
+}
+
+.wardrobe-list li::before{
+    content:"";
+    position:absolute;
+    left:4px;
+    top:.75em;
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:var(--accent);
+}
+
+.reflection-box{
+    margin:30px 0;
+    padding:22px;
+    background:var(--soft);
+    border:1px solid rgba(155,124,255,.14);
+    border-radius:13px;
+}
+
+.reflection-box h3{
+    margin:0 0 8px;
+    color:var(--heading);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:20px;
+    font-weight:500;
+}
+
+.reflection-box p{margin:0;color:var(--muted);font-size:13px;}
+
+@media(max-width:650px){
+    .article-page{padding:38px 15px 55px;}
+    .article-header{margin-bottom:30px;}
+    .article-header h1{font-size:31px;}
+    .article-subtitle{font-size:13px;}
+    .article-card{padding:25px 20px;}
+    .featured-quote{padding:20px;font-size:19px;}
+    .article-card h2{font-size:22px;}
+    .article-card p{font-size:13.5px;}
+    .find-section{padding:22px 17px;}
+}
+
+@media(max-width:420px){
+    .article-page{padding:30px 14px 45px;}
+    .article-header h1{font-size:28px;}
+    .article-card{padding:22px 17px;}
+    .featured-quote{font-size:18px;padding:18px;}
+    .find-button{padding:14px 12px;font-size:12.5px;}
+}
+</style>
+</head>
+
+<body>
+
+<script src="header.js" defer></script>
+
+<main class="article-page">
+
+    <header class="article-header">
+        <span class="article-category">Fashion &amp; Style</span>
+        <h1>The Beauty of Natural Fibers</h1>
+        <p class="article-subtitle">
+            Discover the character of cotton, linen, wool, and silk, and learn how natural fabrics can bring comfort, texture, and lasting appeal to everyday dressing.
+        </p>
+    </header>
+
+    <article class="article-card">
+
+        <blockquote class="featured-quote">
+            “The most beautiful fabrics invite you to notice how they feel, move, and age.”
+        </blockquote>
+
+        <h2>The Appeal of Natural Materials</h2>
+
+        <p>
+            The fabric of a garment shapes more than its appearance. It influences how clothing feels against the skin, how it moves throughout the day, and how it responds to changing temperatures. Natural fibers have remained part of wardrobes for generations because of their distinctive textures and familiar qualities.
+        </p>
+
+        <p>
+            Cotton, linen, wool, and silk each offer a different experience. Some feel crisp and breathable, while others provide softness, warmth, or a gentle drape. <strong>Understanding these differences makes it easier to choose clothing that suits both your preferences and your everyday needs.</strong>
+        </p>
+
+        <h2>Get to Know the Essential Fibers</h2>
+
+        <p>
+            Natural fibers are not interchangeable. Each has its own character, making certain fabrics better suited to particular garments, climates, and occasions.
+        </p>
+
+
+<style>
+.adsterra-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  overflow: hidden;
+}
+
+.adsterra-mobile {
+  display: none;
+}
+
+.adsterra-desktop {
+  display: flex;
+}
+
+@media (max-width: 650px) {
+  .adsterra-desktop {
+    display: none;
+  }
+
+  .adsterra-mobile {
+    display: flex;
+  }
+}
+</style>
+
+<div class="adsterra-banner adsterra-mobile">
+<script>
+  atOptions = {
+    'key' : '0ab546df419e4e7876a17c780505a6b9',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://bauval.org/22/0ab546df419e4e7876a17c780505a6b9"></script>
+</div>
+
+<div class="adsterra-banner adsterra-desktop">
+<script>
+  atOptions = {
+    'key' : '26ba8c66308c37fe27ce550392d421d9',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://bauval.org/22/26ba8c66308c37fe27ce550392d421d9"></script>
+</div>
+
+
+
+        <ul class="wardrobe-list">
+            <li><strong>Cotton:</strong> A familiar, versatile fiber often valued for its softness and everyday practicality.</li>
+            <li><strong>Linen:</strong> Known for its airy feel, relaxed texture, and naturally casual appearance.</li>
+            <li><strong>Wool:</strong> A useful choice for warmth, with different weights and textures suited to different seasons.</li>
+            <li><strong>Silk:</strong> Appreciated for its smooth surface, fluid movement, and refined finish.</li>
+        </ul>
+
+        <section class="find-section">
+            <h3>Explore Fashion Finds</h3>
+            <p>
+                Discover selected fashion and lifestyle pieces that can complement a thoughtful, versatile wardrobe.
+            </p>
+            <a href="fashionfind.html" class="find-button" target="_blank" rel="noopener noreferrer">
+                <span>Explore Fashion Picks</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </a>
+            <p class="cta-note">
+                You will continue to an independent shopping page. Product availability and pricing may change.
+            </p>
+        </section>
+
+        <h2>Let Texture Shape the Outfit</h2>
+
+        <p>
+            One of the simplest ways to make an outfit feel considered is to combine different textures. A crisp cotton shirt can bring structure to soft trousers, while a linen layer can add a relaxed quality to a more tailored look.
+        </p>
+
+        <p>
+            Texture creates visual interest without requiring bold patterns or complicated styling. <strong>Even a restrained color palette can feel expressive when the fabrics have depth and contrast.</strong>
+        </p>
+
+        <div class="reflection-box">
+            <h3>A Fabric Discovery Exercise</h3>
+            <p>
+                Look through your wardrobe and notice which fabrics you naturally reach for most often. Pay attention to their weight, softness, texture, and how comfortable they feel throughout the day.
+            </p>
+        </div>
+
+        <h2>Understand Care and Longevity</h2>
+
+        <p>
+            Natural fibers can require different forms of care. Some cotton garments are easy to wash, while linen may wrinkle naturally and wool often benefits from gentle handling. Silk can also require more careful washing and storage.
+        </p>
+
+        <p>
+            Reading garment labels and following care instructions helps preserve shape, texture, and color. Avoiding unnecessary washing, allowing garments to air between wears when appropriate, and storing delicate pieces carefully can all make a difference.
+        </p>
+
+        <h2>Choose Fabrics for Your Lifestyle</h2>
+
+        <p>
+            The best fabric is not always the most luxurious one. It is the one that works comfortably with your routine. If you spend much of the day moving around, breathable and easy-care fabrics may be especially useful. For cooler settings, soft wool layers can offer warmth without relying on heavy styling.
+        </p>
+
+        <p>
+            Think about the climate you live in, the activities that fill your day, and the amount of care you are willing to give your clothes. These practical details can guide more satisfying choices.
+        </p>
+
+        <h2>Build a Wardrobe With Lasting Character</h2>
+
+        <p>
+            Natural fibers bring subtle character to clothing through their texture, movement, and changing appearance over time. They can make simple silhouettes feel thoughtful and help everyday pieces become wardrobe favorites.
+        </p>
+
+        <p>
+            Choosing them does not need to become a strict rule. A balanced wardrobe can include many different materials. What matters is knowing what you are buying and selecting pieces that genuinely suit you. <strong>When comfort, function, and personal taste come together, getting dressed feels more effortless.</strong>
+        </p>
+
+    </article>
+</main>
+
+<script src="footer.js" defer></script>
+
+</body>
+</html>

