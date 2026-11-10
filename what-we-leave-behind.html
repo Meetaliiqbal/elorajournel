@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+<title>What We Leave Behind — Elora Journal</title>
+<meta name="description" content="Reflect on the quiet legacy of our choices, kindness, words, and everyday actions, and consider what we leave behind in the lives of others.">
+<link rel="canonical" href="what-we-leave-behind.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --bg: #0f142b;
+    --surface: #151b38;
+    --soft: #202951;
+    --accent: #9b7cff;
+    --accent-light: #c9bdff;
+    --text: #f4f1ff;
+    --muted: #b3b1ca;
+    --border: rgba(201,189,255,0.15);
+    --max: 760px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.8;
+    min-height: 100vh;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.article-page {
+    width: 100%;
+    padding: 72px 24px 90px;
+}
+
+.article-header {
+    max-width: var(--max);
+    margin: 0 auto 42px;
+    text-align: center;
+}
+
+.category-pill {
+    display: inline-block;
+    padding: 7px 17px;
+    margin-bottom: 24px;
+    border: 1px solid rgba(155,124,255,0.4);
+    border-radius: 30px;
+    color: var(--accent-light);
+    background: rgba(155,124,255,0.09);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.article-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 500;
+    line-height: 1.17;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+}
+
+.article-header .subtitle {
+    max-width: 610px;
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: 1.08rem;
+    line-height: 1.8;
+}
+
+.article-card {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 48px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    box-shadow: 0 25px 70px rgba(0,0,0,0.18);
+}
+
+.featured-quote {
+    padding: 27px 30px;
+    margin-bottom: 40px;
+    background: var(--soft);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 12px 12px 0;
+    color: var(--accent-light);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem;
+    font-style: italic;
+    line-height: 1.65;
+}
+
+.article-card h2 {
+    margin: 38px 0 16px;
+    color: var(--text);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.35;
+}
+
+.article-card h2:first-of-type {
+    margin-top: 0;
+}
+
+.article-card p {
+    margin-bottom: 19px;
+    color: var(--muted);
+    font-size: 0.98rem;
+}
+
+.observation-list {
+    margin: 24px 0 30px;
+    padding: 0;
+    list-style: none;
+}
+
+.observation-list li {
+    position: relative;
+    margin-bottom: 14px;
+    padding: 15px 18px 15px 43px;
+    background: rgba(32,41,81,0.65);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--muted);
+}
+
+.observation-list li::before {
+    content: "✦";
+    position: absolute;
+    left: 17px;
+    top: 14px;
+    color: var(--accent);
+}
+
+.reflection-box {
+    margin-top: 34px;
+    padding: 25px 27px;
+    background: rgba(155,124,255,0.08);
+    border: 1px solid rgba(155,124,255,0.25);
+    border-radius: 14px;
+}
+
+.reflection-box h3 {
+    margin-bottom: 10px;
+    color: var(--accent-light);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem;
+    font-weight: 500;
+}
+
+.reflection-box p {
+    margin-bottom: 0;
+}
+
+.find-section {
+    margin-top: 45px;
+    padding: 32px 28px;
+    text-align: center;
+    background: var(--soft);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+}
+
+.find-section h2 {
+    margin: 0 0 12px;
+}
+
+.find-section p {
+    max-width: 520px;
+    margin: 0 auto 22px;
+}
+
+.find-button {
+    display: inline-block;
+    padding: 13px 25px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.find-button:hover {
+    background: #8665ec;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 650px) {
+    .article-page {
+        padding: 52px 18px 65px;
+    }
+
+    .article-card {
+        padding: 32px 25px;
+    }
+
+    .article-header {
+        margin-bottom: 32px;
+    }
+
+    .featured-quote {
+        padding: 23px;
+        font-size: 1.2rem;
+    }
+
+    .article-card h2 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .article-page {
+        padding: 40px 14px 55px;
+    }
+
+    .article-card {
+        padding: 25px 19px;
+        border-radius: 16px;
+    }
+
+    .article-header h1 {
+        font-size: 2.35rem;
+    }
+
+    .article-header .subtitle {
+        font-size: 0.96rem;
+    }
+
+    .featured-quote {
+        padding: 19px;
+        font-size: 1.1rem;
+    }
+
+    .article-card h2 {
+        font-size: 1.45rem;
+    }
+
+    .find-section {
+        padding: 26px 18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<script src="header.js" defer></script>
+
+<main class="article-page">
+
+    <header class="article-header">
+        <span class="category-pill">Legacy &amp; Meaning</span>
+        <h1>What We Leave Behind</h1>
+        <p class="subtitle">
+            Our lives leave traces in the people we meet, the choices we make,
+            and the kindness we offer. A meaningful legacy often begins with
+            the smallest things.
+        </p>
+    </header>
+
+    <article class="article-card">
+
+        <blockquote class="featured-quote">
+            “In the end, what matters most may not be what we gathered,
+            but what we gave and what others carry forward.”
+        </blockquote>
+
+        <h2>A Legacy Beyond Possessions</h2>
+
+        <p>
+            When we think about what we leave behind, our minds may turn
+            toward visible things: the work we completed, the places we
+            visited, the objects we collected, or the achievements attached
+            to our names.
+        </p>
+
+        <p>
+            These things can hold meaning, but they are only one part of
+            a life. Much of what remains after an ordinary day is less
+            tangible. It is the encouragement someone remembers, the
+            patience we offered when another person needed time, or the
+            sense of belonging created by a thoughtful gesture.
+        </p>
+
+        <p>
+            Our influence is often quieter than we imagine. It lives in
+            conversations, shared experiences, habits, and the ways we
+            make others feel when they are around us.
+        </p>
+
+        <h2>The Impressions We Leave on Others</h2>
+
+        <p>
+            Every interaction has the possibility of leaving an impression.
+            A sincere compliment can stay with someone longer than expected.
+            Listening without rushing to respond can make a person feel
+            understood. A small act of generosity can remind someone that
+            they are not alone.
+        </p>
+
+        <p>
+            We may never know the full effect of these moments. Someone
+            might remember a kindness years after we have forgotten
+            offering it. A few encouraging words might help another
+            person continue through a difficult season.
+        </p>
+
+
+<style>
+.adsterra-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  overflow: hidden;
+}
+
+.adsterra-mobile {
+  display: none;
+}
+
+.adsterra-desktop {
+  display: flex;
+}
+
+@media (max-width: 650px) {
+  .adsterra-desktop {
+    display: none;
+  }
+
+  .adsterra-mobile {
+    display: flex;
+  }
+}
+</style>
+
+<div class="adsterra-banner adsterra-mobile">
+<script>
+  atOptions = {
+    'key' : '0ab546df419e4e7876a17c780505a6b9',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://bauval.org/22/0ab546df419e4e7876a17c780505a6b9"></script>
+</div>
+
+<div class="adsterra-banner adsterra-desktop">
+<script>
+  atOptions = {
+    'key' : '26ba8c66308c37fe27ce550392d421d9',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://bauval.org/22/26ba8c66308c37fe27ce550392d421d9"></script>
+</div>
+
+
+
+        <p>
+            This does not mean we must become perfect or spend every
+            moment trying to impress others. It means recognizing that
+            our everyday behavior contributes to the atmosphere we create
+            around us.
+        </p>
+
+        <h2>The Quiet Power of Ordinary Choices</h2>
+
+        <p>
+            A meaningful legacy is rarely built in a single grand gesture.
+            More often, it develops through repeated choices: telling
+            the truth, keeping a promise, showing respect, admitting
+            when we are wrong, and treating people with consideration.
+        </p>
+
+        <p>
+            These actions may seem small while we are doing them.
+            Their significance becomes clearer when we look at the
+            pattern they create over time.
+        </p>
+
+        <ul class="observation-list">
+            <li>Offer your attention when someone is sharing something important.</li>
+            <li>Choose honesty, even when a more convenient answer is available.</li>
+            <li>Give encouragement without expecting recognition in return.</li>
+            <li>Take responsibility for the impact of your words and actions.</li>
+            <li>Share knowledge, care, and opportunities whenever you can.</li>
+        </ul>
+
+        <h2>What We Pass On Without Realizing</h2>
+
+        <p>
+            We pass on more than advice. The way we respond to challenges,
+            treat ourselves, and handle uncertainty can influence the
+            people who observe us. Our habits sometimes become examples
+            that others carry into their own lives.
+        </p>
+
+        <p>
+            A calm response can demonstrate patience. A willingness to
+            learn can make curiosity feel welcome. The courage to begin
+            again can remind someone that mistakes do not have to define
+            the future.
+        </p>
+
+        <p>
+            We do not control how others interpret our actions, and we
+            cannot decide exactly what they will remember. But we can
+            be thoughtful about the values we practice and the examples
+            we offer.
+        </p>
+
+        <h2>Letting Go of the Need to Be Remembered</h2>
+
+        <p>
+            Thinking about legacy can sometimes create pressure to do
+            something extraordinary or leave behind a permanent mark.
+            Yet a meaningful life does not need to become a performance
+            for future recognition.
+        </p>
+
+        <p>
+            Some of the most important contributions are private.
+            They happen in homes, friendships, workplaces, and brief
+            encounters that may never be recorded. Their value does
+            not depend on how widely they are remembered.
+        </p>
+
+        <p>
+            Perhaps the more useful question is not whether people
+            will remember our names, but whether our presence made
+            something a little kinder, wiser, or more hopeful.
+        </p>
+
+        <h2>Living the Legacy Now</h2>
+
+        <p>
+            The things we leave behind are shaped by how we live today.
+            We do not have to wait for a major milestone to contribute
+            something meaningful. Each ordinary day gives us another
+            opportunity to practice the qualities we hope will remain.
+        </p>
+
+        <p>
+            Be generous with encouragement. Be careful with promises.
+            Make time for the people who matter. Create work with care.
+            When you make a mistake, be willing to repair what you can.
+        </p>
+
+        <p>
+            These choices may not look remarkable from the outside.
+            But over a lifetime, they can become the most lasting part
+            of what we leave behind.
+        </p>
+
+        <div class="reflection-box">
+            <h3>A Moment to Reflect</h3>
+            <p>
+                When people think of the time they spent with you, what
+                would you hope they remember? What small action could
+                you take today to bring that quality into your life?
+            </p>
+        </div>
+
+        <section class="find-section">
+            <h2>Reflect on the Meaning You Leave</h2>
+            <p>
+                Discover thoughtful quotes and reflections about kindness,
+                purpose, connection, personal values, and the legacy created
+                through everyday choices.
+            </p>
+            <a href="quotesfind.html" class="find-button" target="_blank" rel="noopener noreferrer">
+                Explore Meaningful Reflections
+            </a>
+        </section>
+
+        <div class="reflection-box">
+            <h3>Carry This Thought With You</h3>
+            <p>
+                You may not choose every memory others keep, but you can
+                choose the care, honesty, and kindness you bring into
+                the moments you share.
+            </p>
+        </div>
+
+    </article>
+
+</main>
+
+<script src="footer.js" defer></script>
+
+</body>
+</html>

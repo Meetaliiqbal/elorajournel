@@ -1,0 +1,479 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+<title>The Solitude of Solo Trips — Elora Journal</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap');
+
+:root{
+    --bg:#0f142b;
+    --surface:#151b38;
+    --soft:#202951;
+    --text:#d3d7ee;
+    --heading:#ffffff;
+    --muted:#898fae;
+    --accent:#9b7cff;
+    --accent-light:#c9bdff;
+    --accent-dark:#8062e8;
+    --border:rgba(155,124,255,.18);
+    --max:760px;
+}
+
+*,*::before,*::after{box-sizing:border-box;}
+
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+
+body{
+    margin:0;
+    min-width:0;
+    overflow-x:hidden;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'DM Sans',Arial,sans-serif;
+    line-height:1.8;
+}
+
+a{color:inherit;text-decoration:none;}
+
+.article-page{
+    width:100%;
+    max-width:var(--max);
+    margin:0 auto;
+    padding:60px 22px 80px;
+}
+
+.article-header{text-align:center;margin-bottom:38px;}
+
+.article-category{
+    display:inline-block;
+    margin-bottom:17px;
+    padding:6px 14px;
+    background:rgba(155,124,255,.10);
+    border:1px solid rgba(155,124,255,.22);
+    border-radius:30px;
+    color:var(--accent-light);
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.article-header h1{
+    margin:0 0 17px;
+    color:var(--heading);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:clamp(32px,5vw,46px);
+    font-weight:500;
+    line-height:1.2;
+    letter-spacing:-.5px;
+}
+
+.article-subtitle{
+    max-width:620px;
+    margin:0 auto;
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.8;
+}
+
+.article-card{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:40px;
+    box-shadow:0 15px 45px rgba(0,0,0,.18);
+}
+
+.featured-quote{
+    margin:0 0 32px;
+    padding:23px 25px;
+    background:rgba(155,124,255,.07);
+    border-left:3px solid var(--accent);
+    border-radius:0 12px 12px 0;
+    color:var(--accent-light);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:21px;
+    font-style:italic;
+    line-height:1.6;
+}
+
+.article-card h2{
+    margin:30px 0 12px;
+    color:var(--heading);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:25px;
+    font-weight:500;
+    line-height:1.4;
+}
+
+.article-card h2:first-of-type{margin-top:0;}
+
+.article-card p{
+    margin:0 0 19px;
+    color:var(--text);
+    font-size:14px;
+    line-height:1.85;
+}
+
+.article-card strong{color:var(--accent-light);font-weight:600;}
+
+.find-section{
+    margin:28px 0 32px;
+    padding:25px 22px;
+    background:rgba(155,124,255,.055);
+    border:1px solid rgba(155,124,255,.16);
+    border-radius:14px;
+}
+
+.find-section h3{
+    margin:0 0 8px;
+    color:var(--heading);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:22px;
+    font-weight:500;
+    text-align:center;
+}
+
+.find-section p{
+    max-width:540px;
+    margin:0 auto 18px;
+    color:var(--muted);
+    font-size:12.5px;
+    text-align:center;
+    line-height:1.7;
+}
+
+.find-button{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    width:100%;
+    padding:15px 20px;
+    background:var(--accent);
+    border-radius:8px;
+    color:#ffffff;
+    font-size:13px;
+    font-weight:600;
+    box-shadow:0 5px 16px rgba(155,124,255,.18);
+    transition:background .2s ease,transform .2s ease,box-shadow .2s ease;
+}
+
+.find-button:hover{
+    background:var(--accent-dark);
+    transform:translateY(-1px);
+    box-shadow:0 8px 20px rgba(155,124,255,.25);
+}
+
+.find-button svg{transition:transform .2s ease;}
+.find-button:hover svg{transform:translateX(3px);}
+
+.cta-note{
+    margin:10px 0 0 !important;
+    color:#737a98 !important;
+    font-size:9.5px !important;
+    text-align:center !important;
+}
+
+.travel-list{margin:24px 0 28px;padding:0;list-style:none;}
+
+.travel-list li{
+    position:relative;
+    margin-bottom:13px;
+    padding-left:25px;
+    color:#bfc4da;
+    font-size:13.5px;
+    line-height:1.7;
+}
+
+.travel-list li::before{
+    content:"";
+    position:absolute;
+    left:4px;
+    top:.75em;
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:var(--accent);
+}
+
+.reflection-box{
+    margin:30px 0;
+    padding:22px;
+    background:var(--soft);
+    border:1px solid rgba(155,124,255,.14);
+    border-radius:13px;
+}
+
+.reflection-box h3{
+    margin:0 0 8px;
+    color:var(--heading);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:20px;
+    font-weight:500;
+}
+
+.reflection-box p{margin:0;color:var(--muted);font-size:13px;}
+
+@media(max-width:650px){
+    .article-page{padding:38px 15px 55px;}
+    .article-header{margin-bottom:30px;}
+    .article-header h1{font-size:31px;}
+    .article-subtitle{font-size:13px;}
+    .article-card{padding:25px 20px;}
+    .featured-quote{padding:20px;font-size:19px;}
+    .article-card h2{font-size:22px;}
+    .article-card p{font-size:13.5px;}
+    .find-section{padding:22px 17px;}
+}
+
+@media(max-width:420px){
+    .article-page{padding:30px 14px 45px;}
+    .article-header h1{font-size:28px;}
+    .article-card{padding:22px 17px;}
+    .featured-quote{font-size:18px;padding:18px;}
+    .find-button{padding:14px 12px;font-size:12.5px;}
+}
+</style>
+</head>
+
+<body>
+
+<script src="header.js" defer></script>
+
+<main class="article-page">
+
+<header class="article-header">
+    <span class="article-category">Travel &amp; Exploration</span>
+    <h1>The Solitude of Solo Trips</h1>
+    <p class="article-subtitle">
+        Embracing the freedom of traveling alone, discovering
+        unfamiliar places at your own rhythm, and finding a deeper
+        connection with yourself along the way.
+    </p>
+</header>
+
+<article class="article-card">
+
+<blockquote class="featured-quote">
+    “Sometimes the greatest journey is the one that gives you
+    the space to hear your own thoughts.”
+</blockquote>
+
+<h2>The Freedom of Choosing Your Own Pace</h2>
+
+<p>
+    Traveling alone offers a kind of freedom that can be difficult
+    to experience in a group. There is no need to coordinate
+    everyone's preferences, negotiate every stop, or follow a
+    schedule designed around someone else's interests.
+</p>
+
+<p>
+    You can spend an entire afternoon in a museum, take a longer
+    walk through an unfamiliar neighborhood, or change your plans
+    simply because something catches your attention.
+    <strong>Solo travel makes personal curiosity the center of
+    the experience.</strong>
+</p>
+
+<h2>Becoming Comfortable with Your Own Company</h2>
+
+<p>
+    At first, eating alone, navigating a new city, or spending a
+    quiet evening without familiar company may feel unusual.
+    These small moments can become opportunities to develop
+    confidence and independence.
+</p>
+
+<p>
+    Over time, a meal at a neighborhood café or a peaceful walk
+    through a public garden can feel completely natural. You begin
+    to appreciate the freedom of being present without needing
+    constant conversation or entertainment.
+</p>
+
+<section class="find-section">
+    <h3>Prepare for Your Independent Journey</h3>
+    <p>
+        Thinking about your first solo escape? Explore travel
+        inspiration and planning resources to help you prepare
+        for a confident and rewarding experience.
+    </p>
+
+
+<style>
+.adsterra-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  overflow: hidden;
+}
+
+.adsterra-mobile {
+  display: none;
+}
+
+.adsterra-desktop {
+  display: flex;
+}
+
+@media (max-width: 650px) {
+  .adsterra-desktop {
+    display: none;
+  }
+
+  .adsterra-mobile {
+    display: flex;
+  }
+}
+</style>
+
+<div class="adsterra-banner adsterra-mobile">
+<script>
+  atOptions = {
+    'key' : '0ab546df419e4e7876a17c780505a6b9',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://bauval.org/22/0ab546df419e4e7876a17c780505a6b9"></script>
+</div>
+
+<div class="adsterra-banner adsterra-desktop">
+<script>
+  atOptions = {
+    'key' : '26ba8c66308c37fe27ce550392d421d9',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://bauval.org/22/26ba8c66308c37fe27ce550392d421d9"></script>
+</div>
+
+
+    <a href="travelfind.html" class="find-button" target="_blank" rel="noopener noreferrer">
+        <span>Start Planning a Solo Escape</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+        stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+    </a>
+    <p class="cta-note">
+        Review destination guidance, accommodation details, and local safety information before departure.
+    </p>
+</section>
+
+<h2>Meeting the World on Your Own Terms</h2>
+
+<p>
+    Solo travel does not have to mean being isolated. Traveling
+    independently can create opportunities to connect with people
+    you might not otherwise meet.
+</p>
+
+<p>
+    A conversation with a local shopkeeper, a shared table at a
+    small restaurant, or a guided walking tour can introduce new
+    perspectives. These interactions often feel more spontaneous
+    when you are moving through a destination independently.
+</p>
+
+<p>
+    The important distinction is that connection becomes a choice
+    rather than an expectation. <strong>You can enjoy company when
+    it feels right and welcome solitude when you need it.</strong>
+</p>
+
+<ul class="travel-list">
+    <li>Research your destination, neighborhoods, and transportation before arrival.</li>
+    <li>Share your itinerary and important contact details with someone you trust.</li>
+    <li>Choose well-reviewed accommodation in an area that suits your plans.</li>
+    <li>Keep copies of essential documents and emergency information accessible.</li>
+    <li>Trust your instincts and avoid situations that make you uncomfortable.</li>
+</ul>
+
+<div class="reflection-box">
+    <h3>A Quiet Kind of Confidence</h3>
+    <p>
+        Confidence does not mean knowing exactly what to do in
+        every situation. It means learning to make thoughtful
+        decisions, adapt when plans change, and ask for help
+        whenever necessary.
+    </p>
+</div>
+
+<h2>Discovering More Than a Destination</h2>
+
+<p>
+    When traveling alone, the absence of familiar routines can
+    make you more aware of your habits and preferences. You may
+    discover that you enjoy early morning walks, spontaneous
+    conversations, or long periods of quiet observation.
+</p>
+
+<p>
+    New surroundings can also reveal how adaptable you are.
+    Navigating unfamiliar streets, communicating across language
+    differences, and managing daily decisions can gradually
+    strengthen your sense of independence.
+</p>
+
+<h2>Making Space for Reflection</h2>
+
+<p>
+    Some of the most memorable moments of a solo journey happen
+    when nothing particularly remarkable is taking place. Sitting
+    beside a window, watching a city wake up, or enjoying a quiet
+    evening after a full day can create room for reflection.
+</p>
+
+<p>
+    Without the constant rhythm of group plans, thoughts have
+    more room to settle. You may return home with a clearer
+    understanding of what energizes you, what matters to you,
+    and what you would like to explore next.
+</p>
+
+<h2>Returning with a Different Perspective</h2>
+
+<p>
+    A solo trip does not need to be dramatic or far-reaching to
+    become meaningful. Even a short journey can offer a fresh
+    sense of independence and a renewed appreciation for your
+    own company.
+</p>
+
+<p>
+    You return with more than photographs and souvenirs. You
+    carry the memory of decisions made independently, unexpected
+    encounters, and moments when you discovered that you were
+    capable of more than you had imagined.
+</p>
+
+<p>
+    Perhaps that is the quiet gift of traveling alone: the world
+    becomes a place to explore, while the journey also becomes
+    an opportunity to understand yourself.
+</p>
+
+</article>
+</main>
+
+<script src="footer.js" defer></script>
+
+</body>
+</html>

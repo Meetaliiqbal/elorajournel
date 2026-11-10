@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+<title>The Welcoming Threshold — Elora Journal</title>
+<meta name="description" content="Discover how to create a welcoming home entrance with thoughtful lighting, practical storage, natural textures, and meaningful details.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="header.js" defer></script>
+
+<style>
+:root {
+    --bg:#0f142b;
+    --surface:#151b38;
+    --soft:#202951;
+    --text:#d3d7ee;
+    --heading:#ffffff;
+    --muted:#898fae;
+    --accent:#9b7cff;
+    --accent-light:#c9bdff;
+    --accent-dark:#8062e8;
+    --border:rgba(155,124,255,.18);
+    --max:760px;
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+    background:var(--bg);
+    color:var(--text);
+    font-family:'DM Sans',sans-serif;
+    line-height:1.8;
+}
+
+.article-page {
+    max-width:var(--max);
+    margin:0 auto;
+    padding:60px 22px 80px;
+}
+
+.article-header {
+    text-align:center;
+    margin-bottom:42px;
+}
+
+.article-category {
+    display:inline-block;
+    color:var(--accent-light);
+    background:rgba(155,124,255,.12);
+    border:1px solid var(--border);
+    padding:7px 16px;
+    border-radius:30px;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:22px;
+}
+
+.article-header h1 {
+    color:var(--heading);
+    font-family:'Playfair Display',serif;
+    font-size:clamp(38px,7vw,56px);
+    font-weight:500;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+.article-subtitle {
+    color:var(--muted);
+    font-size:16px;
+    max-width:590px;
+    margin:0 auto;
+    line-height:1.8;
+}
+
+.article-card {
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:22px;
+    padding:32px;
+    margin-bottom:30px;
+}
+
+.featured-quote {
+    color:var(--accent-light);
+    font-family:'Playfair Display',serif;
+    font-size:25px;
+    font-style:italic;
+    line-height:1.55;
+    text-align:center;
+    padding:34px 25px;
+    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
+    margin:35px 0;
+}
+
+.article-card h2 {
+    color:var(--heading);
+    font-family:'Playfair Display',serif;
+    font-size:29px;
+    font-weight:500;
+    line-height:1.35;
+    margin:38px 0 15px;
+}
+
+.article-card h2:first-child {
+    margin-top:0;
+}
+
+.article-card p {
+    color:var(--text);
+    font-size:15px;
+    margin-bottom:18px;
+}
+
+.article-card strong {
+    color:var(--accent-light);
+    font-weight:600;
+}
+
+.design-list {
+    list-style:none;
+    margin:22px 0;
+}
+
+.design-list li {
+    position:relative;
+    padding:13px 16px 13px 42px;
+    margin-bottom:10px;
+    background:rgba(155,124,255,.07);
+    border:1px solid var(--border);
+    border-radius:12px;
+    color:var(--text);
+    font-size:14px;
+}
+
+.design-list li::before {
+    content:"✦";
+    position:absolute;
+    left:17px;
+    color:var(--accent-light);
+}
+
+.reflection-box {
+    background:var(--soft);
+    border-left:3px solid var(--accent);
+    border-radius:0 15px 15px 0;
+    padding:24px;
+    margin:30px 0;
+}
+
+.reflection-box p {
+    margin:0;
+    color:var(--accent-light);
+    font-family:'Playfair Display',serif;
+    font-size:19px;
+    font-style:italic;
+}
+
+.find-section {
+    text-align:center;
+    padding:35px 25px;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:22px;
+    margin-top:35px;
+}
+
+.find-section h2 {
+    color:var(--heading);
+    font-family:'Playfair Display',serif;
+    font-size:29px;
+    font-weight:500;
+    margin-bottom:12px;
+}
+
+.find-section p {
+    color:var(--muted);
+    font-size:14px;
+    margin-bottom:23px;
+}
+
+.find-button {
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    background:var(--accent);
+    color:#fff;
+    text-decoration:none;
+    padding:13px 24px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:700;
+    transition:.25s ease;
+}
+
+.find-button:hover {
+    background:var(--accent-dark);
+    transform:translateY(-2px);
+}
+
+.find-button svg {
+    width:17px;
+    height:17px;
+}
+
+.cta-note {
+    color:var(--muted);
+    font-size:12px;
+    margin-top:16px;
+}
+
+@media(max-width:600px) {
+    .article-page {
+        padding:42px 17px 60px;
+    }
+
+    .article-card {
+        padding:23px;
+    }
+
+    .article-card h2 {
+        font-size:25px;
+    }
+
+    .featured-quote {
+        font-size:21px;
+        padding:27px 15px;
+    }
+
+    .find-section {
+        padding:28px 18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<main class="article-page">
+
+<header class="article-header">
+    <span class="article-category">Home & Decor</span>
+    <h1>The Welcoming Threshold</h1>
+    <p class="article-subtitle">
+        Explore the art of creating a thoughtful entrance where practical details, warm lighting, and personal touches offer a beautiful first impression.
+    </p>
+</header>
+
+<article class="article-card">
+
+<div class="featured-quote">
+    “The feeling of home begins before you step through the door.”
+</div>
+
+<h2>The First Feeling of Home</h2>
+
+<p>
+The entrance is often one of the smallest areas in a home, yet it carries an important responsibility. It is the first space you experience when returning and the first impression guests receive when they arrive.
+</p>
+
+<p>
+A welcoming threshold does not depend on an impressive doorway or an elaborate hallway. It comes from thoughtful details that make entering and leaving feel effortless. A place to put your keys, a comfortable light, a small surface for everyday essentials, and a little personality can transform the experience.
+</p>
+
+<p>
+Think of your entrance as a gentle introduction to the rest of your home. Its atmosphere can reflect the colors, materials, and feeling that continue throughout your interiors.
+</p>
+
+<h2>Start With a Clear and Functional Layout</h2>
+
+<p>
+Before adding decorative pieces, consider how people move through the entrance. The area should feel easy to navigate, with enough room to open doors, remove shoes, and carry bags without obstacles.
+</p>
+
+<p>
+In a compact hallway, choose furniture with a slim profile. A narrow console, wall-mounted shelf, or small bench can provide useful function without taking up too much floor space.
+</p>
+
+<p>
+Keep frequently used items within easy reach and avoid allowing everyday clutter to collect near the doorway. A well-planned entrance feels calm because everything has a place.
+</p>
+
+
+<style>
+.adsterra-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  overflow: hidden;
+}
+
+.adsterra-mobile {
+  display: none;
+}
+
+.adsterra-desktop {
+  display: flex;
+}
+
+@media (max-width: 650px) {
+  .adsterra-desktop {
+    display: none;
+  }
+
+  .adsterra-mobile {
+    display: flex;
+  }
+}
+</style>
+
+<div class="adsterra-banner adsterra-mobile">
+<script>
+  atOptions = {
+    'key' : '0ab546df419e4e7876a17c780505a6b9',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://bauval.org/22/0ab546df419e4e7876a17c780505a6b9"></script>
+</div>
+
+<div class="adsterra-banner adsterra-desktop">
+<script>
+  atOptions = {
+    'key' : '26ba8c66308c37fe27ce550392d421d9',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://bauval.org/22/26ba8c66308c37fe27ce550392d421d9"></script>
+</div>
+
+
+
+<h2>Make Lighting Feel Inviting</h2>
+
+<p>
+Lighting has a powerful influence on the atmosphere of an entrance. A harsh or poorly positioned light can make even a beautifully decorated hallway feel unwelcoming.
+</p>
+
+<p>
+Choose warm-toned illumination that creates a comfortable first impression. A pendant light can add visual interest, while a wall sconce or small table lamp introduces a softer layer of light.
+</p>
+
+<p>
+If natural light is limited, consider reflective surfaces and light-colored finishes to help the area feel brighter. A mirror can also make a narrow entrance appear more open.
+</p>
+
+<h2>Choose Materials That Set the Tone</h2>
+
+<p>
+The materials used near the entrance should be both attractive and practical. This is a high-use area, so surfaces need to handle everyday movement while contributing to the overall design.
+</p>
+
+<p>
+Wood introduces warmth, stone and ceramic offer durability, and woven baskets provide useful storage with natural texture. A simple combination of these materials can create an entrance that feels relaxed and considered.
+</p>
+
+<p>
+Consider a small rug or runner to add softness and help define the area. Choose one that is suitable for regular cleaning and does not create a tripping hazard.
+</p>
+
+<h2>Give Everyday Essentials a Home</h2>
+
+<p>
+A welcoming entrance is also an organized one. When keys, shoes, bags, and other daily items have designated places, the area becomes easier to maintain.
+</p>
+
+<p>
+A shallow tray can collect keys and small accessories. Hooks can hold coats and bags, while a closed cabinet keeps shoes and less attractive essentials out of sight.
+</p>
+
+<p>
+Baskets are useful for items that need to remain accessible but do not need to be displayed. The aim is to make organization feel natural rather than turning the entrance into a storage area.
+</p>
+
+<h2>Add a Personal Point of Interest</h2>
+
+<p>
+A small personal detail can give an entrance a sense of identity. Artwork, a framed photograph, a favorite decorative object, or a vase with fresh greenery can make the space feel connected to the people who live there.
+</p>
+
+<p>
+A mirror is another thoughtful addition. It offers a practical place for a final glance before leaving while adding depth and light to the hallway.
+</p>
+
+<p>
+Choose one or two focal details rather than filling every available surface. A little restraint allows the entrance to feel peaceful and intentional.
+</p>
+
+<h2>Make Small Entrances Feel Spacious</h2>
+
+<p>
+Limited space does not have to mean limited style. Vertical storage, floating shelves, wall hooks, and compact furniture can help you make better use of a narrow entrance.
+</p>
+
+<p>
+Keep the floor as clear as possible and use a consistent color palette to create visual continuity. Mirrors and subtle lighting can further enhance the feeling of openness.
+</p>
+
+<h2>Simple Ideas for a Welcoming Entrance</h2>
+
+<ul class="design-list">
+    <li>Use a slim console or floating shelf for everyday essentials.</li>
+    <li>Add warm lighting to create a comfortable first impression.</li>
+    <li>Place a mirror where it can reflect available natural light.</li>
+    <li>Use hooks, baskets, or a cabinet to organize coats, bags, and shoes.</li>
+    <li>Choose a durable rug or runner that suits the space.</li>
+    <li>Introduce a plant, framed artwork, or meaningful decorative object.</li>
+    <li>Keep pathways clear and avoid overcrowding small surfaces.</li>
+</ul>
+
+<div class="reflection-box">
+    <p>
+        A thoughtful entrance says welcome in the quietest way: through comfort, simplicity, and the feeling that everything has its place.
+    </p>
+</div>
+
+<h2>A Beautiful Welcome, Every Day</h2>
+
+<p>
+The entrance may be a transition between the outside world and the comfort of home, but it deserves the same attention as every other room. Its design can support daily routines while setting a gentle tone for the moments that follow.
+</p>
+
+<p>
+Begin with the essentials, add a few details that feel personal, and allow the space to remain open and easy to use. Even the simplest doorway can become a meaningful part of the home when it is designed with care.
+</p>
+
+<p>
+After all, a welcoming home begins with the small experience of arriving.
+</p>
+
+</article>
+
+<section class="find-section">
+    <h2>Style Your Welcome Home</h2>
+    <p>
+        Discover decor inspiration and thoughtful details to make your entrance feel warm, organized, and inviting.
+    </p>
+    <a href="decorfind.html" class="find-button">
+        Explore Home & Decor
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M13 6l6 6-6 6"/>
+        </svg>
+    </a>
+    <p class="cta-note">Make every arrival feel like coming home.</p>
+</section>
+
+</main>
+
+<script src="footer.js" defer></script>
+</body>
+</html>
